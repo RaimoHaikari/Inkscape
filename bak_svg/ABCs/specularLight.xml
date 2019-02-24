@@ -1,0 +1,39 @@
+<filter
+   inkscape:label="Specular light"
+   inkscape:menu="ABCs"
+   inkscape:menu-tooltip="Basic specular bevel to use for building textures"
+   color-interpolation-filters="sRGB"
+   id="filter3065">
+  <feGaussianBlur
+	 result="result0"
+	 in="SourceAlpha"
+	 stdDeviation="6"
+	 id="feGaussianBlur3067" />
+  <feSpecularLighting
+	 specularExponent="25"
+	 specularConstant="1"
+	 surfaceScale="10"
+	 lighting-color="rgb(255,255,255)"
+	 result="result1"
+	 in="result0"
+	 id="feSpecularLighting3069">
+	<feDistantLight
+	   azimuth="235"
+	   elevation="45"
+	   id="feDistantLight3071" />
+  </feSpecularLighting>
+  <feComposite
+	 k3="1"
+	 k2="1"
+	 operator="arithmetic"
+	 result="result4"
+	 in="SourceGraphic"
+	 in2="result1"
+	 id="feComposite3073" />
+  <feComposite
+	 operator="in"
+	 result="result2"
+	 in="result4"
+	 in2="SourceAlpha"
+	 id="feComposite3075" />
+</filter>

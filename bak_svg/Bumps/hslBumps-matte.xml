@@ -1,0 +1,44 @@
+<filter
+   name="HSL Bumps, matte"
+   tooltip="Same as HSL bumps but with a diffuse reflection instead of a specular one"
+   color-interpolation-filters="sRGB"
+   id="filter3154">
+  <feGaussianBlur
+	 stdDeviation="0.01"
+	 in="SourceGraphic"
+	 result="result0"
+	 id="feGaussianBlur3156" />
+  <feColorMatrix
+	 result="fbSourceGraphicAlpha"
+	 in="result0"
+	 values="1 0 0 -1 0 1 0 1 -1 0 1 0 0 -1 0 -0.8 -1 0 4 -2.5 "
+	 id="feColorMatrix3158" />
+  <feGaussianBlur
+	 result="result0"
+	 in="fbSourceGraphicAlpha"
+	 stdDeviation="0.5"
+	 id="feGaussianBlur3160" />
+  <feDiffuseLighting
+	 surfaceScale="15"
+	 diffuseConstant="0.4"
+	 result="result6"
+	 lighting-color="rgb(255,255,255)"
+	 id="feDiffuseLighting3162">
+	<feDistantLight
+	   azimuth="235"
+	   elevation="25"
+	   id="feDistantLight3164" />
+  </feDiffuseLighting>
+  <feComposite
+	 operator="in"
+	 result="result2"
+	 in="result6"
+	 in2="SourceGraphic"
+	 id="feComposite3166" />
+  <feComposite
+	 in2="SourceGraphic"
+	 operator="arithmetic"
+	 k2="0.8"
+	 k3="0.8"
+	 id="feComposite3168" />
+</filter>

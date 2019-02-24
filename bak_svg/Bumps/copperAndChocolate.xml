@@ -1,0 +1,73 @@
+<filter
+   name="Copper and chocolate"
+   tooltip="Specular bump which can be easily converted from metallic to molded plastic effects"
+   color-interpolation-filters="sRGB"
+   id="filter3048">
+  <feGaussianBlur
+	 stdDeviation="0.5"
+	 in="SourceGraphic"
+	 result="result0"
+	 id="feGaussianBlur3050" />
+  <feFlood
+	 result="result6"
+	 flood-color="rgb(147,80,9)"
+	 id="feFlood3052" />
+  <feComposite
+	 k3="0.3"
+	 k2="0.3"
+	 k1="0.5"
+	 operator="arithmetic"
+	 result="result2"
+	 in="result0"
+	 in2="result6"
+	 id="feComposite3054" />
+  <feColorMatrix
+	 result="fbSourceGraphicAlpha"
+	 in="result2"
+	 values="1 0 0 -1 0 1 0 1 -1 0 1 0 0 -1 0 -0.8 -1 0 4.2 -2.9 "
+	 id="feColorMatrix3056" />
+  <feGaussianBlur
+	 result="result0"
+	 in="fbSourceGraphicAlpha"
+	 stdDeviation="1.5"
+	 id="feGaussianBlur3058" />
+  <feSpecularLighting
+	 specularExponent="30"
+	 specularConstant="1"
+	 surfaceScale="5"
+	 lighting-color="rgb(255,255,255)"
+	 result="result1"
+	 in="result0"
+	 id="feSpecularLighting3060">
+	<feDistantLight
+	   azimuth="225"
+	   elevation="69"
+	   id="feDistantLight3062" />
+  </feSpecularLighting>
+  <feBlend
+	 mode="screen"
+	 result="result5"
+	 in2="result6"
+	 in="result1"
+	 id="feBlend3064" />
+  <feComposite
+	 result="result7"
+	 operator="arithmetic"
+	 k2="1.2"
+	 k1="0.2"
+	 k3="0.2"
+	 in="result5"
+	 in2="result5"
+	 id="feComposite3066" />
+  <feBlend
+	 mode="multiply"
+	 result="result8"
+	 in2="result7"
+	 id="feBlend3068" />
+  <feComposite
+	 operator="in"
+	 in2="SourceGraphic"
+	 result="result9"
+	 in="result8"
+	 id="feComposite3070" />
+</filter>

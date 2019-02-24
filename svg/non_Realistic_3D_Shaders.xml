@@ -1,0 +1,584 @@
+<defs id="defs4" menu="Non realistic 3D shaders">
+	<filter
+	   x="-0.25"
+	   width="1.5"
+	   y="-0.25"
+	   height="1.5"
+	   menu="Non realistic 3D shaders"
+	   label="Aluminium"
+	   color-interpolation-filters="sRGB"
+	   id="filter2998">
+	  <feGaussianBlur
+		 result="result8"
+		 stdDeviation="7"
+		 id="feGaussianBlur3000" />
+	  <feComposite
+		 in="result8"
+		 operator="xor"
+		 result="result6"
+		 in2="SourceGraphic"
+		 id="feComposite3002" />
+	  <feDisplacementMap
+		 result="result4"
+		 scale="75"
+		 yChannelSelector="A"
+		 xChannelSelector="A"
+		 in2="result6"
+		 in="result6"
+		 id="feDisplacementMap3004" />
+	  <feComposite
+		 k1="1"
+		 in="result4"
+		 operator="arithmetic"
+		 result="result2"
+		 in2="SourceGraphic"
+		 id="feComposite3006" />
+	</filter>
+	<filter
+	   x="-0.25"
+	   width="1.5"
+	   y="-0.25"
+	   height="1.5"
+	   menu="Non realistic 3D shaders"
+	   menu-="Non realistic chrome shader with strong speculars"
+	   label="Chrome"
+	   color-interpolation-filters="sRGB"
+	   id="filter3008">
+	  <feGaussianBlur
+		 result="result8"
+		 stdDeviation="4"
+		 id="feGaussianBlur3010" />
+	  <feComposite
+		 in="result8"
+		 operator="xor"
+		 result="result6"
+		 in2="result8"
+		 id="feComposite3012" />
+	  <feDisplacementMap
+		 result="result4"
+		 scale="80"
+		 yChannelSelector="A"
+		 xChannelSelector="A"
+		 in2="result6"
+		 in="result6"
+		 id="feDisplacementMap3014" />
+	  <feComposite
+		 k1="3"
+		 in="result8"
+		 operator="arithmetic"
+		 result="result2"
+		 in2="result4"
+		 id="feComposite3016" />
+	  <feComposite
+		 in2="result2"
+		 operator="in"
+		 in="result2"
+		 result="fbSourceGraphic"
+		 id="feComposite3018" />
+	</filter>
+	<filter
+	   label="Chrome dark"
+	   menu-="Dark version of chrome shading with a ground reflection simulation"
+	   menu="Non realistic 3D shaders"
+	   height="1.5"
+	   y="-0.25"
+	   width="1.5"
+	   x="-0.25"
+	   color-interpolation-filters="sRGB"
+	   id="filter3020">
+	  <feGaussianBlur
+		 stdDeviation="3.5"
+		 result="result8"
+		 id="feGaussianBlur3022" />
+	  <feComposite
+		 in2="result8"
+		 result="result6"
+		 operator="xor"
+		 in="result8"
+		 id="feComposite3024" />
+	  <feDisplacementMap
+		 in="result8"
+		 in2="result6"
+		 xChannelSelector="A"
+		 yChannelSelector="A"
+		 scale="75"
+		 result="result4"
+		 id="feDisplacementMap3026" />
+	  <feComposite
+		 in2="result4"
+		 result="result2"
+		 operator="arithmetic"
+		 in="result8"
+		 k1="3"
+		 id="feComposite3028" />
+	  <feComposite
+		 result="fbSourceGraphic"
+		 in="result2"
+		 operator="in"
+		 in2="result2"
+		 id="feComposite3030" />
+	</filter>
+	<filter
+	   x="-0.25"
+	   width="1.5"
+	   y="-0.25"
+	   height="1.5"
+	   menu="Non realistic 3D shaders"
+	   menu-="Imitation of black and white cartoon shading"
+	   label="Comics"
+	   color-interpolation-filters="sRGB"
+	   id="filter3032">
+	  <feGaussianBlur
+		 result="result8"
+		 stdDeviation="7"
+		 id="feGaussianBlur3034" />
+	  <feComposite
+		 in="result8"
+		 operator="xor"
+		 result="result6"
+		 in2="result8"
+		 id="feComposite3036" />
+	  <feDisplacementMap
+		 result="result4"
+		 scale="100"
+		 yChannelSelector="A"
+		 xChannelSelector="A"
+		 in2="result6"
+		 in="SourceGraphic"
+		 id="feDisplacementMap3038" />
+	  <feComposite
+		 k1="1"
+		 in="SourceGraphic"
+		 operator="arithmetic"
+		 result="result2"
+		 in2="result4"
+		 id="feComposite3040" />
+	  <feComposite
+		 in2="result2"
+		 operator="in"
+		 in="SourceGraphic"
+		 result="fbSourceGraphic"
+		 id="feComposite3042" />
+	</filter>
+	<filter
+	   x="-0.25"
+	   width="1.5"
+	   y="-0.5"
+	   height="2"
+	   menu-="Comics shader with creamy waves transparency"
+	   menu="Non realistic 3D shaders"
+	   label="Comics cream"
+	   color-interpolation-filters="sRGB"
+	   id="filter3044">
+	  <feGaussianBlur
+		 result="result8"
+		 stdDeviation="5"
+		 id="feGaussianBlur3046" />
+	  <feTurbulence
+		 baseFrequency="0.02 0.02"
+		 numOctaves="1"
+		 type="turbulence"
+		 result="result7"
+		 seed="77"
+		 id="feTurbulence3048" />
+	  <feComposite
+		 in="result8"
+		 operator="xor"
+		 result="result6"
+		 in2="result7"
+		 id="feComposite3050" />
+	  <feDisplacementMap
+		 result="result4"
+		 scale="170"
+		 yChannelSelector="A"
+		 xChannelSelector="A"
+		 in2="result6"
+		 in="SourceGraphic"
+		 id="feDisplacementMap3052" />
+	  <feComposite
+		 in="result4"
+		 operator="arithmetic"
+		 result="result2"
+		 in2="SourceGraphic"
+		 k1="1"
+		 id="feComposite3054" />
+	  <feComposite
+		 in2="result2"
+		 operator="out"
+		 in="SourceGraphic"
+		 result="fbSourceGraphic"
+		 id="feComposite3056" />
+	</filter>
+	<filter
+	   label="Comics draft"
+	   menu-="Draft painted cartoon shading with a glassy look"
+	   menu="Non realistic 3D shaders"
+	   height="1.5"
+	   y="-0.25"
+	   width="1.5"
+	   x="-0.25"
+	   color-interpolation-filters="sRGB"
+	   id="filter3058">
+	  <feGaussianBlur
+		 stdDeviation="7"
+		 result="result8"
+		 id="feGaussianBlur3060" />
+	  <feComposite
+		 in2="result8"
+		 result="result6"
+		 operator="xor"
+		 in="result8"
+		 id="feComposite3062" />
+	  <feDisplacementMap
+		 in="SourceGraphic"
+		 in2="result6"
+		 xChannelSelector="A"
+		 yChannelSelector="A"
+		 scale="100"
+		 result="result4"
+		 id="feDisplacementMap3064" />
+	  <feComposite
+		 in2="result4"
+		 result="result2"
+		 operator="arithmetic"
+		 in="SourceGraphic"
+		 k1="1"
+		 id="feComposite3066" />
+	  <feComposite
+		 result="fbSourceGraphic"
+		 in="result6"
+		 operator="in"
+		 in2="result2"
+		 id="feComposite3068" />
+	</filter>
+	<filter
+	   label="Comics fading"
+	   menu-="Cartoon paint style with some fading at the edges"
+	   menu="Non realistic 3D shaders"
+	   height="1.5"
+	   y="-0.25"
+	   width="1.5"
+	   x="-0.25"
+	   color-interpolation-filters="sRGB"
+	   id="filter3070">
+	  <feGaussianBlur
+		 stdDeviation="7"
+		 result="result8"
+		 id="feGaussianBlur3072" />
+	  <feComposite
+		 in2="result8"
+		 result="result6"
+		 operator="xor"
+		 in="result8"
+		 id="feComposite3074" />
+	  <feDisplacementMap
+		 in="SourceGraphic"
+		 in2="result6"
+		 xChannelSelector="A"
+		 yChannelSelector="A"
+		 scale="100"
+		 result="result4"
+		 id="feDisplacementMap3076" />
+	  <feComposite
+		 in2="result4"
+		 result="result2"
+		 operator="arithmetic"
+		 in="SourceGraphic"
+		 k1="1"
+		 id="feComposite3078" />
+	  <feComposite
+		 result="fbSourceGraphic"
+		 in="result8"
+		 operator="in"
+		 in2="result2"
+		 id="feComposite3080" />
+	</filter>
+	<filter
+	   x="-0.25"
+	   width="1.5"
+	   y="-0.25"
+	   height="1.5"
+	   menu="Non realistic 3D shaders"
+	   menu-="Fluid brushed cartoon drawing"
+	   label="Comics fluid"
+	   color-interpolation-filters="sRGB"
+	   id="filter3082">
+	  <feGaussianBlur
+		 result="result8"
+		 stdDeviation="4"
+		 id="feGaussianBlur3084" />
+	  <feComposite
+		 in="result8"
+		 operator="xor"
+		 result="result6"
+		 in2="result8"
+		 id="feComposite3086" />
+	  <feDisplacementMap
+		 result="result4"
+		 scale="100"
+		 yChannelSelector="A"
+		 xChannelSelector="A"
+		 in2="result6"
+		 in="result6"
+		 id="feDisplacementMap3088" />
+	  <feComposite
+		 k1="5"
+		 in="result8"
+		 operator="arithmetic"
+		 result="result2"
+		 in2="result4"
+		 id="feComposite3090" />
+	  <feComposite
+		 in2="result2"
+		 operator="in"
+		 in="result6"
+		 result="fbSourceGraphic"
+		 id="feComposite3092" />
+	</filter>
+	<filter
+	   x="-0.25"
+	   width="1.5"
+	   y="-0.25"
+	   height="1.5"
+	   menu="Non realistic 3D shaders"
+	   menu-="Combination of smooth shading and embossing"
+	   label="Emboss shader"
+	   color-interpolation-filters="sRGB"
+	   id="filter3094">
+	  <feGaussianBlur
+		 result="result8"
+		 stdDeviation="5"
+		 id="feGaussianBlur3096" />
+	  <feComposite
+		 in="result8"
+		 operator="xor"
+		 result="result6"
+		 in2="result8"
+		 id="feComposite3098" />
+	  <feDisplacementMap
+		 result="result4"
+		 scale="100"
+		 yChannelSelector="A"
+		 xChannelSelector="A"
+		 in2="result6"
+		 in="result8"
+		 id="feDisplacementMap3100" />
+	  <feComposite
+		 k1="1"
+		 in="result4"
+		 operator="arithmetic"
+		 result="result2"
+		 in2="result4"
+		 id="feComposite3102" />
+	  <feComposite
+		 in2="result8"
+		 operator="in"
+		 in="result2"
+		 result="fbSourceGraphic"
+		 id="feComposite3104" />
+	</filter>
+	<filter
+	   x="-0.25"
+	   width="1.5"
+	   y="-0.25"
+	   height="1.5"
+	   menu="Non realistic 3D shaders"
+	   menu-="Non realistic frosted glass imitation"
+	   label="Frosted glass"
+	   color-interpolation-filters="sRGB"
+	   id="filter3106">
+	  <feGaussianBlur
+		 result="result8"
+		 stdDeviation="7"
+		 id="feGaussianBlur3108" />
+	  <feComposite
+		 in="result8"
+		 operator="xor"
+		 result="result6"
+		 in2="result8"
+		 id="feComposite3110" />
+	  <feDisplacementMap
+		 result="result4"
+		 scale="75"
+		 yChannelSelector="A"
+		 xChannelSelector="A"
+		 in2="result6"
+		 in="result6"
+		 id="feDisplacementMap3112" />
+	  <feComposite
+		 k1="2"
+		 in="SourceGraphic"
+		 operator="arithmetic"
+		 result="result2"
+		 in2="result4"
+		 id="feComposite3114" />
+	  <feComposite
+		 in2="result2"
+		 operator="in"
+		 in="result6"
+		 result="fbSourceGraphic"
+		 id="feComposite3116" />
+	</filter>
+	<filter
+	   x="-0.25"
+	   width="1.5"
+	   y="-0.25"
+	   height="1.5"
+	   menu="Non realistic 3D shaders"
+	   menu-="Silky close to mother of pearl shading"
+	   label="Satin"
+	   color-interpolation-filters="sRGB"
+	   id="filter3118">
+	  <feGaussianBlur
+		 result="result8"
+		 stdDeviation="7"
+		 id="feGaussianBlur3120" />
+	  <feComposite
+		 in="result8"
+		 operator="xor"
+		 result="result6"
+		 in2="result8"
+		 id="feComposite3122" />
+	  <feDisplacementMap
+		 result="result4"
+		 scale="75"
+		 yChannelSelector="A"
+		 xChannelSelector="A"
+		 in2="result6"
+		 in="result6"
+		 id="feDisplacementMap3124" />
+	  <feComposite
+		 k1="1"
+		 in="SourceGraphic"
+		 operator="arithmetic"
+		 result="result2"
+		 in2="result4"
+		 id="feComposite3126" />
+	  <feComposite
+		 in2="result2"
+		 operator="in"
+		 in="result8"
+		 result="fbSourceGraphic"
+		 id="feComposite3128" />
+	</filter>
+	<filter
+	   label="Smooth shader"
+	   menu-="Smooth shading with a graphite pencil grey"
+	   menu="Non realistic 3D shaders"
+	   height="1.5"
+	   y="-0.25"
+	   width="1.5"
+	   x="-0.25"
+	   color-interpolation-filters="sRGB"
+	   id="filter3130">
+	  <feGaussianBlur
+		 stdDeviation="7"
+		 result="result8"
+		 id="feGaussianBlur3132" />
+	  <feComposite
+		 in2="result8"
+		 result="result6"
+		 operator="xor"
+		 in="result8"
+		 id="feComposite3134" />
+	  <feDisplacementMap
+		 in="result8"
+		 in2="result6"
+		 xChannelSelector="A"
+		 yChannelSelector="A"
+		 scale="75"
+		 result="result4"
+		 id="feDisplacementMap3136" />
+	  <feComposite
+		 in2="result4"
+		 result="result2"
+		 operator="arithmetic"
+		 in="SourceGraphic"
+		 k1="1"
+		 id="feComposite3138" />
+	  <feComposite
+		 result="fbSourceGraphic"
+		 in="result8"
+		 operator="in"
+		 in2="result2"
+		 id="feComposite3140" />
+	</filter>
+	<filter
+	   label="Smooth shader contour"
+	   menu-="Contouring version of smooth shader"
+	   menu="Non realistic 3D shaders"
+	   height="1.5"
+	   y="-0.25"
+	   width="1.5"
+	   x="-0.25"
+	   color-interpolation-filters="sRGB"
+	   id="filter3142">
+	  <feGaussianBlur
+		 stdDeviation="7"
+		 result="result8"
+		 id="feGaussianBlur3144" />
+	  <feComposite
+		 in2="result8"
+		 result="result6"
+		 operator="xor"
+		 in="result8"
+		 id="feComposite3146" />
+	  <feDisplacementMap
+		 in2="result6"
+		 xChannelSelector="A"
+		 yChannelSelector="A"
+		 scale="75"
+		 result="result4"
+		 in="result8"
+		 id="feDisplacementMap3148" />
+	  <feComposite
+		 in2="result4"
+		 result="result2"
+		 operator="arithmetic"
+		 in="SourceGraphic"
+		 k1="1"
+		 id="feComposite3150" />
+	  <feComposite
+		 result="fbSourceGraphic"
+		 in="result6"
+		 operator="in"
+		 in2="result2"
+		 id="feComposite3152" />
+	</filter>
+	<filter
+	   label="Smooth shader dark"
+	   menu-="Dark version of non realistic smooth shading"
+	   menu="Non realistic 3D shaders"
+	   height="1.5"
+	   y="-0.25"
+	   width="1.5"
+	   x="-0.25"
+	   color-interpolation-filters="sRGB"
+	   id="filter3154">
+	  <feGaussianBlur
+		 stdDeviation="7"
+		 result="result8"
+		 id="feGaussianBlur3156" />
+	  <feComposite
+		 in2="result8"
+		 result="result6"
+		 operator="xor"
+		 in="result8"
+		 id="feComposite3158" />
+	  <feDisplacementMap
+		 in="result8"
+		 in2="result6"
+		 xChannelSelector="A"
+		 yChannelSelector="A"
+		 scale="75"
+		 result="result4"
+		 id="feDisplacementMap3160" />
+	  <feComposite
+		 in2="result4"
+		 result="result2"
+		 operator="arithmetic"
+		 in="SourceGraphic"
+		 k1="2"
+		 id="feComposite3162" />
+	</filter>
+</defs>

@@ -1,0 +1,162 @@
+<defs
+ id="defs3585" menu="Blurs">
+	<filter
+	   label="Apparition"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   tooltip="Edges are partly feathered out"
+	   color-interpolation-filters="sRGB"
+	   id="filter3601">
+	  <feMorphology
+		 radius="4"
+		 in="SourceGraphic"
+		 result="result0"
+		 id="feMorphology3603" />
+	  <feGaussianBlur
+		 in="result0"
+		 stdDeviation="8"
+		 result="result91"
+		 id="feGaussianBlur3605" />
+	  <feComposite
+		 operator="in"
+		 in="SourceGraphic"
+		 in2="result91"
+		 id="feComposite3607" />
+	</filter>
+	<filter
+	   label="Blur content"
+	   menu="Blurs"
+	   tooltip="Blur the contents of objects, preserving the outline"
+	   color-interpolation-filters="sRGB"
+	   id="filter3609">
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 "
+		 result="result7"
+		 id="feColorMatrix3611" />
+	  <feGaussianBlur
+		 result="result6"
+		 stdDeviation="5"
+		 id="feGaussianBlur3613" />
+	  <feComposite
+		 in2="result7"
+		 operator="atop"
+		 in="result6"
+		 result="result91"
+		 id="feComposite3615" />
+	  <feComposite
+		 operator="in"
+		 in2="result91"
+		 id="feComposite3617" />
+	</filter>
+	<filter
+	   label="Cross-smooth"
+	   menu="Blurs"
+	   tooltip="Blur inner borders and intersections"
+	   color-interpolation-filters="sRGB"
+	   id="filter3619">
+	  <feGaussianBlur
+		 stdDeviation="3"
+		 id="feGaussianBlur3621" />
+	  <feColorMatrix
+		 result="fbSourceGraphic"
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 6 -2.5 "
+		 id="feColorMatrix3623" />
+	</filter>
+	<filter
+	   label="Evanescent"
+	   menu="Blurs"
+	   tooltip="Blur the contents of objects, preserving the outline and adding progressive transparency at edges"
+	   color-interpolation-filters="sRGB"
+	   id="filter3625">
+	  <feGaussianBlur
+		 result="result6"
+		 stdDeviation="3"
+		 in="SourceGraphic"
+		 id="feGaussianBlur3627" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 "
+		 result="result7"
+		 in="SourceGraphic"
+		 id="feColorMatrix3629" />
+	  <feComposite
+		 operator="in"
+		 in="result6"
+		 in2="result7"
+		 id="feComposite3631" />
+	</filter>
+	<filter
+	   label="Fancy blur"
+	   menu="Blurs"
+	   tooltip="Smooth colorized contour which allows desaturation and hue rotation"
+	   color-interpolation-filters="sRGB"
+	   id="filter3633">
+	  <feGaussianBlur
+		 stdDeviation="5"
+		 result="result1"
+		 id="feGaussianBlur3635" />
+	  <feComposite
+		 operator="arithmetic"
+		 k2="2"
+		 in="result1"
+		 in2="result1"
+		 id="feComposite3637" />
+	</filter>
+	<filter
+	   label="Motion blur, horizontal"
+	   menu="Blurs"
+	   tooltip="Blur as if the object flies horizontally; adjust Standard Deviation to vary force"
+	   color-interpolation-filters="sRGB"
+	   id="filter3639">
+	  <feGaussianBlur
+		 in="SourceGraphic"
+		 stdDeviation="5 0.01"
+		 id="feGaussianBlur3641" />
+	</filter>
+	<filter
+	   label="Motion blur, vertical"
+	   menu="Blurs"
+	   tooltip="Blur as if the object flies vertically; adjust Standard Deviation to vary force"
+	   color-interpolation-filters="sRGB"
+	   id="filter3643">
+	  <feGaussianBlur
+		 in="SourceGraphic"
+		 stdDeviation="0.01 5"
+		 id="feGaussianBlur3645" />
+	</filter>
+	<filter
+	   label="Noisy blur"
+	   menu="Blurs"
+	   tooltip="Small-scale roughening and blurring to edges and content"
+	   x="-0.25"
+	   width="1.5"
+	   y="-0.25"
+	   height="1.5"
+	   color-interpolation-filters="sRGB"
+	   id="filter3647">
+	  <feGaussianBlur
+		 stdDeviation="5"
+		 result="result1"
+		 id="feGaussianBlur3649" />
+	  <feTurbulence
+		 numOctaves="1"
+		 seed="0"
+		 type="fractalNoise"
+		 baseFrequency="0.1"
+		 result="result2"
+		 id="feTurbulence3651" />
+	  <feDisplacementMap
+		 scale="5"
+		 yChannelSelector="G"
+		 xChannelSelector="R"
+		 result="result3"
+		 in="result1"
+		 in2="result2"
+		 id="feDisplacementMap3653" />
+	  <feComposite
+		 operator="atop"
+		 in2="result3"
+		 id="feComposite3655" />
+	</filter>
+</defs>

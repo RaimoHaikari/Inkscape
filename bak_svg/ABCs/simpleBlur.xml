@@ -1,0 +1,9 @@
+<filter
+   name="Simple blur"
+   tooltip="Simple Gaussian blur, same as the blur slider in Fill and Stroke dialog"
+   color-interpolation-filters="sRGB"
+   id="filter3061">
+  <feGaussianBlur
+	 stdDeviation="3"
+	 id="feGaussianBlur3063" />
+</filter>

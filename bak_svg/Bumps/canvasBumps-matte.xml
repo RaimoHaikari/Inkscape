@@ -1,0 +1,56 @@
+<filter
+   name="Canvas Bumps, matte"
+   tooltip="Same as Canvas Bumps but with a diffuse light instead of a specular one"
+   color-interpolation-filters="sRGB"
+   id="filter3010">
+  <feTurbulence
+	 baseFrequency="0.2"
+	 seed="300"
+	 numOctaves="7"
+	 result="result1"
+	 type="turbulence"
+	 id="feTurbulence3012" />
+  <feDisplacementMap
+	 in2="result1"
+	 xChannelSelector="R"
+	 result="result6"
+	 id="feDisplacementMap3014" />
+  <feBlend
+	 result="fbSourceGraphic"
+	 mode="screen"
+	 in2="SourceGraphic"
+	 in="result6"
+	 id="feBlend3016" />
+  <feColorMatrix
+	 values="1 0 0 -1 0 1 0 1 -1 0 1 0 0 -1 0 -0.8 -1 0 4 -2.5 "
+	 result="fbSourceGraphicAlpha"
+	 id="feColorMatrix3018" />
+  <feGaussianBlur
+	 stdDeviation="0.5"
+	 in="fbSourceGraphicAlpha"
+	 result="result0"
+	 id="feGaussianBlur3020" />
+  <feDiffuseLighting
+	 result="result5"
+	 surfaceScale="15"
+	 diffuseConstant="0.4"
+	 id="feDiffuseLighting3022">
+	<feDistantLight
+	   azimuth="235"
+	   elevation="25"
+	   id="feDistantLight3024" />
+  </feDiffuseLighting>
+  <feComposite
+	 result="result4"
+	 operator="arithmetic"
+	 k2="0.9"
+	 k3="0.9"
+	 in2="SourceGraphic"
+	 id="feComposite3026" />
+  <feComposite
+	 in2="SourceGraphic"
+	 in="result4"
+	 result="result2"
+	 operator="in"
+	 id="feComposite3028" />
+</filter>

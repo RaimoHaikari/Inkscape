@@ -1,0 +1,851 @@
+<defs id="defs4571" menu="Image effects, transparent">
+	<filter
+	   label="Alpha draw"
+	   tooltip="Gives a transparent drawing effect to bitmaps and materials"
+	   height="1"
+	   width="1"
+	   y="0"
+	   x="0"
+	   color-interpolation-filters="sRGB"
+	   id="filter4590">
+	  <feGaussianBlur
+		 result="result8"
+		 stdDeviation="0.6"
+		 id="feGaussianBlur4592" />
+	  <feConvolveMatrix
+		 order="3 3"
+		 kernelMatrix="1 1 1 1 -8 1 1 1 1 "
+		 in="result8"
+		 divisor="1"
+		 targetX="1"
+		 targetY="1"
+		 preserveAlpha="true"
+		 result="result0"
+		 bias="0"
+		 id="feConvolveMatrix4594" />
+	  <feColorMatrix
+		 values="1"
+		 in="result0"
+		 result="result1"
+		 type="luminanceToAlpha"
+		 id="feColorMatrix4596" />
+	  <feComposite
+		 k2="10"
+		 in="result1"
+		 result="result2"
+		 operator="arithmetic"
+		 in2="result1"
+		 id="feComposite4598" />
+	  <feGaussianBlur
+		 result="result7"
+		 in="result2"
+		 stdDeviation="0.01"
+		 id="feGaussianBlur4600" />
+	  <feColorMatrix
+		 result="result9"
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 8 -1.7 "
+		 id="feColorMatrix4602" />
+	  <feFlood
+		 flood-opacity="1"
+		 result="result10"
+		 flood-color="rgb(0,0,0)"
+		 id="feFlood4604" />
+	  <feComposite
+		 in2="result9"
+		 in="result10"
+		 operator="in"
+		 result="result11"
+		 id="feComposite4606" />
+	  <feComposite
+		 in2="result11"
+		 operator="in"
+		 id="feComposite4608" />
+	</filter>
+	<filter
+	   label="Alpha draw, color"
+	   menu="Image effects, transparent"
+	   tooltip="Gives a transparent color fill effect to bitmaps and materials"
+	   height="1"
+	   width="1"
+	   y="0"
+	   x="0"
+	   color-interpolation-filters="sRGB"
+	   id="filter4610">
+	  <feGaussianBlur
+		 result="result8"
+		 stdDeviation="0.6"
+		 id="feGaussianBlur4612" />
+	  <feConvolveMatrix
+		 order="3 3"
+		 kernelMatrix="1 1 1 1 -8 1 1 1 1 "
+		 in="result8"
+		 divisor="1"
+		 targetX="1"
+		 targetY="1"
+		 preserveAlpha="true"
+		 result="result0"
+		 bias="0"
+		 id="feConvolveMatrix4614" />
+	  <feColorMatrix
+		 in="result0"
+		 result="result3"
+		 values="0 -20 0 0 1 0 -20 0 0 1 0 -20 0 0 1 0 0 0 1 0 "
+		 id="feColorMatrix4616" />
+	  <feColorMatrix
+		 values="1"
+		 in="result3"
+		 result="result1"
+		 type="luminanceToAlpha"
+		 id="feColorMatrix4618" />
+	  <feComposite
+		 in2="result1"
+		 in="SourceGraphic"
+		 result="result2"
+		 operator="out"
+		 id="feComposite4620" />
+	  <feGaussianBlur
+		 result="result7"
+		 in="result2"
+		 stdDeviation="0.01"
+		 id="feGaussianBlur4622" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 8 -1.7 "
+		 result="result9"
+		 id="feColorMatrix4624" />
+	  <feComposite
+		 operator="arithmetic"
+		 k2="1.25"
+		 in2="result9"
+		 id="feComposite4626" />
+	</filter>
+	<filter
+	   x="-0.5"
+	   y="-0.5"
+	   width="2"
+	   height="2"
+	   label="Alpha draw, liquid"
+	   menu="Image effects, transparent"
+	   tooltip="Gives a transparent fluid drawing effect with rough line and filling"
+	   color-interpolation-filters="sRGB"
+	   id="filter4628">
+	  <feGaussianBlur
+		 result="result12"
+		 stdDeviation="2"
+		 id="feGaussianBlur4630" />
+	  <feTurbulence
+		 numOctaves="1"
+		 seed="0"
+		 type="fractalNoise"
+		 baseFrequency="0.03"
+		 result="result1"
+		 id="feTurbulence4632" />
+	  <feDisplacementMap
+		 in="result1"
+		 scale="200"
+		 yChannelSelector="B"
+		 xChannelSelector="R"
+		 in2="result12"
+		 result="result3"
+		 id="feDisplacementMap4634" />
+	  <feComposite
+		 result="result14"
+		 operator="in"
+		 in2="result1"
+		 id="feComposite4636" />
+	  <feGaussianBlur
+		 in="result14"
+		 stdDeviation="0.5"
+		 result="result8"
+		 id="feGaussianBlur4638" />
+	  <feConvolveMatrix
+		 bias="0"
+		 result="result0"
+		 preserveAlpha="true"
+		 targetY="1"
+		 targetX="1"
+		 divisor="1"
+		 in="result8"
+		 kernelMatrix="1 1 1 1 -8 1 1 1 1 "
+		 order="3 3"
+		 id="feConvolveMatrix4640" />
+	  <feColorMatrix
+		 type="luminanceToAlpha"
+		 result="result1"
+		 in="result0"
+		 values="1"
+		 id="feColorMatrix4642" />
+	  <feComposite
+		 in="result1"
+		 in2="result1"
+		 k2="5"
+		 operator="arithmetic"
+		 result="result11"
+		 id="feComposite4644" />
+	  <feGaussianBlur
+		 stdDeviation="0.2"
+		 in="result11"
+		 result="result7"
+		 id="feGaussianBlur4646" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 5 -0.5 "
+		 result="result9"
+		 id="feColorMatrix4648" />
+	  <feComposite
+		 result="result13"
+		 operator="in"
+		 in2="result9"
+		 in="result12"
+		 id="feComposite4650" />
+	  <feFlood
+		 in="result13"
+		 flood-color="rgb(157,87,40)"
+		 result="result10"
+		 flood-opacity="1"
+		 id="feFlood4652" />
+	  <feComposite
+		 operator="in"
+		 in="result10"
+		 in2="result13"
+		 id="feComposite4654" />
+	  <feComposite
+		 operator="in"
+		 in2="SourceGraphic"
+		 id="feComposite4656" />
+	</filter>
+	<filter
+	   tooltip="Gives a transparent engraving effect with rough line and filling"
+	   menu="Image effects, transparent"
+	   label="Alpha engraving"
+	   height="1"
+	   width="1"
+	   y="0"
+	   x="0"
+	   color-interpolation-filters="sRGB"
+	   id="filter4658">
+	  <feTurbulence
+		 result="result1"
+		 baseFrequency="0.03"
+		 type="fractalNoise"
+		 seed="0"
+		 numOctaves="5"
+		 id="feTurbulence4660" />
+	  <feDisplacementMap
+		 result="result3"
+		 in2="result1"
+		 xChannelSelector="R"
+		 yChannelSelector="G"
+		 scale="7"
+		 in="SourceGraphic"
+		 id="feDisplacementMap4662" />
+	  <feComposite
+		 result="result4"
+		 in="result3"
+		 in2="result1"
+		 operator="in"
+		 id="feComposite4664" />
+	  <feGaussianBlur
+		 result="result8"
+		 stdDeviation="0.7"
+		 in="result4"
+		 id="feGaussianBlur4666" />
+	  <feConvolveMatrix
+		 order="3 3"
+		 kernelMatrix="1 1 1 1 -8 1 1 1 1 "
+		 in="result8"
+		 divisor="1"
+		 targetX="1"
+		 targetY="1"
+		 preserveAlpha="true"
+		 result="result0"
+		 bias="0"
+		 id="feConvolveMatrix4668" />
+	  <feColorMatrix
+		 values="1"
+		 in="result0"
+		 result="result1"
+		 type="luminanceToAlpha"
+		 id="feColorMatrix4670" />
+	  <feComposite
+		 result="result11"
+		 operator="arithmetic"
+		 k2="5"
+		 in2="result1"
+		 id="feComposite4672" />
+	  <feGaussianBlur
+		 result="result7"
+		 in="result11"
+		 stdDeviation="0.5"
+		 id="feGaussianBlur4674" />
+	  <feColorMatrix
+		 result="result9"
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 3 0 "
+		 id="feColorMatrix4676" />
+	  <feFlood
+		 flood-opacity="1"
+		 result="result10"
+		 flood-color="rgb(157,87,40)"
+		 in="result9"
+		 id="feFlood4678" />
+	  <feComposite
+		 in2="result9"
+		 in="result10"
+		 operator="in"
+		 id="feComposite4680" />
+	  <feComposite
+		 in2="SourceGraphic"
+		 operator="in"
+		 id="feComposite4682" />
+	</filter>
+	<filter
+	   label="Alpha engraving B"
+	   menu="Image effects, transparent"
+	   tooltip="Gives a controllable roughness engraving effect to bitmaps and materials"
+	   height="1"
+	   y="0"
+	   width="1"
+	   x="0"
+	   color-interpolation-filters="sRGB"
+	   id="filter4684">
+	  <feTurbulence
+		 numOctaves="1"
+		 seed="0"
+		 type="fractalNoise"
+		 baseFrequency="0.1"
+		 result="result1"
+		 id="feTurbulence4686" />
+	  <feGaussianBlur
+		 stdDeviation="4"
+		 result="result2"
+		 id="feGaussianBlur4688" />
+	  <feDisplacementMap
+		 scale="10"
+		 yChannelSelector="B"
+		 xChannelSelector="R"
+		 in="SourceGraphic"
+		 in2="result2"
+		 result="fbSourceGraphic"
+		 id="feDisplacementMap4690" />
+	  <feGaussianBlur
+		 result="result8"
+		 stdDeviation="0.01"
+		 in="fbSourceGraphic"
+		 id="feGaussianBlur4692" />
+	  <feConvolveMatrix
+		 order="3 3"
+		 kernelMatrix="1 1 1 1 -8 1 1 1 1 "
+		 in="result8"
+		 divisor="1"
+		 targetX="1"
+		 targetY="1"
+		 preserveAlpha="true"
+		 result="result0"
+		 bias="0"
+		 id="feConvolveMatrix4694" />
+	  <feColorMatrix
+		 values="1"
+		 in="result0"
+		 result="result1"
+		 type="luminanceToAlpha"
+		 id="feColorMatrix4696" />
+	  <feComposite
+		 k2="2"
+		 in="result1"
+		 result="result2"
+		 operator="arithmetic"
+		 in2="result1"
+		 id="feComposite4698" />
+	  <feGaussianBlur
+		 result="result7"
+		 in="result2"
+		 stdDeviation="0.5"
+		 id="feGaussianBlur4700" />
+	  <feColorMatrix
+		 result="result9"
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 5 0 "
+		 id="feColorMatrix4702" />
+	  <feFlood
+		 flood-opacity="1"
+		 result="result10"
+		 flood-color="rgb(65,94,115)"
+		 id="feFlood4704" />
+	  <feComposite
+		 in2="result9"
+		 in="result10"
+		 operator="in"
+		 result="result11"
+		 id="feComposite4706" />
+	  <feComposite
+		 in2="result11"
+		 operator="in"
+		 id="feComposite4708" />
+	</filter>
+	<filter
+	   label="Bubbly Bumps alpha"
+	   menu="Image effects, transparent"
+	   tooltip="Same as Bubbly Bumps but with transparent highlights"
+	   color-interpolation-filters="sRGB"
+	   id="filter4710">
+	  <feGaussianBlur
+		 result="result0"
+		 in="SourceGraphic"
+		 stdDeviation="0.5"
+		 id="feGaussianBlur4712" />
+	  <feTurbulence
+		 baseFrequency="0.2"
+		 seed="300"
+		 numOctaves="10"
+		 result="result1"
+		 type="fractalNoise"
+		 id="feTurbulence4714" />
+	  <feGaussianBlur
+		 stdDeviation="4"
+		 result="result8"
+		 id="feGaussianBlur4716" />
+	  <feDisplacementMap
+		 result="result7"
+		 in2="result8"
+		 scale="5"
+		 in="SourceGraphic"
+		 xChannelSelector="R"
+		 id="feDisplacementMap4718" />
+	  <feComposite
+		 result="result2"
+		 operator="in"
+		 in2="result1"
+		 in="result7"
+		 id="feComposite4720" />
+	  <feComposite
+		 k3="3"
+		 in2="result2"
+		 in="result0"
+		 operator="arithmetic"
+		 id="feComposite4722" />
+	  <feBlend
+		 result="fbSourceGraphic"
+		 mode="multiply"
+		 in2="result2"
+		 id="feBlend4724" />
+	  <feColorMatrix
+		 values="1 0 0 -1 0 1 0 1 -1 0 1 0 0 -1 0 -1.8 -0.5 0 5.7 -3.5 "
+		 in="fbSourceGraphic"
+		 result="fbSourceGraphicAlpha"
+		 id="feColorMatrix4726" />
+	  <feGaussianBlur
+		 stdDeviation="0.5"
+		 in="fbSourceGraphicAlpha"
+		 result="result0"
+		 id="feGaussianBlur4728" />
+	  <feSpecularLighting
+		 result="result6"
+		 surfaceScale="-5"
+		 specularExponent="5"
+		 id="feSpecularLighting4730">
+		<feDistantLight
+		   azimuth="225"
+		   elevation="25"
+		   id="feDistantLight4732" />
+	  </feSpecularLighting>
+	  <feComposite
+		 in2="result6"
+		 in="SourceGraphic"
+		 result="result2"
+		 operator="in"
+		 id="feComposite4734" />
+	  <feComposite
+		 in="result2"
+		 result="result4"
+		 operator="arithmetic"
+		 k2="1"
+		 k3="1"
+		 in2="result2"
+		 id="feComposite4736" />
+	</filter>
+	<filter
+	   tooltip="Same as Canvas Bumps but with transparent highlights"
+	   menu="Image effects, transparent"
+	   label="Canvas Bumps alpha"
+	   color-interpolation-filters="sRGB"
+	   id="filter4738">
+	  <feTurbulence
+		 type="turbulence"
+		 result="result1"
+		 numOctaves="7"
+		 seed="300"
+		 baseFrequency="0.2"
+		 id="feTurbulence4740" />
+	  <feBlend
+		 in="result1"
+		 in2="SourceGraphic"
+		 mode="screen"
+		 result="fbSourceGraphic"
+		 id="feBlend4742" />
+	  <feColorMatrix
+		 result="fbSourceGraphicAlpha"
+		 values="1 0 0 -1 0 1 0 1 -1 0 1 0 0 -1 0 -0.8 -1 0 4 -2.5 "
+		 id="feColorMatrix4744" />
+	  <feGaussianBlur
+		 result="result0"
+		 in="fbSourceGraphicAlpha"
+		 stdDeviation="0.5"
+		 id="feGaussianBlur4746" />
+	  <feSpecularLighting
+		 result="result6"
+		 surfaceScale="-5"
+		 specularConstant="1"
+		 specularExponent="5"
+		 id="feSpecularLighting4748">
+		<feDistantLight
+		   azimuth="225"
+		   elevation="35"
+		   id="feDistantLight4750" />
+	  </feSpecularLighting>
+	  <feComposite
+		 operator="in"
+		 result="result2"
+		 in="SourceGraphic"
+		 in2="result6"
+		 id="feComposite4752" />
+	  <feComposite
+		 in2="result2"
+		 k3="1"
+		 k2="1"
+		 operator="arithmetic"
+		 result="result4"
+		 in="result2"
+		 id="feComposite4754" />
+	</filter>
+	<filter
+	   label="Canvas transparency"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   menu="Image effects, transparent"
+	   tooltip="Gives a canvas like HSL sensitive transparency."
+	   color-interpolation-filters="sRGB"
+	   id="filter4756">
+	  <feTurbulence
+		 result="result1"
+		 numOctaves="10"
+		 baseFrequency="0.3"
+		 type="turbulence"
+		 id="feTurbulence4758" />
+	  <feColorMatrix
+		 result="result0"
+		 in="SourceGraphic"
+		 type="luminanceToAlpha"
+		 id="feColorMatrix4760" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.4 0 "
+		 result="result2"
+		 id="feColorMatrix4762" />
+	  <feComposite
+		 in="result2"
+		 operator="over"
+		 in2="result1"
+		 id="feComposite4764" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 10 -4 "
+		 result="result91"
+		 id="feColorMatrix4766" />
+	  <feComposite
+		 operator="out"
+		 in="SourceGraphic"
+		 in2="result91"
+		 id="feComposite4768" />
+	  <feGaussianBlur
+		 stdDeviation="0.7"
+		 id="feGaussianBlur4770" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 "
+		 id="feColorMatrix4772" />
+	</filter>
+	<filter
+	   label="Dots transparency"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   menu="Image effects, transparent"
+	   tooltip="Gives a pointillist HSL sensitive transparency"
+	   color-interpolation-filters="sRGB"
+	   id="filter4774">
+	  <feTurbulence
+		 result="result1"
+		 numOctaves="3"
+		 baseFrequency="1"
+		 type="fractalNoise"
+		 seed="50"
+		 id="feTurbulence4776" />
+	  <feColorMatrix
+		 result="result0"
+		 in="SourceGraphic"
+		 type="luminanceToAlpha"
+		 id="feColorMatrix4778" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.7 0 "
+		 result="result2"
+		 id="feColorMatrix4780" />
+	  <feComposite
+		 in="result1"
+		 operator="over"
+		 in2="result2"
+		 result="result3"
+		 id="feComposite4782" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 5 -3.2 "
+		 result="result91"
+		 id="feColorMatrix4784" />
+	  <feComposite
+		 operator="out"
+		 in="SourceGraphic"
+		 result="result4"
+		 in2="result91"
+		 id="feComposite4786" />
+	</filter>
+	<filter
+	   tooltip="Same as HSL Bumps but with transparent highlights"
+	   menu="Image effects, transparent"
+	   label="HSL Bumps alpha"
+	   color-interpolation-filters="sRGB"
+	   id="filter4788">
+	  <feGaussianBlur
+		 result="result0"
+		 in="SourceGraphic"
+		 stdDeviation="0.5"
+		 id="feGaussianBlur4790" />
+	  <feColorMatrix
+		 values="1 0 0 -1 0 1 0 1 -1 0 1 0 0 -1 0 -0.8 -1 0 4.4 -2.9 "
+		 in="result0"
+		 result="fbSourceGraphicAlpha"
+		 id="feColorMatrix4792" />
+	  <feGaussianBlur
+		 stdDeviation="0.7"
+		 in="fbSourceGraphicAlpha"
+		 result="result0"
+		 id="feGaussianBlur4794" />
+	  <feSpecularLighting
+		 in="result0"
+		 result="result1"
+		 lighting-color="rgb(255,255,255)"
+		 surfaceScale="-2"
+		 specularConstant="1.5"
+		 specularExponent="10"
+		 id="feSpecularLighting4796">
+		<feDistantLight
+		   elevation="50"
+		   azimuth="235"
+		   id="feDistantLight4798" />
+	  </feSpecularLighting>
+	  <feComposite
+		 result="result4"
+		 operator="in"
+		 in="SourceGraphic"
+		 in2="result1"
+		 id="feComposite4800" />
+	  <feComposite
+		 operator="arithmetic"
+		 k2="1"
+		 k3="1"
+		 in2="result4"
+		 id="feComposite4802" />
+	</filter>
+	<filter
+	   x="-0.2"
+	   width="1.4"
+	   y="-0.2"
+	   height="1.4"
+	   tooltip="Marbled transparency effect which conforms to image detected edges"
+	   menu="Image effects, transparent"
+	   label="Marbled ink"
+	   color-interpolation-filters="sRGB"
+	   id="filter4804">
+	  <feGaussianBlur
+		 result="result9"
+		 in="SourceGraphic"
+		 stdDeviation="2"
+		 id="feGaussianBlur4806" />
+	  <feTurbulence
+		 baseFrequency="0.06"
+		 numOctaves="10"
+		 type="fractalNoise"
+		 result="result7"
+		 seed="0"
+		 id="feTurbulence4808" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1.5 -0.3 "
+		 result="result5"
+		 id="feColorMatrix4810" />
+	  <feComposite
+		 in="result9"
+		 operator="out"
+		 result="result6"
+		 in2="result5"
+		 id="feComposite4812" />
+	  <feGaussianBlur
+		 result="result10"
+		 stdDeviation="0.5"
+		 id="feGaussianBlur4814" />
+	  <feDisplacementMap
+		 result="result4"
+		 scale="120"
+		 yChannelSelector="G"
+		 xChannelSelector="A"
+		 in2="result10"
+		 in="result5"
+		 id="feDisplacementMap4816" />
+	  <feComposite
+		 in="result9"
+		 operator="in"
+		 result="result2"
+		 in2="result4"
+		 id="feComposite4818" />
+	  <feComposite
+		 in2="SourceGraphic"
+		 operator="in"
+		 in="result2"
+		 result="fbSourceGraphic"
+		 id="feComposite4820" />
+	  <feBlend
+		 in2="result2"
+		 mode="multiply"
+		 id="feBlend4822" />
+	</filter>
+	<filter
+	   tooltip="Adds a turbulent transparency which displaces pixels at the same time"
+	   menu="Image effects, transparent"
+	   label="Rough transparency"
+	   color-interpolation-filters="sRGB"
+	   id="filter4824">
+	  <feTurbulence
+		 result="result3"
+		 baseFrequency="0.3"
+		 type="fractalNoise"
+		 seed="0"
+		 numOctaves="3"
+		 id="feTurbulence4826" />
+	  <feGaussianBlur
+		 stdDeviation="1.5"
+		 result="result91"
+		 id="feGaussianBlur4828" />
+	  <feDisplacementMap
+		 result="fbSourceGraphic"
+		 in="SourceGraphic"
+		 xChannelSelector="R"
+		 yChannelSelector="G"
+		 scale="30"
+		 in2="result91"
+		 id="feDisplacementMap4830" />
+	  <feColorMatrix
+		 type="luminanceToAlpha"
+		 in="fbSourceGraphic"
+		 result="result0"
+		 id="feColorMatrix4832" />
+	  <feColorMatrix
+		 result="result2"
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 "
+		 id="feColorMatrix4834" />
+	  <feComposite
+		 in2="result2"
+		 operator="over"
+		 in="result3"
+		 result="result4"
+		 id="feComposite4836" />
+	  <feGaussianBlur
+		 stdDeviation="2"
+		 result="result5"
+		 id="feGaussianBlur4838" />
+	  <feDisplacementMap
+		 scale="100"
+		 xChannelSelector="R"
+		 in="result5"
+		 in2="result3"
+		 yChannelSelector="G"
+		 id="feDisplacementMap4840" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 6.5 -4.5 "
+		 result="result92"
+		 id="feColorMatrix4842" />
+	  <feComposite
+		 in="fbSourceGraphic"
+		 operator="out"
+		 in2="result92"
+		 id="feComposite4844" />
+	</filter>
+	<filter
+	   label="Smear transparency"
+	   menu="Image effects, transparent"
+	   tooltip="Paint objects with a transparent turbulence which turns around color edges"
+	   height="1.4"
+	   y="-0.2"
+	   width="1.4"
+	   x="-0.2"
+	   color-interpolation-filters="sRGB"
+	   id="filter4846">
+	  <feColorMatrix
+		 in="SourceGraphic"
+		 result="result1"
+		 type="luminanceToAlpha"
+		 id="feColorMatrix4848" />
+	  <feComposite
+		 in2="result1"
+		 k3="1"
+		 in="SourceGraphic"
+		 result="result2"
+		 operator="out"
+		 id="feComposite4850" />
+	  <feGaussianBlur
+		 stdDeviation="0.7"
+		 result="result10"
+		 id="feGaussianBlur4852" />
+	  <feBlend
+		 in2="result10"
+		 mode="screen"
+		 in="result10"
+		 result="fbSourceGraphic"
+		 id="feBlend4854" />
+	  <feGaussianBlur
+		 stdDeviation="3"
+		 result="result8"
+		 in="fbSourceGraphic"
+		 id="feGaussianBlur4856" />
+	  <feTurbulence
+		 seed="0"
+		 result="result7"
+		 type="fractalNoise"
+		 numOctaves="1"
+		 baseFrequency="0.3"
+		 id="feTurbulence4858" />
+	  <feColorMatrix
+		 result="result9"
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1.2 -0.2 "
+		 id="feColorMatrix4860" />
+	  <feComposite
+		 in2="result8"
+		 result="result6"
+		 operator="atop"
+		 in="result8"
+		 id="feComposite4862" />
+	  <feDisplacementMap
+		 in="result9"
+		 in2="result6"
+		 xChannelSelector="R"
+		 yChannelSelector="A"
+		 scale="100"
+		 result="result4"
+		 id="feDisplacementMap4864" />
+	  <feComposite
+		 in2="result4"
+		 result="result2"
+		 operator="arithmetic"
+		 in="result8"
+		 k1="2"
+		 id="feComposite4866" />
+	  <feComposite
+		 result="fbSourceGraphic"
+		 in="fbSourceGraphic"
+		 operator="in"
+		 in2="result2"
+		 id="feComposite4868" />
+	</filter>
+</defs>

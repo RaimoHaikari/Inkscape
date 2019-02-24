@@ -1,0 +1,75 @@
+<filter
+   name="Neon"
+   tooltip="Neon light effect"
+   x="-0.25"
+   y="-0.25"
+   width="1.5"
+   height="1.5"
+   color-interpolation-filters="sRGB"
+   id="filter3079">
+  <feGaussianBlur
+	 stdDeviation="1"
+	 result="result1"
+	 id="feGaussianBlur3081" />
+  <feComposite
+	 in="result1"
+	 in2="result1"
+	 result="result4"
+	 operator="in"
+	 id="feComposite3083" />
+  <feGaussianBlur
+	 stdDeviation="7"
+	 result="result6"
+	 in="result4"
+	 id="feGaussianBlur3085" />
+  <feComposite
+	 operator="over"
+	 in="result6"
+	 in2="result4"
+	 result="result8"
+	 id="feComposite3087" />
+  <feComposite
+	 operator="in"
+	 result="fbSourceGraphic"
+	 in="result6"
+	 in2="result8"
+	 id="feComposite3089" />
+  <feSpecularLighting
+	 specularExponent="45"
+	 specularConstant="2"
+	 surfaceScale="2.5"
+	 lighting-color="rgb(255,255,255)"
+	 result="result1"
+	 in="fbSourceGraphic"
+	 id="feSpecularLighting3091">
+	<fePointLight
+	   z="20000"
+	   y="-10000"
+	   x="-5000"
+	   id="fePointLight3093" />
+  </feSpecularLighting>
+  <feComposite
+	 operator="in"
+	 result="result2"
+	 in="result1"
+	 in2="fbSourceGraphic"
+	 id="feComposite3095" />
+  <feComposite
+	 k3="1.5"
+	 k2="1.2"
+	 operator="arithmetic"
+	 result="result4"
+	 in="fbSourceGraphic"
+	 in2="result2"
+	 id="feComposite3097" />
+  <feComposite
+	 operator="over"
+	 in="result9"
+	 in2="result4"
+	 result="result9"
+	 id="feComposite3099" />
+  <feBlend
+	 mode="screen"
+	 in2="result9"
+	 id="feBlend3101" />
+</filter>

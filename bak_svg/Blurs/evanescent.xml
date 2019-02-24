@@ -1,0 +1,22 @@
+<filter
+   name="Evanescent"
+   inkscape:menu="Blurs"
+   tooltip="Blur the contents of objects, preserving the outline and adding progressive transparency at edges"
+   color-interpolation-filters="sRGB"
+   id="filter4332">
+  <feGaussianBlur
+	 result="result6"
+	 stdDeviation="3"
+	 in="SourceGraphic"
+	 id="feGaussianBlur4334" />
+  <feColorMatrix
+	 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 "
+	 result="result7"
+	 in="SourceGraphic"
+	 id="feColorMatrix4336" />
+  <feComposite
+	 operator="in"
+	 in="result6"
+	 in2="result7"
+	 id="feComposite4338" />
+</filter>

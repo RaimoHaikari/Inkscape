@@ -1,0 +1,87 @@
+<filter
+   tooltip="Combine a HSL edges detection bump with a leathery or woody and colorizable texture"
+   name="Embossed leather"
+   height="1.4"
+   width="1.4"
+   x="-0.2"
+   y="-0.2"
+   color-interpolation-filters="sRGB"
+   id="filter3106">
+  <feGaussianBlur
+	 result="result14"
+	 stdDeviation="1.5"
+	 id="feGaussianBlur3108" />
+  <feFlood
+	 result="result12"
+	 flood-color="rgb(146,94,26)"
+	 in="SourceGraphic"
+	 id="feFlood3110" />
+  <feTurbulence
+	 type="turbulence"
+	 seed="25"
+	 baseFrequency="0.001 0.002"
+	 numOctaves="5"
+	 result="result5"
+	 id="feTurbulence3112" />
+  <feDisplacementMap
+	 scale="100"
+	 xChannelSelector="R"
+	 in="result5"
+	 result="result8"
+	 in2="result14"
+	 yChannelSelector="G"
+	 id="feDisplacementMap3114" />
+  <feComposite
+	 in="result8"
+	 result="result10"
+	 operator="arithmetic"
+	 in2="result5"
+	 k1="0.5"
+	 k2="0.5"
+	 id="feComposite3116" />
+  <feSpecularLighting
+	 specularExponent="15"
+	 specularConstant="1"
+	 surfaceScale="-15"
+	 result="result2"
+	 id="feSpecularLighting3118">
+	<feDistantLight
+	   elevation="90"
+	   azimuth="225"
+	   id="feDistantLight3120" />
+  </feSpecularLighting>
+  <feGaussianBlur
+	 result="result13"
+	 stdDeviation="0.4"
+	 id="feGaussianBlur3122" />
+  <feDiffuseLighting
+	 surfaceScale="-20"
+	 result="result1"
+	 diffuseConstant="0.6"
+	 in="result13"
+	 id="feDiffuseLighting3124">
+	<feDistantLight
+	   elevation="10"
+	   azimuth="225"
+	   id="feDistantLight3126" />
+  </feDiffuseLighting>
+  <feComposite
+	 result="result4"
+	 in="SourceGraphic"
+	 operator="arithmetic"
+	 k2="1"
+	 k3="0.6"
+	 in2="result1"
+	 id="feComposite3128" />
+  <feComposite
+	 result="result11"
+	 in2="SourceGraphic"
+	 operator="in"
+	 id="feComposite3130" />
+  <feBlend
+	 in2="result11"
+	 in="result11"
+	 result="result9"
+	 mode="normal"
+	 id="feBlend3132" />
+</filter>

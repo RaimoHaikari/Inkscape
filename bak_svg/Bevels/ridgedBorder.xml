@@ -1,0 +1,36 @@
+<filter
+   name="Ridged border"
+   tooltip="Ridged border with inner bevel"
+   color-interpolation-filters="sRGB"
+   id="filter3151">
+  <feMorphology
+	 radius="4.3"
+	 in="SourceAlpha"
+	 result="result91"
+	 id="feMorphology3153" />
+  <feComposite
+	 operator="out"
+	 in="SourceGraphic"
+	 in2="result91"
+	 id="feComposite3155" />
+  <feGaussianBlur
+	 result="result0"
+	 stdDeviation="1.2"
+	 id="feGaussianBlur3157" />
+  <feDiffuseLighting
+	 diffuseConstant="1"
+	 id="feDiffuseLighting3159">
+	<feDistantLight
+	   elevation="66"
+	   azimuth="225"
+	   id="feDistantLight3161" />
+  </feDiffuseLighting>
+  <feBlend
+	 mode="multiply"
+	 in2="SourceGraphic"
+	 id="feBlend3163" />
+  <feComposite
+	 operator="in"
+	 in2="SourceAlpha"
+	 id="feComposite3165" />
+</filter>

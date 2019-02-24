@@ -1,0 +1,461 @@
+<defs
+ id="defs5347" menu="Morphology">
+	<filter
+	   label="Black hole"	   
+	   tooltip="Creates a black light inside and outside"
+	   height="1.5"
+	   width="1.5"
+	   y="-0.25"
+	   x="-0.25"
+	   color-interpolation-filters="sRGB"
+	   id="filter5363">
+	  <feGaussianBlur
+		 stdDeviation="5"
+		 in="SourceAlpha"
+		 result="result1"
+		 id="feGaussianBlur5365" />
+	  <feComposite
+		 operator="arithmetic"
+		 k2="3.2"
+		 k1="-1"
+		 k4="-2"
+		 result="result3"
+		 in2="result1"
+		 id="feComposite5367" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 10 0 "
+		 result="result2"
+		 id="feColorMatrix5369" />
+	  <feComposite
+		 result="fbSourceGraphic"
+		 in="SourceGraphic"
+		 operator="out"
+		 in2="result2"
+		 id="feComposite5371" />
+	  <feBlend
+		 mode="multiply"
+		 in="result1"
+		 in2="fbSourceGraphic"
+		 result="result91"
+		 id="feBlend5373" />
+	  <feBlend
+		 mode="screen"
+		 in="fbSourceGraphic"
+		 in2="result91"
+		 id="feBlend5375" />
+	</filter>
+	<filter
+	   label="Color outline"
+	   menu="Morphology"
+	   tooltip="Draws a colored outline around"
+	   width="1.5"
+	   height="1.5"
+	   x="-0.25"
+	   y="-0.25"
+	   color-interpolation-filters="sRGB"
+	   id="filter5377">
+	  <feGaussianBlur
+		 in="SourceAlpha"
+		 stdDeviation="3"
+		 result="blur"
+		 id="feGaussianBlur5379" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 10 -1 "
+		 result="result4"
+		 id="feColorMatrix5381" />
+	  <feFlood
+		 result="result1"
+		 flood-color="rgb(154,27,74)"
+		 in="blur"
+		 id="feFlood5383" />
+	  <feComposite
+		 result="result2"
+		 in2="result4"
+		 in="result1"
+		 operator="atop"
+		 id="feComposite5385" />
+	  <feComposite
+		 in="SourceGraphic"
+		 in2="result2"
+		 result="result3"
+		 operator="atop"
+		 id="feComposite5387" />
+	</filter>
+	<filter
+	   label="Color outline, in"
+	   menu="Morphology"
+	   tooltip="A colorizable inner outline with adjustable width and blur"
+	   color-interpolation-filters="sRGB"
+	   id="filter5389">
+	  <feGaussianBlur
+		 stdDeviation="2"
+		 result="result8"
+		 id="feGaussianBlur5391" />
+	  <feColorMatrix
+		 result="result5"
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 10 -9 "
+		 id="feColorMatrix5393" />
+	  <feComposite
+		 result="result6"
+		 in="SourceGraphic"
+		 operator="in"
+		 in2="result5"
+		 id="feComposite5395" />
+	  <feFlood
+		 result="result10"
+		 in="result6"
+		 flood-opacity="1"
+		 flood-color="rgb(203,134,255)"
+		 id="feFlood5397" />
+	  <feComposite
+		 result="result2"
+		 operator="in"
+		 in2="SourceGraphic"
+		 id="feComposite5399" />
+	  <feBlend
+		 mode="normal"
+		 in="result6"
+		 in2="result2"
+		 id="feBlend5401" />
+	</filter>
+	<filter
+	   label="Cool outside"
+	   menu="Morphology"
+	   tooltip="Blurred colorized contour, empty inside"
+	   color-interpolation-filters="sRGB"
+	   id="filter5403">
+	  <feGaussianBlur
+		 stdDeviation="2"
+		 result="result1"
+		 id="feGaussianBlur5405" />
+	  <feOffset
+		 dx="2"
+		 dy="2"
+		 id="feOffset5407" />
+	  <feConvolveMatrix
+		 result="result3"
+		 order="3 3"
+		 kernelMatrix="2 0 0 0 8 0 4 0 -4 "
+		 divisor="2"
+		 bias="0"
+		 targetX="0"
+		 id="feConvolveMatrix5409" />
+	  <feComposite
+		 operator="xor"
+		 result="result2"
+		 in="result3"
+		 in2="result1"
+		 id="feComposite5411" />
+	  <feColorMatrix
+		 values="91.7"
+		 result="fbSourceGraphic"
+		 type="hueRotate"
+		 id="feColorMatrix5413" />
+	  <feBlend
+		 mode="multiply"
+		 result="result4"
+		 in="fbSourceGraphic"
+		 in2="result3"
+		 id="feBlend5415" />
+	  <feComposite
+		 operator="in"
+		 result="result6"
+		 in="fbSourceGraphic"
+		 in2="result4"
+		 id="feComposite5417" />
+	</filter>
+	<filter
+	   label="Hole"
+	   menu="Morphology"
+	   tooltip="Opens a smooth hole inside the shape"
+	   color-interpolation-filters="sRGB"
+	   id="filter5419">
+	  <feGaussianBlur
+		 stdDeviation="12"
+		 in="SourceAlpha"
+		 result="result1"
+		 id="feGaussianBlur5421" />
+	  <feComposite
+		 operator="arithmetic"
+		 k2="3.5"
+		 k4="-2"
+		 result="result2"
+		 in2="result1"
+		 id="feComposite5423" />
+	  <feComposite
+		 in="SourceGraphic"
+		 operator="out"
+		 in2="result2"
+		 result="result91"
+		 id="feComposite5425" />
+	  <feBlend
+		 mode="darken"
+		 in2="result91"
+		 id="feBlend5427" />
+	</filter>
+	<filter
+	   label="Inner outline"
+	   menu="Morphology"
+	   tooltip="Draws an outline around"
+	   color-interpolation-filters="sRGB"
+	   id="filter5429">
+	  <feGaussianBlur
+		 result="result1"
+		 in="SourceAlpha"
+		 stdDeviation="3"
+		 id="feGaussianBlur5431" />
+	  <feComposite
+		 result="result3"
+		 k4="-2"
+		 k1="-1"
+		 k2="3.2"
+		 operator="arithmetic"
+		 in2="result1"
+		 id="feComposite5433" />
+	  <feColorMatrix
+		 result="result2"
+		 values="0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 10 0 "
+		 id="feColorMatrix5435" />
+	  <feComposite
+		 operator="out"
+		 in="SourceGraphic"
+		 result="fbSourceGraphic"
+		 in2="result2"
+		 id="feComposite5437" />
+	  <feBlend
+		 mode="darken"
+		 in2="fbSourceGraphic"
+		 in="fbSourceGraphic"
+		 id="feBlend5439" />
+	</filter>
+	<filter
+	   label="Outline"
+	   menu="Morphology"
+	   tooltip="Adds a glowing blur and removes the shape"
+	   color-interpolation-filters="sRGB"
+	   id="filter5441">
+	  <feGaussianBlur
+		 stdDeviation="5"
+		 result="result2"
+		 id="feGaussianBlur5443" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 10 -2 "
+		 result="result1"
+		 id="feColorMatrix5445" />
+	  <feComposite
+		 operator="arithmetic"
+		 in="SourceGraphic"
+		 k2="-1"
+		 k3="1"
+		 in2="result1"
+		 id="feComposite5447" />
+	</filter>
+	<filter
+	   label="Outline, double"
+	   menu="Morphology"
+	   tooltip="Draws a smooth line inside colorized with the color it overlays"
+	   color-interpolation-filters="sRGB"
+	   id="filter5449">
+	  <feGaussianBlur
+		 stdDeviation="3"
+		 in="SourceAlpha"
+		 result="result1"
+		 id="feGaussianBlur5451" />
+	  <feComposite
+		 operator="arithmetic"
+		 k2="3.2"
+		 k1="-1"
+		 k4="-2"
+		 result="result3"
+		 in2="result1"
+		 id="feComposite5453" />
+	  <feColorMatrix
+		 values="0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 10 0 "
+		 result="result2"
+		 id="feColorMatrix5455" />
+	  <feComposite
+		 result="fbSourceGraphic"
+		 in="SourceGraphic"
+		 operator="out"
+		 in2="result2"
+		 id="feComposite5457" />
+	  <feGaussianBlur
+		 in="fbSourceGraphic"
+		 stdDeviation="0.5"
+		 result="result4"
+		 id="feGaussianBlur5459" />
+	  <feComposite
+		 operator="xor"
+		 in="result4"
+		 result="result5"
+		 in2="result4"
+		 id="feComposite5461" />
+	  <feBlend
+		 result="result6"
+		 mode="darken"
+		 in="result5"
+		 in2="result5"
+		 id="feBlend5463" />
+	  <feBlend
+		 in="result6"
+		 in2="result6"
+		 mode="darken"
+		 id="feBlend5465" />
+	</filter>
+	<filter
+	   label="Parallel hollow"
+	   menu="Morphology"
+	   tooltip="A blurry hollow going parallel to the edge on the inside"
+	   color-interpolation-filters="sRGB"
+	   id="filter5467">
+	  <feGaussianBlur
+		 stdDeviation="7.5"
+		 in="SourceAlpha"
+		 result="result1"
+		 id="feGaussianBlur5469" />
+	  <feComposite
+		 operator="arithmetic"
+		 k2="3.2"
+		 k1="-1"
+		 k4="-2"
+		 in2="result1"
+		 id="feComposite5471" />
+	  <feColorMatrix
+		 values="0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 3 0 "
+		 result="result91"
+		 id="feColorMatrix5473" />
+	  <feComposite
+		 result="fbSourceGraphic"
+		 in="SourceGraphic"
+		 operator="out"
+		 in2="result91"
+		 id="feComposite5475" />
+	  <feGaussianBlur
+		 in="fbSourceGraphic"
+		 stdDeviation="2"
+		 result="result92"
+		 id="feGaussianBlur5477" />
+	  <feComposite
+		 operator="out"
+		 in="fbSourceGraphic"
+		 in2="result92"
+		 result="result93"
+		 id="feComposite5479" />
+	  <feBlend
+		 mode="multiply"
+		 in2="result93"
+		 result="result94"
+		 id="feBlend5481" />
+	  <feBlend
+		 mode="darken"
+		 in2="result94"
+		 id="feBlend5483" />
+	</filter>
+	<filter
+	   label="Smooth edges"
+	   menu="Morphology"
+	   tooltip="Smooth the outside of shapes and pictures without altering their contents"
+	   color-interpolation-filters="sRGB"
+	   id="filter5485">
+	  <feGaussianBlur
+		 stdDeviation="3"
+		 result="result1"
+		 id="feGaussianBlur5487" />
+	  <feComposite
+		 operator="arithmetic"
+		 k2="2"
+		 k4="-1"
+		 in="result1"
+		 result="result2"
+		 in2="SourceGraphic"
+		 id="feComposite5489" />
+	  <feColorMatrix
+		 values="0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 8 -6 "
+		 result="result3"
+		 id="feColorMatrix5491" />
+	  <feComposite
+		 in="SourceGraphic"
+		 operator="in"
+		 in2="result3"
+		 id="feComposite5493" />
+	</filter>
+	<filter
+	   label="Smooth outline"
+	   menu="Morphology"
+	   tooltip="Outlining the lines and smoothing their crossings"
+	   color-interpolation-filters="sRGB"
+	   id="filter5495">
+	  <feGaussianBlur
+		 stdDeviation="4"
+		 id="feGaussianBlur5497" />
+	  <feColorMatrix
+		 result="fbSourceGraphic"
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 7 -4 "
+		 id="feColorMatrix5499" />
+	  <feGaussianBlur
+		 stdDeviation="0.7"
+		 result="result91"
+		 id="feGaussianBlur5501" />
+	  <feComposite
+		 operator="xor"
+		 in2="result91"
+		 result="result92"
+		 id="feComposite5503" />
+	  <feBlend
+		 mode="darken"
+		 in2="result92"
+		 id="feBlend5505" />
+	</filter>
+	<filter
+	   label="Warm inside"
+	   menu="Morphology"
+	   tooltip="Blurred colorized contour, filled inside"
+	   color-interpolation-filters="sRGB"
+	   id="filter5507">
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 "
+		 result="fbSourceGraphic"
+		 id="feColorMatrix5509" />
+	  <feGaussianBlur
+		 stdDeviation="3"
+		 result="result1"
+		 id="feGaussianBlur5511" />
+	  <feOffset
+		 dx="2"
+		 dy="2"
+		 result="result6"
+		 id="feOffset5513" />
+	  <feComposite
+		 k2="2"
+		 operator="in"
+		 result="result2"
+		 in="result6"
+		 in2="result1"
+		 id="feComposite5515" />
+	  <feColorMatrix
+		 values="110"
+		 result="result3"
+		 type="hueRotate"
+		 id="feColorMatrix5517" />
+	  <feBlend
+		 mode="screen"
+		 in="result2"
+		 in2="result3"
+		 result="result4"
+		 id="feBlend5519" />
+	  <feConvolveMatrix
+		 order="3 3"
+		 kernelMatrix="-2 0 2 0 4 0 2 0 2"
+		 divisor="2"
+		 bias="0"
+		 targetX="0"
+		 in="result4"
+		 result="result5"
+		 id="feConvolveMatrix5521" />
+	  <feComposite
+		 operator="atop"
+		 in="result2"
+		 in2="result5"
+		 id="feComposite5523" />
+	</filter>
+</defs>

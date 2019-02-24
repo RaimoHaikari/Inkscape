@@ -1,0 +1,61 @@
+<filter
+   name="Combined lighting"
+   tooltip="Basic specular bevel to use for building textures"
+   color-interpolation-filters="sRGB"
+   id="filter3065">
+  <feGaussianBlur
+	 stdDeviation="6"
+	 in="SourceGraphic"
+	 result="result0"
+	 id="feGaussianBlur3067" />
+  <feDiffuseLighting
+	 lighting-color="rgb(255,255,255)"
+	 diffuseConstant="1"
+	 surfaceScale="4"
+	 result="result5"
+	 id="feDiffuseLighting3069">
+	<feDistantLight
+	   elevation="45"
+	   azimuth="235"
+	   id="feDistantLight3071" />
+  </feDiffuseLighting>
+  <feComposite
+	 k1="1.4"
+	 in2="SourceGraphic"
+	 in="result5"
+	 result="fbSourceGraphic"
+	 operator="arithmetic"
+	 id="feComposite3073" />
+  <feGaussianBlur
+	 result="result0"
+	 in="fbSourceGraphic"
+	 stdDeviation="6"
+	 id="feGaussianBlur3075" />
+  <feSpecularLighting
+	 specularExponent="25"
+	 specularConstant="1"
+	 surfaceScale="4"
+	 lighting-color="rgb(255,255,255)"
+	 result="result1"
+	 in="result0"
+	 id="feSpecularLighting3077">
+	<feDistantLight
+	   azimuth="235"
+	   elevation="45"
+	   id="feDistantLight3079" />
+  </feSpecularLighting>
+  <feComposite
+	 k3="1"
+	 k2="1"
+	 operator="arithmetic"
+	 result="result4"
+	 in="fbSourceGraphic"
+	 in2="result1"
+	 id="feComposite3081" />
+  <feComposite
+	 operator="in"
+	 result="result2"
+	 in2="SourceGraphic"
+	 in="result4"
+	 id="feComposite3083" />
+</filter>

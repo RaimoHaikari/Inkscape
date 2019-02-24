@@ -1,0 +1,74 @@
+<filter
+   name="Electronic microscopy"
+   tooltip="Bevel, crude light, discoloration and glow like in electronic microscopy"
+   x="-0.15"
+   y="-0.15"
+   width="1.3"
+   height="1.3"
+   color-interpolation-filters="sRGB"
+   id="filter3129">
+  <feGaussianBlur
+	 stdDeviation="0.5"
+	 result="result6"
+	 id="feGaussianBlur3131" />
+  <feComposite
+	 operator="in"
+	 in="result6"
+	 in2="result6"
+	 result="result91"
+	 id="feComposite3133" />
+  <feBlend
+	 mode="multiply"
+	 in="result6"
+	 result="result2"
+	 in2="result91"
+	 id="feBlend3135" />
+  <feGaussianBlur
+	 stdDeviation="7"
+	 result="result3"
+	 in="result2"
+	 id="feGaussianBlur3137" />
+  <feComposite
+	 in2="result2"
+	 result="result92"
+	 id="feComposite3139" />
+  <feComposite
+	 operator="in"
+	 in="result3"
+	 result="result5"
+	 in2="result92"
+	 id="feComposite3141" />
+  <feGaussianBlur
+	 stdDeviation="1"
+	 in="result5"
+	 id="feGaussianBlur3143" />
+  <feSpecularLighting
+	 surfaceScale="2"
+	 specularConstant="1.5"
+	 specularExponent="100"
+	 id="feSpecularLighting3145">
+	<fePointLight
+	   x="-5000"
+	   y="-5000"
+	   z="20000"
+	   id="fePointLight3147" />
+  </feSpecularLighting>
+  <feComposite
+	 operator="arithmetic"
+	 k1="1"
+	 in2="result5"
+	 result="result93"
+	 id="feComposite3149" />
+  <feComposite
+	 operator="arithmetic"
+	 k2="0.1"
+	 k3="1"
+	 in="result5"
+	 in2="result93"
+	 result="result94"
+	 id="feComposite3151" />
+  <feBlend
+	 mode="multiply"
+	 in2="result94"
+	 id="feBlend3153" />
+</filter>

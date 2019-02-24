@@ -1,0 +1,33 @@
+<filter
+   name="Noise fill"
+   inkscape:menu-tooltip="Basic noise fill texture; adjust color in Flood"
+   color-interpolation-filters="sRGB"
+   id="filter3033">
+  <feTurbulence
+	 numOctaves="5"
+	 baseFrequency="0.02"
+	 type="fractalNoise"
+	 id="feTurbulence3035" />
+  <feColorMatrix
+	 result="result0"
+	 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 3 -1 "
+	 id="feColorMatrix3037" />
+  <feFlood
+	 flood-opacity="1"
+	 flood-color="rgb(145,199,195)"
+	 result="result1"
+	 id="feFlood3039" />
+  <feBlend
+	 in2="SourceGraphic"
+	 mode="normal"
+	 in="result1"
+	 id="feBlend3041" />
+  <feComposite
+	 operator="out"
+	 in2="result0"
+	 id="feComposite3043" />
+  <feComposite
+	 operator="atop"
+	 in2="SourceGraphic"
+	 id="feComposite3045" />
+</filter>

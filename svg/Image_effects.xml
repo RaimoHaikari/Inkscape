@@ -1,0 +1,470 @@
+<defs
+ id="defs4421" menu="Image effects">
+	<filter
+	   label="Age"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   tooltip="Imitate aged photograph"
+	   color-interpolation-filters="sRGB"
+	   id="filter4437">
+	  <feColorMatrix
+		 type="saturate"
+		 in="SourceGraphic"
+		 values="0"
+		 id="feColorMatrix4439" />
+	  <feColorMatrix
+		 values="3 0 0 0 -0.3 0 3 0 0 -0.3 0 0 3 0 -0.3 0 0 0 1 0"
+		 result="result0"
+		 id="feColorMatrix4441" />
+	  <feTurbulence
+		 baseFrequency="0.111"
+		 numOctaves="2"
+		 type="fractalNoise"
+		 id="feTurbulence4443" />
+	  <feColorMatrix
+		 values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 -200"
+		 id="feColorMatrix4445" />
+	  <feGaussianBlur
+		 stdDeviation="1"
+		 id="feGaussianBlur4447" />
+	  <feComposite
+		 in2="result0"
+		 operator="atop"
+		 id="feComposite4449" />
+	</filter>
+	<filter
+	   label="Blueprint"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   menu="Image effects"
+	   tooltip="Detect color edges and retrace them in blue"
+	   color-interpolation-filters="sRGB"
+	   id="filter4451">
+	  <feConvolveMatrix
+		 order="3 3"
+		 kernelMatrix="1 1 1 1 -8 1 1 1 1"
+		 in="SourceGraphic"
+		 divisor="1"
+		 targetX="1"
+		 targetY="1"
+		 preserveAlpha="true"
+		 result="result0"
+		 bias="0"
+		 id="feConvolveMatrix4453" />
+	  <feColorMatrix
+		 result="result3"
+		 values="-0.15 -0.3 -0.05 0 1 -0.15 -0.3 -0.05 0 1 0 0 0 0 1 0 0 0 1 0"
+		 id="feColorMatrix4455" />
+	</filter>
+	<filter
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   tooltip="Give lead pencil or chromolithography or engraving or other effects to images and material filled objects"
+	   menu="Image effects"
+	   label="Drawing"
+	   color-interpolation-filters="sRGB"
+	   id="filter4457">
+	  <feGaussianBlur
+		 stdDeviation="0.5"
+		 result="result8"
+		 id="feGaussianBlur4459" />
+	  <feConvolveMatrix
+		 bias="0"
+		 result="result0"
+		 preserveAlpha="true"
+		 targetY="1"
+		 targetX="1"
+		 divisor="1"
+		 in="result8"
+		 kernelMatrix="1 1 1 1 -8 1 1 1 1 "
+		 order="3 3"
+		 id="feConvolveMatrix4461" />
+	  <feColorMatrix
+		 values="0 -6 0 0 1 0 -6 0 0 1 0 -6 0 0 1 0 0 0 1 0 "
+		 result="result3"
+		 id="feColorMatrix4463" />
+	  <feComposite
+		 k3="0.3"
+		 k1="1"
+		 operator="arithmetic"
+		 in2="result3"
+		 in="SourceGraphic"
+		 result="fbSourceGraphic"
+		 id="feComposite4465" />
+	  <feGaussianBlur
+		 stdDeviation="0.01"
+		 in="fbSourceGraphic"
+		 result="result7"
+		 id="feGaussianBlur4467" />
+	  <feBlend
+		 in2="result7"
+		 in="result7"
+		 mode="multiply"
+		 id="feBlend4469" />
+	  <feComposite
+		 operator="in"
+		 in2="SourceGraphic"
+		 id="feComposite4471" />
+	</filter>
+	<filter
+	   label="Edge detect"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   menu="Image effects"
+	   tooltip="Detect color edges in object"
+	   color-interpolation-filters="sRGB"
+	   id="filter4473">
+	  <feConvolveMatrix
+		 order="3 3"
+		 kernelMatrix="1 1 1 1 -8 1 1 1 1"
+		 in="SourceGraphic"
+		 divisor="3"
+		 targetX="1"
+		 targetY="1"
+		 preserveAlpha="true"
+		 result="result0"
+		 bias="0"
+		 id="feConvolveMatrix4475" />
+	</filter>
+	<filter
+	   height="1"
+	   width="1"
+	   y="0"
+	   x="0"
+	   label="Film grain"
+	   menu="Image effects"
+	   tooltip="Adds a small scale graininess"
+	   color-interpolation-filters="sRGB"
+	   id="filter4477">
+	  <feTurbulence
+		 type="fractalNoise"
+		 numOctaves="3"
+		 baseFrequency="1"
+		 seed="0"
+		 result="result0"
+		 id="feTurbulence4479" />
+	  <feColorMatrix
+		 result="result4"
+		 values="0"
+		 type="saturate"
+		 id="feColorMatrix4481" />
+	  <feComposite
+		 in="SourceGraphic"
+		 in2="result4"
+		 operator="arithmetic"
+		 k1="1.25"
+		 k2="0.5"
+		 k3="0.5"
+		 result="result2"
+		 id="feComposite4483" />
+	  <feBlend
+		 result="result5"
+		 mode="normal"
+		 in="result2"
+		 in2="SourceGraphic"
+		 id="feBlend4485" />
+	  <feComposite
+		 in="result5"
+		 in2="SourceGraphic"
+		 operator="in"
+		 result="result3"
+		 id="feComposite4487" />
+	</filter>
+	<filter
+	   label="Horizontal edge detect"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   menu="Image effects"
+	   tooltip="Detect horizontal color edges in object"
+	   color-interpolation-filters="sRGB"
+	   id="filter4489">
+	  <feConvolveMatrix
+		 bias="0"
+		 result="result0"
+		 preserveAlpha="true"
+		 targetY="1"
+		 targetX="1"
+		 divisor="1"
+		 in="SourceGraphic"
+		 kernelMatrix="0 1 0 0 -2 0 0 1 0"
+		 order="3 3"
+		 id="feConvolveMatrix4491" />
+	</filter>
+	<filter
+	   label="Liquid drawing"
+	   tooltip="Gives a fluid and wavy expressionist drawing effect to images"
+	   menu="Image effects"
+	   x="-0.25"
+	   width="1.5"
+	   y="-0.25"
+	   height="1.5"
+	   color-interpolation-filters="sRGB"
+	   id="filter4493">
+	  <feGaussianBlur
+		 result="result11"
+		 stdDeviation="2"
+		 id="feGaussianBlur4495" />
+	  <feGaussianBlur
+		 in="SourceGraphic"
+		 stdDeviation="0.5"
+		 result="result8"
+		 id="feGaussianBlur4497" />
+	  <feTurbulence
+		 result="result9"
+		 baseFrequency="0.08"
+		 numOctaves="1"
+		 type="fractalNoise"
+		 id="feTurbulence4499" />
+	  <feDisplacementMap
+		 result="result10"
+		 in2="result11"
+		 xChannelSelector="G"
+		 scale="100"
+		 yChannelSelector="R"
+		 id="feDisplacementMap4501" />
+	  <feConvolveMatrix
+		 bias="0"
+		 result="result0"
+		 preserveAlpha="true"
+		 targetY="1"
+		 targetX="1"
+		 divisor="1"
+		 in="result10"
+		 kernelMatrix="1 1 1 1 -8 1 1 1 1 "
+		 order="3 3"
+		 id="feConvolveMatrix4503" />
+	  <feColorMatrix
+		 in="result0"
+		 values="0 -6 0 0 1 0 -6 0 0 1 0 -6 0 0 1 0 0 0 1 0 "
+		 result="result3"
+		 id="feColorMatrix4505" />
+	  <feComposite
+		 operator="in"
+		 in2="SourceGraphic"
+		 in="result3"
+		 result="fbSourceGraphic"
+		 id="feComposite4507" />
+	  <feBlend
+		 in2="result8"
+		 mode="multiply"
+		 result="result12"
+		 id="feBlend4509" />
+	  <feGaussianBlur
+		 stdDeviation="0.01"
+		 in="result12"
+		 result="result7"
+		 id="feGaussianBlur4511" />
+	  <feBlend
+		 mode="screen"
+		 in2="result12"
+		 id="feBlend4513" />
+	  <feComposite
+		 operator="in"
+		 in2="SourceGraphic"
+		 id="feComposite4515" />
+	</filter>
+	<filter
+	   label="Oil painting"
+	   menu="Image effects"
+	   tooltip="Simulate oil painting style"
+	   color-interpolation-filters="sRGB"
+	   id="filter4517">
+	  <feMorphology
+		 radius="2"
+		 in="SourceGraphic"
+		 result="result0"
+		 id="feMorphology4519" />
+	  <feTurbulence
+		 numOctaves="1"
+		 baseFrequency="0.078"
+		 result="result91"
+		 id="feTurbulence4521" />
+	  <feDisplacementMap
+		 in="result0"
+		 scale="6.3"
+		 xChannelSelector="R"
+		 yChannelSelector="G"
+		 in2="result91"
+		 id="feDisplacementMap4523" />
+	</filter>
+	<filter
+	   label="Old postcard"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   menu="Image effects"
+	   tooltip="Slightly posterize and draw edges like on old printed postcards"
+	   color-interpolation-filters="sRGB"
+	   id="filter4525">
+	  <feConvolveMatrix
+		 targetY="1"
+		 targetX="1"
+		 in="SourceGraphic"
+		 divisor="1"
+		 kernelMatrix="0 -0.4 0 -0.4 2.6 -0.4 0 -0.4 0 "
+		 order="3 3"
+		 result="result1"
+		 id="feConvolveMatrix4527" />
+	  <feGaussianBlur
+		 stdDeviation="3"
+		 result="result2"
+		 id="feGaussianBlur4529" />
+	  <feMorphology
+		 operator="dilate"
+		 radius="10"
+		 result="result4"
+		 id="feMorphology4531" />
+	  <feBlend
+		 in="result4"
+		 in2="result1"
+		 mode="darken"
+		 result="result3"
+		 id="feBlend4533" />
+	  <feComposite
+		 operator="in"
+		 in2="SourceGraphic"
+		 id="feComposite4535" />
+	</filter>
+	<filter
+	   label="Pencil"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   menu="Image effects"
+	   tooltip="Detect color edges and retrace them in grayscale"
+	   color-interpolation-filters="sRGB"
+	   id="filter4537">
+	  <feConvolveMatrix
+		 bias="0"
+		 result="result0"
+		 preserveAlpha="true"
+		 targetY="1"
+		 targetX="1"
+		 divisor="1"
+		 in="SourceGraphic"
+		 kernelMatrix="1 1 1 1 -8 1 1 1 1"
+		 order="3 3"
+		 id="feConvolveMatrix4539" />
+	  <feColorMatrix
+		 values="-0.15 -0.3 -0.05 0 1 -0.15 -0.3 -0.05 0 1 -0.15 -0.3 -0.05 0 1 0 0 0 1 0"
+		 result="result3"
+		 id="feColorMatrix4541" />
+	</filter>
+	<filter
+	   label="Sharpen"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   menu="Image effects"
+	   tooltip="Sharpen edges and boundaries within the object, force=0.15"
+	   color-interpolation-filters="sRGB"
+	   id="filter4543">
+	  <feConvolveMatrix
+		 order="3 3"
+		 kernelMatrix="0 -0.15 0 -0.15 1.6 -0.15 0 -0.15 0"
+		 divisor="1"
+		 in="SourceGraphic"
+		 targetX="1"
+		 targetY="1"
+		 id="feConvolveMatrix4545" />
+	</filter>
+	<filter
+	   label="Sharpen more"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   menu="Image effects"
+	   tooltip="Sharpen edges and boundaries within the object, force=0.3"
+	   color-interpolation-filters="sRGB"
+	   id="filter4547">
+	  <feConvolveMatrix
+		 targetY="1"
+		 targetX="1"
+		 in="SourceGraphic"
+		 divisor="1"
+		 kernelMatrix="0 -0.3 0 -0.3 2.2 -0.3 0 -0.3 0"
+		 order="3 3"
+		 result="result1"
+		 id="feConvolveMatrix4549" />
+	  <feBlend
+		 in2="SourceGraphic"
+		 mode="normal"
+		 result="result2"
+		 id="feBlend4551" />
+	</filter>
+	<filter
+	   label="Soft focus lens"
+	   menu="Image effects"
+	   tooltip="Glowing image content without blurring it"
+	   height="1"
+	   y="0"
+	   width="1"
+	   x="0"
+	   color-interpolation-filters="sRGB"
+	   id="filter4553">
+	  <feGaussianBlur
+		 stdDeviation="5"
+		 result="result3"
+		 id="feGaussianBlur4555" />
+	  <feComposite
+		 in2="result3"
+		 operator="arithmetic"
+		 in="result3"
+		 k1="0.5"
+		 k3="0.5"
+		 result="result1"
+		 id="feComposite4557" />
+	  <feBlend
+		 in2="result1"
+		 result="result5"
+		 mode="screen"
+		 in="SourceGraphic"
+		 id="feBlend4559" />
+	  <feBlend
+		 mode="darken"
+		 in="result5"
+		 result="result6"
+		 in2="result5"
+		 id="feBlend4561" />
+	  <feComposite
+		 operator="in"
+		 in2="SourceGraphic"
+		 id="feComposite4563" />
+	</filter>
+	<filter
+	   label="Vertical edge detect"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   menu="Image effects"
+	   tooltip="Detect vertical color edges in object"
+	   color-interpolation-filters="sRGB"
+	   id="filter4565">
+	  <feConvolveMatrix
+		 order="3 3"
+		 kernelMatrix="0 0 0 1 -2 1 0 0 0"
+		 in="SourceGraphic"
+		 divisor="1"
+		 targetX="1"
+		 targetY="1"
+		 preserveAlpha="true"
+		 result="result0"
+		 bias="0"
+		 id="feConvolveMatrix4567" />
+	</filter>
+</defs>

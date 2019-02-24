@@ -1,0 +1,359 @@
+<defs id="defs3902" menu="Shadows and Glows">
+	<filter
+	   label="Cutout"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   tooltip="Drop shadow under the cut-out of the shape"
+	   color-interpolation-filters="sRGB"
+	   id="filter3918">
+	  <feGaussianBlur
+		 in="SourceAlpha"
+		 stdDeviation="4.2"
+		 id="feGaussianBlur3920" />
+	  <feOffset
+		 dy="5"
+		 dx="5"
+		 result="result91"
+		 id="feOffset3922" />
+	  <feComposite
+		 operator="out"
+		 in="SourceGraphic"
+		 in2="result91"
+		 id="feComposite3924" />
+	</filter>
+	<filter
+	   tooltip="In and out glow with a possible offset and colorizable flood"
+	   menu="Shadows and Glows"
+	   label="Cutout Glow"
+	   color-interpolation-filters="sRGB"
+	   id="filter3926">
+	  <feOffset
+		 dy="3"
+		 dx="3"
+		 id="feOffset3928" />
+	  <feGaussianBlur
+		 result="result8"
+		 stdDeviation="3"
+		 id="feGaussianBlur3930" />
+	  <feFlood
+		 flood-color="rgb(0,0,0)"
+		 flood-opacity="1"
+		 in="result8"
+		 result="result10"
+		 id="feFlood3932" />
+	  <feComposite
+		 in2="SourceGraphic"
+		 operator="in"
+		 in="result10"
+		 result="result9"
+		 id="feComposite3934" />
+	  <feBlend
+		 mode="normal"
+		 in2="result9"
+		 in="result8"
+		 id="feBlend3936" />
+	</filter>
+	<filter
+	   y="-0.25"
+	   height="1.5"
+	   tooltip="Darkens the edge with an inner blur and adds a flexible glow"
+	   menu="Shadows and Glows"
+	   label="Dark and Glow"
+	   color-interpolation-filters="sRGB"
+	   id="filter3938">
+	  <feGaussianBlur
+		 stdDeviation="5"
+		 result="result6"
+		 id="feGaussianBlur3940" />
+	  <feComposite
+		 result="result8"
+		 in="SourceGraphic"
+		 operator="atop"
+		 in2="result6"
+		 id="feComposite3942" />
+	  <feComposite
+		 result="result9"
+		 operator="over"
+		 in2="SourceAlpha"
+		 in="result8"
+		 id="feComposite3944" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 "
+		 result="result10"
+		 id="feColorMatrix3946" />
+	  <feBlend
+		 in="result10"
+		 mode="normal"
+		 in2="result6"
+		 id="feBlend3948" />
+	</filter>
+	<filter
+	   label="Darken edges"
+	   menu="Shadows and Glows"
+	   tooltip="Darken the edges with an inner blur"
+	   color-interpolation-filters="sRGB"
+	   id="filter3950">
+	  <feGaussianBlur
+		 result="result6"
+		 stdDeviation="1.5"
+		 id="feGaussianBlur3952" />
+	  <feComposite
+		 in2="result6"
+		 operator="atop"
+		 in="SourceGraphic"
+		 result="result8"
+		 id="feComposite3954" />
+	  <feComposite
+		 in="result8"
+		 in2="SourceAlpha"
+		 operator="atop"
+		 result="result9"
+		 id="feComposite3956" />
+	</filter>
+	<filter
+	   style="color-interpolation-filters:sRGB;"
+	   label="Drop Shadow"
+	   id="filter3958">
+	  <feFlood
+		 flood-opacity="0.5"
+		 flood-color="rgb(255,255,255)"
+		 result="flood"
+		 id="feFlood3960" />
+	  <feComposite
+		 in="flood"
+		 in2="SourceGraphic"
+		 operator="in"
+		 result="composite1"
+		 id="feComposite3962" />
+	  <feGaussianBlur
+		 in="composite"
+		 stdDeviation="2"
+		 result="blur"
+		 id="feGaussianBlur3964" />
+	  <feOffset
+		 dx="4"
+		 dy="4"
+		 result="offset"
+		 id="feOffset3966" />
+	  <feComposite
+		 in="SourceGraphic"
+		 in2="offset"
+		 operator="over"
+		 result="composite2"
+		 id="feComposite3968" />
+	</filter>
+	<filter
+	   style="color-interpolation-filters:sRGB;"
+	   label="Drop Shadow"
+	   id="filter3970">
+	  <feFlood
+		 flood-opacity="0.5"
+		 flood-color="rgb(0,0,0)"
+		 result="flood"
+		 id="feFlood3972" />
+	  <feComposite
+		 in="flood"
+		 in2="SourceGraphic"
+		 operator="in"
+		 result="composite1"
+		 id="feComposite3974" />
+	  <feGaussianBlur
+		 in="composite"
+		 stdDeviation="2"
+		 result="blur"
+		 id="feGaussianBlur3976" />
+	  <feOffset
+		 dx="4"
+		 dy="4"
+		 result="offset"
+		 id="feOffset3978" />
+	  <feComposite
+		 in="SourceGraphic"
+		 in2="offset"
+		 operator="over"
+		 result="composite2"
+		 id="feComposite3980" />
+	</filter>
+	<filter
+	   label="Fuzzy Glow"
+	   menu="Shadows and Glows"
+	   tooltip="Overlays a semi-transparent shifted copy to a blurred one"
+	   color-interpolation-filters="sRGB"
+	   id="filter3982">
+	  <feOffset
+		 dx="4"
+		 dy="4"
+		 result="result11"
+		 in="SourceGraphic"
+		 id="feOffset3984" />
+	  <feGaussianBlur
+		 stdDeviation="4"
+		 result="result8"
+		 id="feGaussianBlur3986" />
+	  <feComposite
+		 result="result9"
+		 in="SourceGraphic"
+		 operator="in"
+		 in2="result8"
+		 id="feComposite3988" />
+	  <feBlend
+		 in="result9"
+		 in2="result8"
+		 mode="darken"
+		 id="feBlend3990" />
+	</filter>
+	<filter
+	   label="Glow"
+	   menu="Shadows and Glows"
+	   tooltip="Glow of object's own color at the edges"
+	   color-interpolation-filters="sRGB"
+	   id="filter3992">
+	  <feGaussianBlur
+		 stdDeviation="5"
+		 result="result91"
+		 id="feGaussianBlur3994" />
+	  <feComposite
+		 in="SourceGraphic"
+		 operator="over"
+		 in2="result91"
+		 id="feComposite3996" />
+	</filter>
+	<filter
+	   label="In and Out"
+	   menu="Shadows and Glows"
+	   tooltip="Inner colorized shadow, outer black shadow"
+	   color-interpolation-filters="sRGB"
+	   id="filter3998">
+	  <feGaussianBlur
+		 result="result0"
+		 in="SourceAlpha"
+		 stdDeviation="4"
+		 id="feGaussianBlur4000" />
+	  <feOffset
+		 dx="5"
+		 dy="5"
+		 result="result4"
+		 id="feOffset4002" />
+	  <feComposite
+		 in="SourceGraphic"
+		 in2="result4"
+		 operator="xor"
+		 result="result3"
+		 id="feComposite4004" />
+	</filter>
+	<filter
+	   label="Inner Glow"
+	   menu="Shadows and Glows"
+	   tooltip="Adds a colorizable glow inside"
+	   color-interpolation-filters="sRGB"
+	   id="filter4006">
+	  <feGaussianBlur
+		 stdDeviation="10"
+		 result="result8"
+		 id="feGaussianBlur4008" />
+	  <feComposite
+		 result="result6"
+		 in="SourceGraphic"
+		 operator="in"
+		 in2="result8"
+		 id="feComposite4010" />
+	  <feComposite
+		 operator="in"
+		 result="result11"
+		 in2="result6"
+		 id="feComposite4012" />
+	  <feFlood
+		 result="result10"
+		 in="result11"
+		 flood-opacity="1"
+		 flood-color="rgb(255,222,85)"
+		 id="feFlood4014" />
+	  <feBlend
+		 mode="normal"
+		 in="result11"
+		 in2="result10"
+		 result="result12"
+		 id="feBlend4016" />
+	  <feComposite
+		 result="result2"
+		 operator="in"
+		 in2="SourceGraphic"
+		 in="result12"
+		 id="feComposite4018" />
+	</filter>
+	<filter
+	   label="Inner Shadow"
+	   menu="Shadows and Glows"
+	   tooltip="Adds a colorizable drop shadow inside"
+	   color-interpolation-filters="sRGB"
+	   id="filter4020">
+	  <feGaussianBlur
+		 stdDeviation="4"
+		 result="result8"
+		 id="feGaussianBlur4022" />
+	  <feOffset
+		 dx="4"
+		 dy="4"
+		 result="result11"
+		 id="feOffset4024" />
+	  <feComposite
+		 result="result6"
+		 in="SourceGraphic"
+		 operator="in"
+		 in2="result11"
+		 id="feComposite4026" />
+	  <feFlood
+		 result="result10"
+		 in="result6"
+		 flood-opacity="1"
+		 flood-color="rgb(0,0,0)"
+		 id="feFlood4028" />
+	  <feBlend
+		 mode="normal"
+		 in="result6"
+		 in2="result10"
+		 id="feBlend4030" />
+	  <feComposite
+		 result="result2"
+		 operator="in"
+		 in2="SourceGraphic"
+		 id="feComposite4032" />
+	</filter>
+	<filter
+	   label="Inset"
+	   menu="Shadows and Glows"
+	   tooltip="Shadowy outer bevel"
+	   color-interpolation-filters="sRGB"
+	   id="filter4034">
+	  <feMorphology
+		 result="result1"
+		 in="SourceAlpha"
+		 operator="dilate"
+		 radius="3.6"
+		 id="feMorphology4036" />
+	  <feGaussianBlur
+		 stdDeviation="3.6"
+		 in="result1"
+		 result="result0"
+		 id="feGaussianBlur4038" />
+	  <feDiffuseLighting
+		 surfaceScale="-5"
+		 id="feDiffuseLighting4040">
+		<feDistantLight
+		   elevation="45"
+		   azimuth="225"
+		   id="feDistantLight4042" />
+	  </feDiffuseLighting>
+	  <feComposite
+		 in2="result0"
+		 operator="in"
+		 result="result91"
+		 id="feComposite4044" />
+	  <feComposite
+		 in="SourceGraphic"
+		 in2="result91"
+		 id="feComposite4046" />
+	</filter>
+</defs>

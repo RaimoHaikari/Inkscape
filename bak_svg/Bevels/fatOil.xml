@@ -1,0 +1,76 @@
+<filter
+   name="Fat oil"
+   tooltip="Fat oil with some adjustable turbulence"
+   height="1.4"
+   width="1.4"
+   y="-0.2"
+   x="-0.2"
+   color-interpolation-filters="sRGB"
+   id="filter3155">
+  <feTurbulence
+	 numOctaves="3"
+	 seed="55"
+	 type="fractalNoise"
+	 baseFrequency="0.02"
+	 id="feTurbulence3157" />
+  <feGaussianBlur
+	 stdDeviation="1"
+	 result="result91"
+	 id="feGaussianBlur3159" />
+  <feDisplacementMap
+	 scale="15"
+	 yChannelSelector="G"
+	 xChannelSelector="R"
+	 in="SourceGraphic"
+	 in2="result91"
+	 id="feDisplacementMap3161" />
+  <feGaussianBlur
+	 stdDeviation="1.5"
+	 result="result92"
+	 id="feGaussianBlur3163" />
+  <feComposite
+	 result="fbSourceGraphic"
+	 k4="-0.3"
+	 k3="1"
+	 k2="1"
+	 operator="arithmetic"
+	 in2="result92"
+	 id="feComposite3165" />
+  <feGaussianBlur
+	 stdDeviation="3.5"
+	 in="fbSourceGraphic"
+	 result="result0"
+	 id="feGaussianBlur3167" />
+  <feSpecularLighting
+	 in="result0"
+	 result="result1"
+	 lighting-color="rgb(255,255,255)"
+	 surfaceScale="3"
+	 specularConstant="1"
+	 specularExponent="55"
+	 id="feSpecularLighting3169">
+	<feDistantLight
+	   azimuth="235"
+	   elevation="65"
+	   id="feDistantLight3171" />
+  </feSpecularLighting>
+  <feComposite
+	 in2="fbSourceGraphic"
+	 in="result1"
+	 result="result2"
+	 operator="in"
+	 id="feComposite3173" />
+  <feComposite
+	 in="fbSourceGraphic"
+	 result="result4"
+	 operator="arithmetic"
+	 k2="0.4"
+	 k3="1.7"
+	 in2="result2"
+	 id="feComposite3175" />
+  <feBlend
+	 result="fbSourceGraphic"
+	 mode="normal"
+	 in2="result2"
+	 id="feBlend3177" />
+</filter>

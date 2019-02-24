@@ -1,0 +1,11 @@
+<filter
+   name="Motion blur, vertical"
+   inkscape:menu="Blurs"
+   tooltip="Blur as if the object flies vertically; adjust Standard Deviation to vary force"
+   color-interpolation-filters="sRGB"
+   id="filter4350">
+  <feGaussianBlur
+	 in="SourceGraphic"
+	 stdDeviation="0.01 5"
+	 id="feGaussianBlur4352" />
+</filter>

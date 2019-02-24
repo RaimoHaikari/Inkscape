@@ -1,0 +1,26 @@
+<filter
+   name="Black outline"
+   color-interpolation-filters="sRGB"
+   tooltip="Draws a black outline around"
+   id="filter3782">
+  <feGaussianBlur
+	 stdDeviation="2"
+	 in="SourceAlpha"
+	 result="result0"
+	 id="feGaussianBlur3784" />
+  <feComposite
+	 result="result3"
+	 operator="arithmetic"
+	 in2="result0"
+	 in="SourceGraphic"
+	 k2="1"
+	 k3="10"
+	 id="feComposite3786" />
+  <feComposite
+	 k2="1"
+	 operator="in"
+	 in="result3"
+	 result="result4"
+	 in2="result3"
+	 id="feComposite3788" />
+</filter>

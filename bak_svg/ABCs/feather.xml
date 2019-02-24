@@ -1,0 +1,25 @@
+<filter
+   name="Feather"
+   tooltip="Blurred mask on the edge without altering the contents"
+   color-interpolation-filters="sRGB"
+   id="filter3011">
+  <feGaussianBlur
+	 result="result6"
+	 stdDeviation="5"
+	 id="feGaussianBlur3013" />
+  <feComposite
+	 in2="result6"
+	 operator="atop"
+	 in="SourceGraphic"
+	 result="result91"
+	 id="feComposite3015" />
+  <feComposite
+	 operator="in"
+	 in2="result91"
+	 result="result92"
+	 id="feComposite3017" />
+  <feComposite
+	 operator="in"
+	 in2="result92"
+	 id="feComposite3019" />
+</filter>

@@ -1,0 +1,83 @@
+[
+{"name":"ABCs", "children":[]},
+{"name":"Bevels", "children":[]},
+]
+
+
+
+
+
+
+[{"name":"Distort","children":[
+
+	{"node": "filter", 
+	"attributes": {"name":"Lapping","id":"filter3069","height":"1.3","width":"1.3","y":"-0.15","x":"-0.15","color-interpolation-filters":"sRGB"},
+	"children":[
+		{"node": "feTurbulence",
+		"attributes": {"id":"feTurbulence3071","baseFrequency":"0.1","seed":"0","result":"result1","numOctaves":"5","type":"fractalNoise"},
+		"children":[]}
+		,
+		{"node": "feGaussianBlur",
+		"attributes": {"id":"feGaussianBlur3073","result":"result2","stdDeviation":"2"},
+		"children":[]},
+		{"node": "feDisplacementMap",
+		"attributes": {"id":"feDisplacementMap3075","scale":"50","yChannelSelector":"B","in2":"result2","xChannelSelector":"R","in":"SourceGraphic"},
+		"children":[]}
+		]
+	},
+	
+	
+	
+	{"node": "filter","attributes": 
+	{"name":"Chalk and sponge","id":"filter3077","height":"2","width":"1.6","y":"-0.5","x":"-0.3","color-interpolation-filters":"sRGB"},
+	"children":[{"node": "feTurbulence","attributes": {"id":"feTurbulence3079","baseFrequency":"0.4","seed":"0","result":"result1","numOctaves":"5","type":"fractalNoise"},
+	"children":[]},
+	{"node": "feOffset","attributes": {"id":"feOffset3081","result":"result2","dx":"-5","dy":"-5"},
+	"children":[]},
+	{"node": "feDisplacementMap","attributes": {"id":"feDisplacementMap3083","scale":"30","yChannelSelector":"G","in2":"result1","xChannelSelector":"R","in":"SourceGraphic"},
+	"children":[]}]}]},
+	{"name":"ABCs","children":[{"node": "filter","attributes": {"name":"Black outline","id":"filter3061","color-interpolation-filters":"sRGB"},
+	"children":[{"node": "feGaussianBlur","attributes": {"id":"feGaussianBlur3063","result":"result0","stdDeviation":"2","in":"SourceAlpha"},"children":[]},
+	{"node": "feComposite","attributes": {"id":"feComposite3065","result":"result3","in2":"result0","in":"SourceGraphic","k3":"10","k2":"1","operator":"arithmetic"},
+	"children":[]},{"node": "feComposite","attributes": {"id":"feComposite3067","result":"result4","in2":"result3","in":"result3","k2":"1","operator":"in"},
+	"children":[]}]},{"node": "filter","attributes": {"name":"Noise fill","id":"filter3161","color-interpolation-filters":"sRGB"},
+	"children":[{"node": "feTurbulence","attributes": {"id":"feTurbulence3163","baseFrequency":"0.02","numOctaves":"5","type":"fractalNoise"},
+	"children":[]},{"node": "feColorMatrix","attributes": {"id":"feColorMatrix3165","result":"result0","values":"1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 3 -1 "},
+	"children":[]},{"node": "feFlood","attributes": {"id":"feFlood3167","result":"result1","flood-opacity":"1","flood-color":"rgb(145,199,195)"},
+	"children":[]},{"node": "feBlend","attributes": {"id":"feBlend3169","in2":"SourceGraphic","in":"result1","mode":"normal"},
+	"children":[]},{"node": "feComposite","attributes": {"id":"feComposite3171","in2":"result0","operator":"out"},
+	"children":[]},{"node": "feComposite","attributes": {"id":"feComposite3173","in2":"SourceGraphic","operator":"atop"},
+	"children":[]}]}]}]
+	
+<filter id="drop-shadow" height="130%">
+	<feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blur"></feGaussianBlur>
+	<feOffset in="blur" dx="5" dy="5" result="offsetBlur"></feOffset>
+	<feMerge>
+		<feMergeNode in="offsetBlur"></feMergeNode>
+		<feMergeNode in="SourceGraphic"></feMergeNode>
+	</feMerge>
+</filter>
+
+{"node": "filter", 
+"attributes":{"id":"drop-shadow", "height":"130%"}},
+"children":[
+	{"node":"feGaussianBlur",
+	"attributes":{"in":"SourceAlpha", "stdDeviation":"5","result":"blur"},
+	"children":[]},
+	{"node":"feOffset",
+	"attributes":{"in":"blur","dx":"5", "dy":"5","result":"offsetBlur"},
+	"children":[]},
+	{"node":"feMerge",
+	"attributes":{},
+	"children":[
+		{"node":"feMergeNode",
+		"attributes":{"in":"offsetBlur"},
+		"children":[]},
+		{"node":"feMergeNode",
+		"attributes":{"in":"SourceGraphic"},
+		"children":[]}
+	]}
+]
+}
+
+

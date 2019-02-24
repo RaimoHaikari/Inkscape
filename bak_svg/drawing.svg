@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="400"
+   height="400"
+   id="svg3805"
+   version="1.1"
+   inkscape:version="0.48.5 r10040">
+  <defs
+     id="defs3807">
+    <filter
+       inkscape:menu-tooltip="Draws a black outline around"
+       inkscape:menu="ABCs"
+       inkscape:label="Black outline"
+       color-interpolation-filters="sRGB"
+       id="filter3825">
+      <feGaussianBlur
+         stdDeviation="2"
+         in="SourceAlpha"
+         result="result0"
+         id="feGaussianBlur3827" />
+      <feComposite
+         result="result3"
+         operator="arithmetic"
+         in2="result0"
+         in="SourceGraphic"
+         k2="1"
+         k3="10"
+         id="feComposite3829" />
+      <feComposite
+         k2="1"
+         operator="in"
+         in="result3"
+         result="result4"
+         in2="result3"
+         id="feComposite3831" />
+    </filter>
+    <filter
+       inkscape:label="Clean edges"
+       inkscape:menu="ABCs"
+       inkscape:menu-tooltip="Removes or decreases glows and jaggeries around objects edges after applying some filters"
+       height="1"
+       width="1"
+       y="0"
+       x="0"
+       color-interpolation-filters="sRGB"
+       id="filter3833">
+      <feGaussianBlur
+         result="result6"
+         stdDeviation="0.4"
+         id="feGaussianBlur3835" />
+      <feComposite
+         in2="result6"
+         operator="in"
+         in="SourceGraphic"
+         result="result7"
+         id="feComposite3837" />
+      <feComposite
+         operator="in"
+         in2="result7"
+         result="result8"
+         in="result7"
+         id="feComposite3839" />
+    </filter>
+    <filter
+       inkscape:label="Diffuse light"
+       inkscape:menu="ABCs"
+       inkscape:menu-tooltip="Basic diffuse bevel to use for building textures"
+       color-interpolation-filters="sRGB"
+       id="filter3841">
+      <feGaussianBlur
+         stdDeviation="6"
+         in="SourceGraphic"
+         result="result0"
+         id="feGaussianBlur3843" />
+      <feDiffuseLighting
+         diffuseConstant="1"
+         surfaceScale="10"
+         result="result5"
+         id="feDiffuseLighting3845">
+        <feDistantLight
+           elevation="25"
+           azimuth="235"
+           id="feDistantLight3847" />
+      </feDiffuseLighting>
+      <feComposite
+         k1="1"
+         in2="SourceGraphic"
+         in="result5"
+         result="result4"
+         operator="arithmetic"
+         k2="0"
+         k3="0.6"
+         id="feComposite3849" />
+    </filter>
+    <filter
+       inkscape:label="Feather"
+       inkscape:menu="ABCs"
+       inkscape:menu-tooltip="Blurred mask on the edge without altering the contents"
+       color-interpolation-filters="sRGB"
+       id="filter3861">
+      <feGaussianBlur
+         result="result6"
+         stdDeviation="5"
+         id="feGaussianBlur3863" />
+      <feComposite
+         in2="result6"
+         operator="atop"
+         in="SourceGraphic"
+         result="result91"
+         id="feComposite3865" />
+      <feComposite
+         operator="in"
+         in2="result91"
+         result="result92"
+         id="feComposite3867" />
+      <feComposite
+         operator="in"
+         in2="result92"
+         id="feComposite3869" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.94375"
+     inkscape:cx="73.377484"
+     inkscape:cy="200"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:snap-page="true"
+     inkscape:window-width="1280"
+     inkscape:window-height="962"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3810">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-652.36218)">
+    <rect
+       style="opacity:0.98672569000000021;color:#000000;fill:#ffd5d5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;"
+       id="rect3813"
+       width="400"
+       height="400"
+       x="0"
+       y="0"
+       transform="translate(0,652.36218)" />
+    <g
+       id="g3821"
+       transform="translate(438.94039,-141.60558)"
+       style="filter:url(#filter3861)">
+      <path
+         transform="matrix(0.5976321,0,0,0.5976321,-54.663901,990.48487)"
+         d="m -190.72847,128.74172 c -122.9139,117.61589 -1.9392,88.04002 -165.25451,40.4014 -163.3153,-47.63862 -77.21449,42.34061 -117.61589,-122.913907 -40.4014,-165.254513 -75.27529,-45.69941066 47.63862,-163.315303 122.9139,-117.6159 1.9392,-88.04002 165.25451,-40.4014 163.315303,47.63862 77.21449,-42.34061 117.61589,122.913906 40.4014,165.254514 75.275289,45.699411 -47.63862,163.315304 z"
+         inkscape:randomized="0"
+         inkscape:rounded="1"
+         inkscape:flatsided="true"
+         sodipodi:arg2="1.3310198"
+         sodipodi:arg1="0.80742103"
+         sodipodi:r2="147.32954"
+         sodipodi:r1="170.12151"
+         sodipodi:cy="5.8278146"
+         sodipodi:cx="-308.34436"
+         sodipodi:sides="6"
+         id="path3817"
+         style="opacity:0.98672569000000021;color:#000000;fill:#d40000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;"
+         sodipodi:type="star" />
+      <path
+         sodipodi:type="star"
+         style="opacity:0.98672569000000021;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;"
+         id="path3819"
+         sodipodi:sides="6"
+         sodipodi:cx="-308.34436"
+         sodipodi:cy="5.8278146"
+         sodipodi:r1="170.12151"
+         sodipodi:r2="147.32954"
+         sodipodi:arg1="0.80742103"
+         sodipodi:arg2="1.3310198"
+         inkscape:flatsided="true"
+         inkscape:rounded="1"
+         inkscape:randomized="0"
+         d="m -190.72847,128.74172 c -122.9139,117.61589 -1.9392,88.04002 -165.25451,40.4014 -163.3153,-47.63862 -77.21449,42.34061 -117.61589,-122.913907 -40.4014,-165.254513 -75.27529,-45.69941066 47.63862,-163.315303 122.9139,-117.6159 1.9392,-88.04002 165.25451,-40.4014 163.315303,47.63862 77.21449,-42.34061 117.61589,122.913906 40.4014,165.254514 75.275289,45.699411 -47.63862,163.315304 z"
+         transform="matrix(0.38077148,0,0,0.38077148,-121.53165,991.74869)" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,33 @@
+<filter
+   name="Matte jelly"
+   x="0"
+   y="0"
+   width="1"
+   height="1"
+   tooltip="Bulging, matte jelly covering"
+   color-interpolation-filters="sRGB"
+   id="filter3021">
+  <feColorMatrix
+	 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.85 0"
+	 result="result0"
+	 in="SourceGraphic"
+	 id="feColorMatrix3023" />
+  <feGaussianBlur
+	 in="SourceAlpha"
+	 stdDeviation="7"
+	 id="feGaussianBlur3025" />
+  <feSpecularLighting
+	 surfaceScale="5"
+	 specularConstant="0.9"
+	 specularExponent="25"
+	 id="feSpecularLighting3027">
+	<feDistantLight
+	   elevation="60"
+	   azimuth="225"
+	   id="feDistantLight3029" />
+  </feSpecularLighting>
+  <feComposite
+	 operator="atop"
+	 in2="result0"
+	 id="feComposite3031" />
+</filter>

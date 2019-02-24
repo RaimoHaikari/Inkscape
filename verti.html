@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+	
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<title>Inkscape filters</title>
+		
+		<meta name="description" content="Preview of Inkscape filters">
+		<meta name="author" content="Raimo Haikari">
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		
+        <style>
+				
+			* {box-sizing: border-box}
+
+			/* Style the tab */
+			.tab {
+				float: left;
+				border: 1px solid #ccc;
+				background-color: #f1f1f1;
+				width: 30%;
+				/* height: 300px; */
+			}
+
+			/* Style the buttons that are used to open the tab content */
+			.tab button {
+				display: block;
+				background-color: inherit;
+				color: black;
+				padding: 22px 16px;
+				width: 100%;
+				border: none;
+				outline: none;
+				text-align: left;
+				cursor: pointer;
+				transition: 0.3s;
+			}
+
+			/* Change background color of buttons on hover */
+			.tab button:hover {
+				background-color: #ddd;
+			}
+
+			/* Create an active/current "tab button" class */
+			.tab button.active {
+				background-color: #ccc;
+			}
+
+			/* Style the tab content */
+			.tabcontent {
+				float: left;
+				padding: 0px 12px;
+				border: 1px solid #ccc;
+				width: 70%;
+				border-left: none;
+				/* height: 300px; */
+			}		
+			
+
+            div.original.active {
+                border: 1px solid blue;
+            }
+        </style>
+
+		<script src="https://d3js.org/d3.v5.min.js"></script>
+		<!-- <script src="https://d3js.org/d3.v4.js"></script> -->
+
+		<script src="javascript/svgFilters.js"></script>
+		<script src="javascript/originalImage.js"></script>
+		<script src="javascript/modelImage.js"></script>
+	</head>
+
+	<body>
+		<div class="row">
+
+<div class="col-md-9" id="mesta"><div class="tab"><button class="tablinks active" name="toggle">ABCs</button><button class="tablinks" name="toggle">Transparency utilities</button><button class="tablinks" name="toggle">Bevels</button><button class="tablinks" name="toggle">Blurs</button><button class="tablinks" name="toggle">Bumps</button><button class="tablinks" name="toggle">Color</button><button class="tablinks" name="toggle">Distort</button><button class="tablinks" name="toggle">Image effects, transparent</button><button class="tablinks" name="toggle">Image effects</button><button class="tablinks" name="toggle">Materials</button><button class="tablinks" name="toggle">Morphology</button><button class="tablinks" name="toggle">Non realistic 3D shaders</button><button class="tablinks" name="toggle">Overlays</button><button class="tablinks" name="toggle">Protrusions</button><button class="tablinks" name="toggle">Ridges</button><button class="tablinks" name="toggle">Scatter</button><button class="tablinks" name="toggle">Shadows and Glows</button><button class="tablinks" name="toggle"></button></div><div class="tabcontent card-columns"><div class="card"><div class="card-header">Dragee</div><div class="card-body"><svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" id="svg2" viewBox="0 0 200 200" version="1.1" width="200" height="200"><defs><filter label="Dragee" tooltip="Gel Ridge with a pearlescent look" height="1.5" width="1.5" y="-0.25" x="-0.25" color-interpolation-filters="sRGB" id="filter3648"><feGaussianBlur stdDeviation="0.01" result="result1" id="feGaussianBlur3650"></feGaussianBlur><feBlend in="result1" mode="screen" result="result5" in2="result1" id="feBlend3652"></feBlend><feGaussianBlur stdDeviation="6" result="result6" id="feGaussianBlur3654"></feGaussianBlur><feComposite operator="xor" result="fbSourceGraphic" in="result6" in2="result6" id="feComposite3656"></feComposite><feColorMatrix result="fbSourceGraphicAlpha" in="fbSourceGraphic" values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 2 0 " id="feColorMatrix3658"></feColorMatrix><feGaussianBlur result="result0" in="fbSourceGraphicAlpha" stdDeviation="2" id="feGaussianBlur3660"></feGaussianBlur><feSpecularLighting specularExponent="35" specularConstant="1" surfaceScale="3" lighting-color="rgb(255,255,255)" result="result1" in="result0" id="feSpecularLighting3662"><feDistantLight azimuth="235" elevation="55" id="feDistantLight3664"></feDistantLight></feSpecularLighting><feComposite operator="in" result="result2" in="result1" in2="fbSourceGraphicAlpha" id="feComposite3666"></feComposite><feComposite k3="1" k2="1" operator="arithmetic" result="result4" in="fbSourceGraphic" in2="result2" id="feComposite3668"></feComposite><feComposite operator="out" in="result9" in2="result4" result="result91" id="feComposite3670"></feComposite><feBlend mode="multiply" in2="result91" id="feBlend3672"></feBlend></filter></defs>
+
+ <metadata id="metadata7">
+
+  <rdf:RDF>
+
+   <cc:Work rdf:about="">
+
+    <dc:format>image/svg+xml</dc:format>
+
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
+
+    <dc:title></dc:title>
+
+   </cc:Work>
+
+  </rdf:RDF>
+
+ </metadata>
+
+ <g id="layer1" transform="translate(0,-852.36218)">
+
+  <rect id="rect2985" opacity="0.98673" style="enable-background:accumulate;color:#000000;" fill-rule="nonzero" transform="translate(0,852.36218)" height="200" width="200" y="0" x="0" fill="#f2f2f2"></rect>
+
+ </g>
+
+ <g id="layer2" fill-rule="nonzero" class="filterTarget" filter="url(#filter3648)">
+
+  <path id="path2988" opacity="0.98672569" style="enable-background:accumulate;color:#000000;" transform="translate(230.46358,54.039735)" fill="#00F" d="m-110.73,68.079c-33.907,20.132-5.0419,19.78-39.431,0.48157s-19.651,5.5235-20.132-33.907c-0.48157-39.431-14.609-14.256,19.298-34.389,33.907-20.132,5.0419-19.78,39.431-0.48157s19.651-5.5235,20.132,33.907c0.48157,39.431,14.609,14.256-19.298,34.389z"></path>
+
+  <path id="path2990" opacity="0.98672569" style="enable-background:accumulate;color:#000000;" d="m-110.73,68.079c-33.907,20.132-5.0419,19.78-39.431,0.48157s-19.651,5.5235-20.132-33.907c-0.48157-39.431-14.609-14.256,19.298-34.389,33.907-20.132,5.0419-19.78,39.431-0.48157s19.651-5.5235,20.132,33.907c0.48157,39.431,14.609,14.256-19.298,34.389z" transform="matrix(0.47954212,0,0,0.47954212,162.35597,71.824919)" fill="#FFF"></path>
+
+ </g>
+
+</svg></div></div><div class="card"><div class="card-header">Glowing bubble</div><div class="card-body"><svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" id="svg2" viewBox="0 0 200 200" version="1.1" width="200" height="200"><defs><filter label="Glowing bubble" menu="Ridges" tooltip="Bubble effect with refraction and glow" x="-0.25" y="-0.25" width="1.5" height="1.5" color-interpolation-filters="sRGB" id="filter3674"><feGaussianBlur stdDeviation="1" result="result1" id="feGaussianBlur3676"></feGaussianBlur><feGaussianBlur stdDeviation="10" result="result6" in="result1" id="feGaussianBlur3678"></feGaussianBlur><feComposite operator="atop" in="result6" in2="result1" result="result8" id="feComposite3680"></feComposite><feComposite operator="xor" result="fbSourceGraphic" in="result6" in2="result8" id="feComposite3682"></feComposite><feColorMatrix result="fbSourceGraphicAlpha" in="fbSourceGraphic" values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 2 0 " id="feColorMatrix3684"></feColorMatrix><feGaussianBlur result="result0" in="fbSourceGraphicAlpha" stdDeviation="1" id="feGaussianBlur3686"></feGaussianBlur><feSpecularLighting specularExponent="35" specularConstant="1.5" surfaceScale="-2" lighting-color="rgb(255,255,255)" result="result1" in="result0" id="feSpecularLighting3688"><feDistantLight azimuth="230" elevation="60" id="feDistantLight3690"></feDistantLight></feSpecularLighting><feComposite operator="in" result="result2" in="result1" in2="fbSourceGraphicAlpha" id="feComposite3692"></feComposite><feComposite k3="1" k2="1" operator="arithmetic" result="result4" in="fbSourceGraphic" in2="result2" id="feComposite3694"></feComposite><feComposite operator="atop" in="result9" in2="result4" result="result91" id="feComposite3696"></feComposite><feBlend mode="multiply" in2="result91" id="feBlend3698"></feBlend></filter></defs>
+
+ <metadata id="metadata7">
+
+  <rdf:RDF>
+
+   <cc:Work rdf:about="">
+
+    <dc:format>image/svg+xml</dc:format>
+
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
+
+    <dc:title></dc:title>
+
+   </cc:Work>
+
+  </rdf:RDF>
+
+ </metadata>
+
+ <g id="layer1" transform="translate(0,-852.36218)">
+
+  <rect id="rect2985" opacity="0.98673" style="enable-background:accumulate;color:#000000;" fill-rule="nonzero" transform="translate(0,852.36218)" height="200" width="200" y="0" x="0" fill="#f2f2f2"></rect>
+
+ </g>
+
+ <g id="layer2" fill-rule="nonzero" class="filterTarget" filter="url(#filter3674)">
+
+  <path id="path2988" opacity="0.98672569" style="enable-background:accumulate;color:#000000;" transform="translate(230.46358,54.039735)" fill="#00F" d="m-110.73,68.079c-33.907,20.132-5.0419,19.78-39.431,0.48157s-19.651,5.5235-20.132-33.907c-0.48157-39.431-14.609-14.256,19.298-34.389,33.907-20.132,5.0419-19.78,39.431-0.48157s19.651-5.5235,20.132,33.907c0.48157,39.431,14.609,14.256-19.298,34.389z"></path>
+
+  <path id="path2990" opacity="0.98672569" style="enable-background:accumulate;color:#000000;" d="m-110.73,68.079c-33.907,20.132-5.0419,19.78-39.431,0.48157s-19.651,5.5235-20.132-33.907c-0.48157-39.431-14.609-14.256,19.298-34.389,33.907-20.132,5.0419-19.78,39.431-0.48157s19.651-5.5235,20.132,33.907c0.48157,39.431,14.609,14.256-19.298,34.389z" transform="matrix(0.47954212,0,0,0.47954212,162.35597,71.824919)" fill="#FFF"></path>
+
+ </g>
+
+</svg></div></div><div class="card"><div class="card-header">Matte ridge</div><div class="card-body"><svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" id="svg2" viewBox="0 0 200 200" version="1.1" width="200" height="200"><defs><filter label="Matte ridge" menu="Ridges" tooltip="Soft pastel ridge" color-interpolation-filters="sRGB" id="filter3700"><feGaussianBlur stdDeviation="0.5" result="result1" id="feGaussianBlur3702"></feGaussianBlur><feBlend in="SourceGraphic" mode="normal" result="result5" in2="result1" id="feBlend3704"></feBlend><feGaussianBlur stdDeviation="3" result="result6" in="result5" id="feGaussianBlur3706"></feGaussianBlur><feComposite operator="xor" in="result6" in2="result6" result="result8" id="feComposite3708"></feComposite><feComposite operator="in" result="fbSourceGraphic" in="result6" in2="result8" id="feComposite3710"></feComposite><feColorMatrix result="fbSourceGraphicAlpha" in="fbSourceGraphic" values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0 " id="feColorMatrix3712"></feColorMatrix><feGaussianBlur result="result0" in="fbSourceGraphic" stdDeviation="0.5" id="feGaussianBlur3714"></feGaussianBlur><feSpecularLighting specularExponent="55" specularConstant="2" surfaceScale="2" lighting-color="rgb(255,255,255)" result="result1" in="result0" id="feSpecularLighting3716"><fePointLight z="20000" y="-10000" x="-5000" id="fePointLight3718"></fePointLight></feSpecularLighting><feComposite operator="arithmetic" result="result2" in="result1" in2="fbSourceGraphicAlpha" k1="1" id="feComposite3720"></feComposite><feComposite k3="1" k2="0.5" operator="arithmetic" result="result4" in="fbSourceGraphic" in2="result2" id="feComposite3722"></feComposite><feComposite operator="over" in="result9" in2="result4" result="result91" id="feComposite3724"></feComposite><feBlend mode="screen" in2="result91" id="feBlend3726"></feBlend></filter></defs>
+
+ <metadata id="metadata7">
+
+  <rdf:RDF>
+
+   <cc:Work rdf:about="">
+
+    <dc:format>image/svg+xml</dc:format>
+
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
+
+    <dc:title></dc:title>
+
+   </cc:Work>
+
+  </rdf:RDF>
+
+ </metadata>
+
+ <g id="layer1" transform="translate(0,-852.36218)">
+
+  <rect id="rect2985" opacity="0.98673" style="enable-background:accumulate;color:#000000;" fill-rule="nonzero" transform="translate(0,852.36218)" height="200" width="200" y="0" x="0" fill="#f2f2f2"></rect>
+
+ </g>
+
+ <g id="layer2" fill-rule="nonzero" class="filterTarget" filter="url(#filter3700)">
+
+  <path id="path2988" opacity="0.98672569" style="enable-background:accumulate;color:#000000;" transform="translate(230.46358,54.039735)" fill="#00F" d="m-110.73,68.079c-33.907,20.132-5.0419,19.78-39.431,0.48157s-19.651,5.5235-20.132-33.907c-0.48157-39.431-14.609-14.256,19.298-34.389,33.907-20.132,5.0419-19.78,39.431-0.48157s19.651-5.5235,20.132,33.907c0.48157,39.431,14.609,14.256-19.298,34.389z"></path>
+
+  <path id="path2990" opacity="0.98672569" style="enable-background:accumulate;color:#000000;" d="m-110.73,68.079c-33.907,20.132-5.0419,19.78-39.431,0.48157s-19.651,5.5235-20.132-33.907c-0.48157-39.431-14.609-14.256,19.298-34.389,33.907-20.132,5.0419-19.78,39.431-0.48157s19.651-5.5235,20.132,33.907c0.48157,39.431,14.609,14.256-19.298,34.389z" transform="matrix(0.47954212,0,0,0.47954212,162.35597,71.824919)" fill="#FFF"></path>
+
+ </g>
+
+</svg></div></div><div class="card"><div class="card-header">Metallized ridge</div><div class="card-body"><svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" id="svg2" viewBox="0 0 200 200" version="1.1" width="200" height="200"><defs><filter label="Metallized ridge" menu="Ridges" tooltip="Gel Ridge metallized at its top" height="2" y="-0.5" width="2" x="-0.5" color-interpolation-filters="sRGB" id="filter3728"><feGaussianBlur stdDeviation="1" result="result1" id="feGaussianBlur3730"></feGaussianBlur><feGaussianBlur stdDeviation="8" result="result6" in="result1" id="feGaussianBlur3732"></feGaussianBlur><feComposite operator="atop" in="result6" in2="result1" result="result8" id="feComposite3734"></feComposite><feComposite operator="xor" result="fbSourceGraphic" in="result6" in2="result8" id="feComposite3736"></feComposite><feColorMatrix result="fbSourceGraphicAlpha" in="fbSourceGraphic" values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 2 0 " id="feColorMatrix3738"></feColorMatrix><feGaussianBlur result="result0" in="fbSourceGraphicAlpha" stdDeviation="2.5" id="feGaussianBlur3740"></feGaussianBlur><feSpecularLighting specularExponent="35" specularConstant="1" surfaceScale="4" lighting-color="rgb(255,255,255)" result="result1" in="result0" id="feSpecularLighting3742"><fePointLight z="20000" y="-10000" x="-5000" id="fePointLight3744"></fePointLight></feSpecularLighting><feComposite operator="in" result="result2" in="result1" in2="fbSourceGraphicAlpha" id="feComposite3746"></feComposite><feComposite k3="1" k2="1" operator="arithmetic" result="result4" in="fbSourceGraphic" in2="result2" id="feComposite3748"></feComposite><feComposite operator="atop" in="result9" in2="result4" result="result91" id="feComposite3750"></feComposite><feBlend mode="multiply" in2="result91" id="feBlend3752"></feBlend></filter></defs>
+
+ <metadata id="metadata7">
+
+  <rdf:RDF>
+
+   <cc:Work rdf:about="">
+
+    <dc:format>image/svg+xml</dc:format>
+
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
+
+    <dc:title></dc:title>
+
+   </cc:Work>
+
+  </rdf:RDF>
+
+ </metadata>
+
+ <g id="layer1" transform="translate(0,-852.36218)">
+
+  <rect id="rect2985" opacity="0.98673" style="enable-background:accumulate;color:#000000;" fill-rule="nonzero" transform="translate(0,852.36218)" height="200" width="200" y="0" x="0" fill="#f2f2f2"></rect>
+
+ </g>
+
+ <g id="layer2" fill-rule="nonzero" class="filterTarget" filter="url(#filter3728)">
+
+  <path id="path2988" opacity="0.98672569" style="enable-background:accumulate;color:#000000;" transform="translate(230.46358,54.039735)" fill="#00F" d="m-110.73,68.079c-33.907,20.132-5.0419,19.78-39.431,0.48157s-19.651,5.5235-20.132-33.907c-0.48157-39.431-14.609-14.256,19.298-34.389,33.907-20.132,5.0419-19.78,39.431-0.48157s19.651-5.5235,20.132,33.907c0.48157,39.431,14.609,14.256-19.298,34.389z"></path>
+
+  <path id="path2990" opacity="0.98672569" style="enable-background:accumulate;color:#000000;" d="m-110.73,68.079c-33.907,20.132-5.0419,19.78-39.431,0.48157s-19.651,5.5235-20.132-33.907c-0.48157-39.431-14.609-14.256,19.298-34.389,33.907-20.132,5.0419-19.78,39.431-0.48157s19.651-5.5235,20.132,33.907c0.48157,39.431,14.609,14.256-19.298,34.389z" transform="matrix(0.47954212,0,0,0.47954212,162.35597,71.824919)" fill="#FFF"></path>
+
+ </g>
+
+</svg></div></div><div class="card"><div class="card-header">Refractive gel A</div><div class="card-body"><svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" id="svg2" viewBox="0 0 200 200" version="1.1" width="200" height="200"><defs><filter label="Refractive gel A" menu="Ridges" tooltip="Gel effect with light refraction" height="1.4" width="1.4" y="-0.2" x="-0.2" color-interpolation-filters="sRGB" id="filter3754"><feOffset dx="7" dy="7" in="SourceAlpha" result="result3" id="feOffset3756"></feOffset><feGaussianBlur stdDeviation="8" in="result3" result="result1" id="feGaussianBlur3758"></feGaussianBlur><feComposite operator="in" in2="result1" in="SourceGraphic" result="result2" id="feComposite3760"></feComposite><feComposite operator="out" result="fbSourceGraphic" in="result2" in2="result2" id="feComposite3762"></feComposite><feColorMatrix result="fbSourceGraphicAlpha" in="fbSourceGraphic" values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0 0 0 0 4 0 " id="feColorMatrix3764"></feColorMatrix><feGaussianBlur result="result0" in="fbSourceGraphicAlpha" stdDeviation="2" id="feGaussianBlur3766"></feGaussianBlur><feSpecularLighting specularExponent="20" specularConstant="1.2" surfaceScale="3" lighting-color="rgb(255,255,255)" result="result1" in="result0" id="feSpecularLighting3768"><feDistantLight azimuth="235" elevation="45" id="feDistantLight3770"></feDistantLight></feSpecularLighting><feComposite operator="in" result="result2" in="result1" in2="fbSourceGraphicAlpha" id="feComposite3772"></feComposite><feComposite in="fbSourceGraphic" operator="arithmetic" k2="2" k3="2" in2="result2" result="result91" id="feComposite3774"></feComposite><feBlend mode="multiply" in2="result91" id="feBlend3776"></feBlend></filter></defs>
+
+ <metadata id="metadata7">
+
+  <rdf:RDF>
+
+   <cc:Work rdf:about="">
+
+    <dc:format>image/svg+xml</dc:format>
+
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
+
+    <dc:title></dc:title>
+
+   </cc:Work>
+
+  </rdf:RDF>
+
+ </metadata>
+
+ <g id="layer1" transform="translate(0,-852.36218)">
+
+  <rect id="rect2985" opacity="0.98673" style="enable-background:accumulate;color:#000000;" fill-rule="nonzero" transform="translate(0,852.36218)" height="200" width="200" y="0" x="0" fill="#f2f2f2"></rect>
+
+ </g>
+
+ <g id="layer2" fill-rule="nonzero" class="filterTarget" filter="url(#filter3754)">
+
+  <path id="path2988" opacity="0.98672569" style="enable-background:accumulate;color:#000000;" transform="translate(230.46358,54.039735)" fill="#00F" d="m-110.73,68.079c-33.907,20.132-5.0419,19.78-39.431,0.48157s-19.651,5.5235-20.132-33.907c-0.48157-39.431-14.609-14.256,19.298-34.389,33.907-20.132,5.0419-19.78,39.431-0.48157s19.651-5.5235,20.132,33.907c0.48157,39.431,14.609,14.256-19.298,34.389z"></path>
+
+  <path id="path2990" opacity="0.98672569" style="enable-background:accumulate;color:#000000;" d="m-110.73,68.079c-33.907,20.132-5.0419,19.78-39.431,0.48157s-19.651,5.5235-20.132-33.907c-0.48157-39.431-14.609-14.256,19.298-34.389,33.907-20.132,5.0419-19.78,39.431-0.48157s19.651-5.5235,20.132,33.907c0.48157,39.431,14.609,14.256-19.298,34.389z" transform="matrix(0.47954212,0,0,0.47954212,162.35597,71.824919)" fill="#FFF"></path>
+
+ </g>
+
+</svg></div></div><div class="card"><div class="card-header">Refractive gel B</div><div class="card-body"><svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" id="svg2" viewBox="0 0 200 200" version="1.1" width="200" height="200"><defs><filter label="Refractive gel B" menu="Ridges" tooltip="Gel effect with strong refraction" height="1.4" width="1.4" y="-0.2" x="-0.2" color-interpolation-filters="sRGB" id="filter3778"><feOffset dx="3" dy="3" in="SourceAlpha" result="result3" id="feOffset3780"></feOffset><feGaussianBlur stdDeviation="8" in="result3" result="result1" id="feGaussianBlur3782"></feGaussianBlur><feComposite operator="in" in2="result1" in="SourceGraphic" result="result2" id="feComposite3784"></feComposite><feComposite operator="out" result="fbSourceGraphic" in="result2" in2="result2" id="feComposite3786"></feComposite><feColorMatrix result="fbSourceGraphicAlpha" in="fbSourceGraphic" values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0 0 0 0 6 0 " id="feColorMatrix3788"></feColorMatrix><feGaussianBlur result="result0" in="fbSourceGraphicAlpha" stdDeviation="3" id="feGaussianBlur3790"></feGaussianBlur><feSpecularLighting specularExponent="20" specularConstant="2" surfaceScale="5" lighting-color="rgb(255,255,255)" result="result1" in="result0" id="feSpecularLighting3792"><feDistantLight azimuth="235" elevation="35" id="feDistantLight3794"></feDistantLight></feSpecularLighting><feComposite operator="in" result="result2" in="result1" in2="fbSourceGraphicAlpha" id="feComposite3796"></feComposite><feComposite in="fbSourceGraphic" operator="arithmetic" k2="1.5" k3="3" in2="result2" result="result91" id="feComposite3798"></feComposite><feBlend mode="screen" in2="result91" id="feBlend3800"></feBlend><feConvolveMatrix order="3 3" kernelMatrix="2 0 1 0 1 0 0 0 0 " targetX="1" targetY="1" divisor="3" id="feConvolveMatrix3802"></feConvolveMatrix></filter></defs>
+
+ <metadata id="metadata7">
+
+  <rdf:RDF>
+
+   <cc:Work rdf:about="">
+
+    <dc:format>image/svg+xml</dc:format>
+
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
+
+    <dc:title></dc:title>
+
+   </cc:Work>
+
+  </rdf:RDF>
+
+ </metadata>
+
+ <g id="layer1" transform="translate(0,-852.36218)">
+
+  <rect id="rect2985" opacity="0.98673" style="enable-background:accumulate;color:#000000;" fill-rule="nonzero" transform="translate(0,852.36218)" height="200" width="200" y="0" x="0" fill="#f2f2f2"></rect>
+
+ </g>
+
+ <g id="layer2" fill-rule="nonzero" class="filterTarget" filter="url(#filter3778)">
+
+  <path id="path2988" opacity="0.98672569" style="enable-background:accumulate;color:#000000;" transform="translate(230.46358,54.039735)" fill="#00F" d="m-110.73,68.079c-33.907,20.132-5.0419,19.78-39.431,0.48157s-19.651,5.5235-20.132-33.907c-0.48157-39.431-14.609-14.256,19.298-34.389,33.907-20.132,5.0419-19.78,39.431-0.48157s19.651-5.5235,20.132,33.907c0.48157,39.431,14.609,14.256-19.298,34.389z"></path>
+
+  <path id="path2990" opacity="0.98672569" style="enable-background:accumulate;color:#000000;" d="m-110.73,68.079c-33.907,20.132-5.0419,19.78-39.431,0.48157s-19.651,5.5235-20.132-33.907c-0.48157-39.431-14.609-14.256,19.298-34.389,33.907-20.132,5.0419-19.78,39.431-0.48157s19.651-5.5235,20.132,33.907c0.48157,39.431,14.609,14.256-19.298,34.389z" transform="matrix(0.47954212,0,0,0.47954212,162.35597,71.824919)" fill="#FFF"></path>
+
+ </g>
+
+</svg></div></div><div class="card"><div class="card-header">Thin Membrane</div><div class="card-body"><svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" id="svg2" viewBox="0 0 200 200" version="1.1" width="200" height="200"><defs><filter label="Thin Membrane" menu="Ridges" tooltip="Thin like a soap membrane" x="-0.05" y="-0.05" width="1.1" height="1.1" color-interpolation-filters="sRGB" id="filter3804"><feGaussianBlur stdDeviation="5" result="result1" id="feGaussianBlur3806"></feGaussianBlur><feComposite in="result1" in2="result1" result="result4" operator="xor" id="feComposite3808"></feComposite><feGaussianBlur stdDeviation="8" result="result6" id="feGaussianBlur3810"></feGaussianBlur><feComposite operator="atop" in="result6" in2="SourceGraphic" result="result8" id="feComposite3812"></feComposite><feComposite operator="in" result="fbSourceGraphic" in="result6" in2="result8" id="feComposite3814"></feComposite><feColorMatrix result="fbSourceGraphicAlpha" in="fbSourceGraphic" values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 2 0 " id="feColorMatrix3816"></feColorMatrix><feGaussianBlur result="result0" in="fbSourceGraphicAlpha" stdDeviation="2" id="feGaussianBlur3818"></feGaussianBlur><feSpecularLighting specularExponent="25" specularConstant="2" surfaceScale="-5" lighting-color="rgb(255,255,255)" result="result1" in="result0" id="feSpecularLighting3820"><fePointLight z="20000" y="-10000" x="-5000" id="fePointLight3822"></fePointLight></feSpecularLighting><feComposite operator="in" result="result2" in="result1" in2="fbSourceGraphicAlpha" id="feComposite3824"></feComposite><feComposite k3="2" k2="1" operator="arithmetic" result="result4" in="fbSourceGraphic" in2="result2" id="feComposite3826"></feComposite><feComposite operator="in" in="result9" result="result9" in2="result4" id="feComposite3828"></feComposite><feBlend mode="multiply" in="result9" in2="result4" id="feBlend3830"></feBlend></filter></defs>
+
+ <metadata id="metadata7">
+
+  <rdf:RDF>
+
+   <cc:Work rdf:about="">
+
+    <dc:format>image/svg+xml</dc:format>
+
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
+
+    <dc:title></dc:title>
+
+   </cc:Work>
+
+  </rdf:RDF>
+
+ </metadata>
+
+ <g id="layer1" transform="translate(0,-852.36218)">
+
+  <rect id="rect2985" opacity="0.98673" style="enable-background:accumulate;color:#000000;" fill-rule="nonzero" transform="translate(0,852.36218)" height="200" width="200" y="0" x="0" fill="#f2f2f2"></rect>
+
+ </g>
+
+ <g id="layer2" fill-rule="nonzero" class="filterTarget" filter="url(#filter3804)">
+
+  <path id="path2988" opacity="0.98672569" style="enable-background:accumulate;color:#000000;" transform="translate(230.46358,54.039735)" fill="#00F" d="m-110.73,68.079c-33.907,20.132-5.0419,19.78-39.431,0.48157s-19.651,5.5235-20.132-33.907c-0.48157-39.431-14.609-14.256,19.298-34.389,33.907-20.132,5.0419-19.78,39.431-0.48157s19.651-5.5235,20.132,33.907c0.48157,39.431,14.609,14.256-19.298,34.389z"></path>
+
+  <path id="path2990" opacity="0.98672569" style="enable-background:accumulate;color:#000000;" d="m-110.73,68.079c-33.907,20.132-5.0419,19.78-39.431,0.48157s-19.651,5.5235-20.132-33.907c-0.48157-39.431-14.609-14.256,19.298-34.389,33.907-20.132,5.0419-19.78,39.431-0.48157s19.651-5.5235,20.132,33.907c0.48157,39.431,14.609,14.256-19.298,34.389z" transform="matrix(0.47954212,0,0,0.47954212,162.35597,71.824919)" fill="#FFF"></path>
+
+ </g>
+
+</svg></div></div></div></div>		
+		
+		
+		
+		
+			<div class="col-md-3" id="alkuperaiset"></div>
+		</div>
+		
+		<script type="text/javascript">
+		
+		
+			var visualisointi = null;
+	        var liitutaulu = d3.select("#mesta");
+			
+	        var fileName = "javascript/test.json";
+			fileName = "javascript/input.json";
+	        
+	        var h = 200;
+	        var w = 200;
+			
+			//d3.json(fileName, function(error, r) {
+			d3.json(fileName).then(function(r) {
+				/*
+				console.log(r);
+			
+			
+			
+				visualisointi = Filters()
+					.data(r)
+					.width(w)
+					.height(h);
+							
+				liitutaulu.call(visualisointi);
+				*/
+			});
+					
+			function openFilter(evt, cityName) {
+
+				// Declare all variables
+				var i, tabcontent, tablinks;
+
+				// Get all elements with class="tabcontent" and hide them
+				tabcontent = document.getElementsByClassName("tabcontent");
+				for (i = 0; i < tabcontent.length; i++) {
+					tabcontent[i].style.display = "none";
+				}
+
+				// Get all elements with class="tablinks" and remove the class "active"
+				tablinks = document.getElementsByClassName("tablinks");
+				for (i = 0; i < tablinks.length; i++) {
+					tablinks[i].className = tablinks[i].className.replace(" active", "");
+				}
+
+				// Show the current tab, and add an "active" class to the link that opened the tab
+				document.getElementById(cityName).style.display = "block";
+				evt.currentTarget.className += " active";
+			} 			
+			
+        </script>	
+		
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		
+	</body>
+</html>

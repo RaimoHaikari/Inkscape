@@ -1,0 +1,159 @@
+<defs id="defs3834" menu="Scatter">
+	<filter
+	   label="Air spray"
+	   tooltip="Convert to small scattered particles with some thickness"
+	   width="2"
+	   height="2"
+	   y="-0.5"
+	   x="-0.5"
+	   color-interpolation-filters="sRGB"
+	   id="filter3850">
+	  <feGaussianBlur
+		 stdDeviation="0.01"
+		 result="result1"
+		 id="feGaussianBlur3852" />
+	  <feBlend
+		 in2="result1"
+		 result="fbSourceGraphic"
+		 mode="multiply"
+		 id="feBlend3854" />
+	  <feTurbulence
+		 baseFrequency="0.8"
+		 type="fractalNoise"
+		 seed="0"
+		 numOctaves="3"
+		 result="result3"
+		 id="feTurbulence3856" />
+	  <feDisplacementMap
+		 in="fbSourceGraphic"
+		 xChannelSelector="R"
+		 yChannelSelector="G"
+		 scale="50"
+		 result="result2"
+		 in2="result3"
+		 id="feDisplacementMap3858" />
+	  <feMorphology
+		 radius="1"
+		 operator="dilate"
+		 result="result4"
+		 id="feMorphology3860" />
+	  <feBlend
+		 mode="screen"
+		 in2="result2"
+		 id="feBlend3862" />
+	</filter>
+	<filter
+	   label="Cubes"
+	   menu="Scatter"
+	   tooltip="Scattered cubes; adjust the Morphology primitive to vary size"
+	   color-interpolation-filters="sRGB"
+	   id="filter3864">
+	  <feTurbulence
+		 baseFrequency="0.14299516908212559"
+		 numOctaves="1"
+		 type="fractalNoise"
+		 id="feTurbulence3866" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 6 -3.5 "
+		 result="result5"
+		 id="feColorMatrix3868" />
+	  <feComposite
+		 in2="result5"
+		 operator="in"
+		 in="SourceGraphic"
+		 result="result6"
+		 id="feComposite3870" />
+	  <feMorphology
+		 result="result3"
+		 radius="5"
+		 operator="dilate"
+		 in="result6"
+		 id="feMorphology3872" />
+	  <feDisplacementMap
+		 result="result4"
+		 scale="0"
+		 yChannelSelector="A"
+		 xChannelSelector="R"
+		 in="result3"
+		 in2="result3"
+		 id="feDisplacementMap3874" />
+	  <feComposite
+		 in2="result4"
+		 operator="arithmetic"
+		 result="result2"
+		 k1="1"
+		 k3="1"
+		 id="feComposite3876" />
+	  <feBlend
+		 mode="darken"
+		 in="result2"
+		 in2="result2"
+		 id="feBlend3878" />
+	  <feConvolveMatrix
+		 order="3 3"
+		 kernelMatrix="2 0 0 0 1 0 0 0 -1 "
+		 targetX="1"
+		 targetY="1"
+		 divisor="2"
+		 edgeMode="duplicate"
+		 id="feConvolveMatrix3880" />
+	</filter>
+	<filter
+	   label="Leaves"
+	   menu="Scatter"
+	   tooltip="Leaves on the ground in Fall, or living foliage"
+	   color-interpolation-filters="sRGB"
+	   id="filter3882">
+	  <feTurbulence
+		 baseFrequency="0.09"
+		 numOctaves="5"
+		 type="fractalNoise"
+		 result="result6"
+		 id="feTurbulence3884" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 4.9 -2.9 "
+		 result="result5"
+		 in="result6"
+		 id="feColorMatrix3886" />
+	  <feComposite
+		 in2="result5"
+		 operator="in"
+		 in="SourceGraphic"
+		 id="feComposite3888" />
+	  <feMorphology
+		 result="result3"
+		 radius="6"
+		 operator="dilate"
+		 id="feMorphology3890" />
+	  <feTurbulence
+		 baseFrequency="0.2"
+		 numOctaves="1"
+		 type="fractalNoise"
+		 result="result91"
+		 id="feTurbulence3892" />
+	  <feDisplacementMap
+		 result="result4"
+		 scale="15"
+		 yChannelSelector="G"
+		 xChannelSelector="R"
+		 in="result3"
+		 in2="result91"
+		 id="feDisplacementMap3894" />
+	  <feComposite
+		 in2="result4"
+		 operator="arithmetic"
+		 result="result2"
+		 k1="0.5"
+		 k3="1"
+		 id="feComposite3896" />
+	  <feConvolveMatrix
+		 order="3 3"
+		 kernelMatrix="1 0 0 0 2 0 0 0 -1 "
+		 targetX="0"
+		 targetY="0"
+		 divisor="1.5"
+		 edgeMode="duplicate"
+		 in="result2"
+		 id="feConvolveMatrix3898" />
+	</filter>
+</defs>

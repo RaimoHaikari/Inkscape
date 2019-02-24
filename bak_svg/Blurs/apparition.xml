@@ -1,0 +1,25 @@
+<filter
+   name="Apparition"
+   x="0"
+   y="0"
+   width="1"
+   height="1"
+   tooltip="Edges are partly feathered out"
+   color-interpolation-filters="sRGB"
+   id="filter4308">
+  <feMorphology
+	 radius="4"
+	 in="SourceGraphic"
+	 result="result0"
+	 id="feMorphology4310" />
+  <feGaussianBlur
+	 in="result0"
+	 stdDeviation="8"
+	 result="result91"
+	 id="feGaussianBlur4312" />
+  <feComposite
+	 operator="in"
+	 in="SourceGraphic"
+	 in2="result91"
+	 id="feComposite4314" />
+</filter>

@@ -1,0 +1,564 @@
+<defs id="defs3632" menu="Ridges">
+	<filter
+	   label="Dragee"
+	   tooltip="Gel Ridge with a pearlescent look"
+	   height="1.5"
+	   width="1.5"
+	   y="-0.25"
+	   x="-0.25"
+	   color-interpolation-filters="sRGB"
+	   id="filter3648">
+	  <feGaussianBlur
+		 stdDeviation="0.01"
+		 result="result1"
+		 id="feGaussianBlur3650" />
+	  <feBlend
+		 in="result1"
+		 mode="screen"
+		 result="result5"
+		 in2="result1"
+		 id="feBlend3652" />
+	  <feGaussianBlur
+		 stdDeviation="6"
+		 result="result6"
+		 id="feGaussianBlur3654" />
+	  <feComposite
+		 operator="xor"
+		 result="fbSourceGraphic"
+		 in="result6"
+		 in2="result6"
+		 id="feComposite3656" />
+	  <feColorMatrix
+		 result="fbSourceGraphicAlpha"
+		 in="fbSourceGraphic"
+		 values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 2 0 "
+		 id="feColorMatrix3658" />
+	  <feGaussianBlur
+		 result="result0"
+		 in="fbSourceGraphicAlpha"
+		 stdDeviation="2"
+		 id="feGaussianBlur3660" />
+	  <feSpecularLighting
+		 specularExponent="35"
+		 specularConstant="1"
+		 surfaceScale="3"
+		 lighting-color="rgb(255,255,255)"
+		 result="result1"
+		 in="result0"
+		 id="feSpecularLighting3662">
+		<feDistantLight
+		   azimuth="235"
+		   elevation="55"
+		   id="feDistantLight3664" />
+	  </feSpecularLighting>
+	  <feComposite
+		 operator="in"
+		 result="result2"
+		 in="result1"
+		 in2="fbSourceGraphicAlpha"
+		 id="feComposite3666" />
+	  <feComposite
+		 k3="1"
+		 k2="1"
+		 operator="arithmetic"
+		 result="result4"
+		 in="fbSourceGraphic"
+		 in2="result2"
+		 id="feComposite3668" />
+	  <feComposite
+		 operator="out"
+		 in="result9"
+		 in2="result4"
+		 result="result91"
+		 id="feComposite3670" />
+	  <feBlend
+		 mode="multiply"
+		 in2="result91"
+		 id="feBlend3672" />
+	</filter>
+	<filter
+	   label="Glowing bubble"
+	   menu="Ridges"
+	   tooltip="Bubble effect with refraction and glow"
+	   x="-0.25"
+	   y="-0.25"
+	   width="1.5"
+	   height="1.5"
+	   color-interpolation-filters="sRGB"
+	   id="filter3674">
+	  <feGaussianBlur
+		 stdDeviation="1"
+		 result="result1"
+		 id="feGaussianBlur3676" />
+	  <feGaussianBlur
+		 stdDeviation="10"
+		 result="result6"
+		 in="result1"
+		 id="feGaussianBlur3678" />
+	  <feComposite
+		 operator="atop"
+		 in="result6"
+		 in2="result1"
+		 result="result8"
+		 id="feComposite3680" />
+	  <feComposite
+		 operator="xor"
+		 result="fbSourceGraphic"
+		 in="result6"
+		 in2="result8"
+		 id="feComposite3682" />
+	  <feColorMatrix
+		 result="fbSourceGraphicAlpha"
+		 in="fbSourceGraphic"
+		 values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 2 0 "
+		 id="feColorMatrix3684" />
+	  <feGaussianBlur
+		 result="result0"
+		 in="fbSourceGraphicAlpha"
+		 stdDeviation="1"
+		 id="feGaussianBlur3686" />
+	  <feSpecularLighting
+		 specularExponent="35"
+		 specularConstant="1.5"
+		 surfaceScale="-2"
+		 lighting-color="rgb(255,255,255)"
+		 result="result1"
+		 in="result0"
+		 id="feSpecularLighting3688">
+		<feDistantLight
+		   azimuth="230"
+		   elevation="60"
+		   id="feDistantLight3690" />
+	  </feSpecularLighting>
+	  <feComposite
+		 operator="in"
+		 result="result2"
+		 in="result1"
+		 in2="fbSourceGraphicAlpha"
+		 id="feComposite3692" />
+	  <feComposite
+		 k3="1"
+		 k2="1"
+		 operator="arithmetic"
+		 result="result4"
+		 in="fbSourceGraphic"
+		 in2="result2"
+		 id="feComposite3694" />
+	  <feComposite
+		 operator="atop"
+		 in="result9"
+		 in2="result4"
+		 result="result91"
+		 id="feComposite3696" />
+	  <feBlend
+		 mode="multiply"
+		 in2="result91"
+		 id="feBlend3698" />
+	</filter>
+	<filter
+	   label="Matte ridge"
+	   menu="Ridges"
+	   tooltip="Soft pastel ridge"
+	   color-interpolation-filters="sRGB"
+	   id="filter3700">
+	  <feGaussianBlur
+		 stdDeviation="0.5"
+		 result="result1"
+		 id="feGaussianBlur3702" />
+	  <feBlend
+		 in="SourceGraphic"
+		 mode="normal"
+		 result="result5"
+		 in2="result1"
+		 id="feBlend3704" />
+	  <feGaussianBlur
+		 stdDeviation="3"
+		 result="result6"
+		 in="result5"
+		 id="feGaussianBlur3706" />
+	  <feComposite
+		 operator="xor"
+		 in="result6"
+		 in2="result6"
+		 result="result8"
+		 id="feComposite3708" />
+	  <feComposite
+		 operator="in"
+		 result="fbSourceGraphic"
+		 in="result6"
+		 in2="result8"
+		 id="feComposite3710" />
+	  <feColorMatrix
+		 result="fbSourceGraphicAlpha"
+		 in="fbSourceGraphic"
+		 values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0 "
+		 id="feColorMatrix3712" />
+	  <feGaussianBlur
+		 result="result0"
+		 in="fbSourceGraphic"
+		 stdDeviation="0.5"
+		 id="feGaussianBlur3714" />
+	  <feSpecularLighting
+		 specularExponent="55"
+		 specularConstant="2"
+		 surfaceScale="2"
+		 lighting-color="rgb(255,255,255)"
+		 result="result1"
+		 in="result0"
+		 id="feSpecularLighting3716">
+		<fePointLight
+		   z="20000"
+		   y="-10000"
+		   x="-5000"
+		   id="fePointLight3718" />
+	  </feSpecularLighting>
+	  <feComposite
+		 operator="arithmetic"
+		 result="result2"
+		 in="result1"
+		 in2="fbSourceGraphicAlpha"
+		 k1="1"
+		 id="feComposite3720" />
+	  <feComposite
+		 k3="1"
+		 k2="0.5"
+		 operator="arithmetic"
+		 result="result4"
+		 in="fbSourceGraphic"
+		 in2="result2"
+		 id="feComposite3722" />
+	  <feComposite
+		 operator="over"
+		 in="result9"
+		 in2="result4"
+		 result="result91"
+		 id="feComposite3724" />
+	  <feBlend
+		 mode="screen"
+		 in2="result91"
+		 id="feBlend3726" />
+	</filter>
+	<filter
+	   label="Metallized ridge"
+	   menu="Ridges"
+	   tooltip="Gel Ridge metallized at its top"
+	   height="2"
+	   y="-0.5"
+	   width="2"
+	   x="-0.5"
+	   color-interpolation-filters="sRGB"
+	   id="filter3728">
+	  <feGaussianBlur
+		 stdDeviation="1"
+		 result="result1"
+		 id="feGaussianBlur3730" />
+	  <feGaussianBlur
+		 stdDeviation="8"
+		 result="result6"
+		 in="result1"
+		 id="feGaussianBlur3732" />
+	  <feComposite
+		 operator="atop"
+		 in="result6"
+		 in2="result1"
+		 result="result8"
+		 id="feComposite3734" />
+	  <feComposite
+		 operator="xor"
+		 result="fbSourceGraphic"
+		 in="result6"
+		 in2="result8"
+		 id="feComposite3736" />
+	  <feColorMatrix
+		 result="fbSourceGraphicAlpha"
+		 in="fbSourceGraphic"
+		 values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 2 0 "
+		 id="feColorMatrix3738" />
+	  <feGaussianBlur
+		 result="result0"
+		 in="fbSourceGraphicAlpha"
+		 stdDeviation="2.5"
+		 id="feGaussianBlur3740" />
+	  <feSpecularLighting
+		 specularExponent="35"
+		 specularConstant="1"
+		 surfaceScale="4"
+		 lighting-color="rgb(255,255,255)"
+		 result="result1"
+		 in="result0"
+		 id="feSpecularLighting3742">
+		<fePointLight
+		   z="20000"
+		   y="-10000"
+		   x="-5000"
+		   id="fePointLight3744" />
+	  </feSpecularLighting>
+	  <feComposite
+		 operator="in"
+		 result="result2"
+		 in="result1"
+		 in2="fbSourceGraphicAlpha"
+		 id="feComposite3746" />
+	  <feComposite
+		 k3="1"
+		 k2="1"
+		 operator="arithmetic"
+		 result="result4"
+		 in="fbSourceGraphic"
+		 in2="result2"
+		 id="feComposite3748" />
+	  <feComposite
+		 operator="atop"
+		 in="result9"
+		 in2="result4"
+		 result="result91"
+		 id="feComposite3750" />
+	  <feBlend
+		 mode="multiply"
+		 in2="result91"
+		 id="feBlend3752" />
+	</filter>
+	<filter
+	   label="Refractive gel A"
+	   menu="Ridges"
+	   tooltip="Gel effect with light refraction"
+	   height="1.4"
+	   width="1.4"
+	   y="-0.2"
+	   x="-0.2"
+	   color-interpolation-filters="sRGB"
+	   id="filter3754">
+	  <feOffset
+		 dx="7"
+		 dy="7"
+		 in="SourceAlpha"
+		 result="result3"
+		 id="feOffset3756" />
+	  <feGaussianBlur
+		 stdDeviation="8"
+		 in="result3"
+		 result="result1"
+		 id="feGaussianBlur3758" />
+	  <feComposite
+		 operator="in"
+		 in2="result1"
+		 in="SourceGraphic"
+		 result="result2"
+		 id="feComposite3760" />
+	  <feComposite
+		 operator="out"
+		 result="fbSourceGraphic"
+		 in="result2"
+		 in2="result2"
+		 id="feComposite3762" />
+	  <feColorMatrix
+		 result="fbSourceGraphicAlpha"
+		 in="fbSourceGraphic"
+		 values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0 0 0 0 4 0 "
+		 id="feColorMatrix3764" />
+	  <feGaussianBlur
+		 result="result0"
+		 in="fbSourceGraphicAlpha"
+		 stdDeviation="2"
+		 id="feGaussianBlur3766" />
+	  <feSpecularLighting
+		 specularExponent="20"
+		 specularConstant="1.2"
+		 surfaceScale="3"
+		 lighting-color="rgb(255,255,255)"
+		 result="result1"
+		 in="result0"
+		 id="feSpecularLighting3768">
+		<feDistantLight
+		   azimuth="235"
+		   elevation="45"
+		   id="feDistantLight3770" />
+	  </feSpecularLighting>
+	  <feComposite
+		 operator="in"
+		 result="result2"
+		 in="result1"
+		 in2="fbSourceGraphicAlpha"
+		 id="feComposite3772" />
+	  <feComposite
+		 in="fbSourceGraphic"
+		 operator="arithmetic"
+		 k2="2"
+		 k3="2"
+		 in2="result2"
+		 result="result91"
+		 id="feComposite3774" />
+	  <feBlend
+		 mode="multiply"
+		 in2="result91"
+		 id="feBlend3776" />
+	</filter>
+	<filter
+	   label="Refractive gel B"
+	   menu="Ridges"
+	   tooltip="Gel effect with strong refraction"
+	   height="1.4"
+	   width="1.4"
+	   y="-0.2"
+	   x="-0.2"
+	   color-interpolation-filters="sRGB"
+	   id="filter3778">
+	  <feOffset
+		 dx="3"
+		 dy="3"
+		 in="SourceAlpha"
+		 result="result3"
+		 id="feOffset3780" />
+	  <feGaussianBlur
+		 stdDeviation="8"
+		 in="result3"
+		 result="result1"
+		 id="feGaussianBlur3782" />
+	  <feComposite
+		 operator="in"
+		 in2="result1"
+		 in="SourceGraphic"
+		 result="result2"
+		 id="feComposite3784" />
+	  <feComposite
+		 operator="out"
+		 result="fbSourceGraphic"
+		 in="result2"
+		 in2="result2"
+		 id="feComposite3786" />
+	  <feColorMatrix
+		 result="fbSourceGraphicAlpha"
+		 in="fbSourceGraphic"
+		 values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0 0 0 0 6 0 "
+		 id="feColorMatrix3788" />
+	  <feGaussianBlur
+		 result="result0"
+		 in="fbSourceGraphicAlpha"
+		 stdDeviation="3"
+		 id="feGaussianBlur3790" />
+	  <feSpecularLighting
+		 specularExponent="20"
+		 specularConstant="2"
+		 surfaceScale="5"
+		 lighting-color="rgb(255,255,255)"
+		 result="result1"
+		 in="result0"
+		 id="feSpecularLighting3792">
+		<feDistantLight
+		   azimuth="235"
+		   elevation="35"
+		   id="feDistantLight3794" />
+	  </feSpecularLighting>
+	  <feComposite
+		 operator="in"
+		 result="result2"
+		 in="result1"
+		 in2="fbSourceGraphicAlpha"
+		 id="feComposite3796" />
+	  <feComposite
+		 in="fbSourceGraphic"
+		 operator="arithmetic"
+		 k2="1.5"
+		 k3="3"
+		 in2="result2"
+		 result="result91"
+		 id="feComposite3798" />
+	  <feBlend
+		 mode="screen"
+		 in2="result91"
+		 id="feBlend3800" />
+	  <feConvolveMatrix
+		 order="3 3"
+		 kernelMatrix="2 0 1 0 1 0 0 0 0 "
+		 targetX="1"
+		 targetY="1"
+		 divisor="3"
+		 id="feConvolveMatrix3802" />
+	</filter>
+	<filter
+	   label="Thin Membrane"
+	   menu="Ridges"
+	   tooltip="Thin like a soap membrane"
+	   x="-0.05"
+	   y="-0.05"
+	   width="1.1"
+	   height="1.1"
+	   color-interpolation-filters="sRGB"
+	   id="filter3804">
+	  <feGaussianBlur
+		 stdDeviation="5"
+		 result="result1"
+		 id="feGaussianBlur3806" />
+	  <feComposite
+		 in="result1"
+		 in2="result1"
+		 result="result4"
+		 operator="xor"
+		 id="feComposite3808" />
+	  <feGaussianBlur
+		 stdDeviation="8"
+		 result="result6"
+		 id="feGaussianBlur3810" />
+	  <feComposite
+		 operator="atop"
+		 in="result6"
+		 in2="SourceGraphic"
+		 result="result8"
+		 id="feComposite3812" />
+	  <feComposite
+		 operator="in"
+		 result="fbSourceGraphic"
+		 in="result6"
+		 in2="result8"
+		 id="feComposite3814" />
+	  <feColorMatrix
+		 result="fbSourceGraphicAlpha"
+		 in="fbSourceGraphic"
+		 values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 2 0 "
+		 id="feColorMatrix3816" />
+	  <feGaussianBlur
+		 result="result0"
+		 in="fbSourceGraphicAlpha"
+		 stdDeviation="2"
+		 id="feGaussianBlur3818" />
+	  <feSpecularLighting
+		 specularExponent="25"
+		 specularConstant="2"
+		 surfaceScale="-5"
+		 lighting-color="rgb(255,255,255)"
+		 result="result1"
+		 in="result0"
+		 id="feSpecularLighting3820">
+		<fePointLight
+		   z="20000"
+		   y="-10000"
+		   x="-5000"
+		   id="fePointLight3822" />
+	  </feSpecularLighting>
+	  <feComposite
+		 operator="in"
+		 result="result2"
+		 in="result1"
+		 in2="fbSourceGraphicAlpha"
+		 id="feComposite3824" />
+	  <feComposite
+		 k3="2"
+		 k2="1"
+		 operator="arithmetic"
+		 result="result4"
+		 in="fbSourceGraphic"
+		 in2="result2"
+		 id="feComposite3826" />
+	  <feComposite
+		 operator="in"
+		 in="result9"
+		 result="result9"
+		 in2="result4"
+		 id="feComposite3828" />
+	  <feBlend
+		 mode="multiply"
+		 in="result9"
+		 in2="result4"
+		 id="feBlend3830" />
+	</filter>
+</defs>

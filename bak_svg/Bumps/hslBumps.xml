@@ -1,0 +1,59 @@
+<filter
+   name="HSL Bumps"
+   tooltip="Highly flexible bump combining diffuse and specular lightings"
+   color-interpolation-filters="sRGB"
+   id="filter3134">
+  <feColorMatrix
+	 result="fbSourceGraphicAlpha"
+	 in="SourceGraphic"
+	 values="1 0 0 -1 0 1 0 1 -1 0 1 0 0 -1 0 -0.8 -1 0 3.7 -2.4 "
+	 id="feColorMatrix3136" />
+  <feGaussianBlur
+	 stdDeviation="0.5"
+	 in="fbSourceGraphicAlpha"
+	 result="result0"
+	 id="feGaussianBlur3138" />
+  <feSpecularLighting
+	 result="result8"
+	 specularConstant="0.75"
+	 specularExponent="6"
+	 in="result0"
+	 surfaceScale="7"
+	 id="feSpecularLighting3140">
+	<feDistantLight
+	   azimuth="235"
+	   elevation="15"
+	   id="feDistantLight3142" />
+  </feSpecularLighting>
+  <feDiffuseLighting
+	 surfaceScale="20"
+	 diffuseConstant="0.2"
+	 result="result6"
+	 lighting-color="rgb(255,255,255)"
+	 in="result0"
+	 id="feDiffuseLighting3144">
+	<feDistantLight
+	   azimuth="235"
+	   elevation="25"
+	   id="feDistantLight3146" />
+  </feDiffuseLighting>
+  <feBlend
+	 in2="SourceGraphic"
+	 result="result7"
+	 mode="screen"
+	 id="feBlend3148" />
+  <feComposite
+	 in2="result7"
+	 operator="arithmetic"
+	 k2="1"
+	 k3="1"
+	 in="result8"
+	 result="result9"
+	 id="feComposite3150" />
+  <feComposite
+	 operator="in"
+	 result="result2"
+	 in="result9"
+	 in2="SourceGraphic"
+	 id="feComposite3152" />
+</filter>

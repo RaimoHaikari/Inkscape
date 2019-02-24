@@ -1,0 +1,59 @@
+<filter
+   tooltip="Glowing metal texture"
+   name="Glowing metal"
+   color-interpolation-filters="sRGB"
+   id="filter3179">
+  <feGaussianBlur
+	 stdDeviation="3"
+	 result="result10"
+	 id="feGaussianBlur3181" />
+  <feBlend
+	 in2="SourceGraphic"
+	 result="result5"
+	 mode="multiply"
+	 in="result10"
+	 id="feBlend3183" />
+  <feComposite
+	 in2="SourceGraphic"
+	 in="result5"
+	 result="fbSourceGraphic"
+	 operator="over"
+	 id="feComposite3185" />
+  <feGaussianBlur
+	 result="result9"
+	 stdDeviation="5"
+	 id="feGaussianBlur3187" />
+  <feSpecularLighting
+	 in="result9"
+	 result="result1"
+	 lighting-color="rgb(255,255,255)"
+	 surfaceScale="1"
+	 specularConstant="2.2"
+	 specularExponent="45"
+	 id="feSpecularLighting3189">
+	<fePointLight
+	   x="-5000"
+	   y="-10000"
+	   z="20000"
+	   id="fePointLight3191" />
+  </feSpecularLighting>
+  <feComposite
+	 in2="fbSourceGraphic"
+	 in="result1"
+	 result="result2"
+	 operator="in"
+	 id="feComposite3193" />
+  <feComposite
+	 in="result2"
+	 result="result4"
+	 operator="arithmetic"
+	 k2="2"
+	 k3="0.8"
+	 in2="fbSourceGraphic"
+	 id="feComposite3195" />
+  <feBlend
+	 in="result4"
+	 in2="result4"
+	 mode="multiply"
+	 id="feBlend3197" />
+</filter>

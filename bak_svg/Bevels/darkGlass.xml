@@ -1,0 +1,67 @@
+<filter
+   name="Dark glass"
+   tooltip="Illuminated glass effect with light coming from beneath"
+   height="1.5"
+   width="1.5"
+   y="-0.25"
+   x="-0.25"
+   color-interpolation-filters="sRGB"
+   id="filter3085">
+  <feBlend
+	 result="result1"
+	 mode="screen"
+	 in2="SourceGraphic"
+	 id="feBlend3087" />
+  <feGaussianBlur
+	 stdDeviation="2"
+	 result="result6"
+	 id="feGaussianBlur3089" />
+  <feComposite
+	 operator="xor"
+	 in="result6"
+	 in2="result1"
+	 result="result7"
+	 id="feComposite3091" />
+  <feComposite
+	 result="result4"
+	 in="result7"
+	 operator="xor"
+	 in2="result7"
+	 id="feComposite3093" />
+  <feGaussianBlur
+	 result="result3"
+	 stdDeviation="3"
+	 in="result4"
+	 id="feGaussianBlur3095" />
+  <feSpecularLighting
+	 result="result5"
+	 specularExponent="55"
+	 specularConstant="1.5"
+	 surfaceScale="6"
+	 in="result3"
+	 id="feSpecularLighting3097">
+	<fePointLight
+	   z="20000"
+	   y="-8000"
+	   x="-5000"
+	   id="fePointLight3099" />
+  </feSpecularLighting>
+  <feComposite
+	 in="result3"
+	 k3="1"
+	 k2="1.5"
+	 operator="arithmetic"
+	 in2="SourceGraphic"
+	 result="result92"
+	 id="feComposite3101" />
+  <feComposite
+	 in="result5"
+	 operator="atop"
+	 in2="result92"
+	 result="result93"
+	 id="feComposite3103" />
+  <feBlend
+	 mode="multiply"
+	 in2="result93"
+	 id="feBlend3105" />
+</filter>

@@ -1,0 +1,80 @@
+<filter
+   name="Bubbly Bumps, matte"
+   tooltip="Same as Bubbly Bumps but with a diffuse light instead of a specular one"
+   color-interpolation-filters="sRGB"
+   id="filter4392">
+  <feGaussianBlur
+	 result="result0"
+	 in="SourceGraphic"
+	 stdDeviation="0.5"
+	 id="feGaussianBlur4394" />
+  <feTurbulence
+	 baseFrequency="0.2"
+	 seed="300"
+	 numOctaves="10"
+	 result="result1"
+	 type="fractalNoise"
+	 id="feTurbulence4396" />
+  <feGaussianBlur
+	 stdDeviation="0.5"
+	 result="result91"
+	 id="feGaussianBlur4398" />
+  <feDisplacementMap
+	 xChannelSelector="R"
+	 scale="5"
+	 result="result6"
+	 in="result0"
+	 in2="result91"
+	 id="feDisplacementMap4400" />
+  <feComposite
+	 result="result2"
+	 operator="in"
+	 in2="result1"
+	 in="result6"
+	 id="feComposite4402" />
+  <feComposite
+	 k3="3"
+	 in2="result2"
+	 in="result0"
+	 operator="arithmetic"
+	 id="feComposite4404" />
+  <feBlend
+	 result="fbSourceGraphic"
+	 mode="multiply"
+	 in2="result2"
+	 id="feBlend4406" />
+  <feColorMatrix
+	 values="1 0 0 -1 0 1 0 1 -1 0 1 0 0 -1 0 -1.8 -0.5 0 5.7 -3.5 "
+	 in="fbSourceGraphic"
+	 result="fbSourceGraphicAlpha"
+	 id="feColorMatrix4408" />
+  <feGaussianBlur
+	 stdDeviation="0.5"
+	 in="fbSourceGraphicAlpha"
+	 result="result0"
+	 id="feGaussianBlur4410" />
+  <feDiffuseLighting
+	 result="result5"
+	 surfaceScale="50"
+	 diffuseConstant="0.6"
+	 id="feDiffuseLighting4412">
+	<feDistantLight
+	   azimuth="225"
+	   elevation="10"
+	   id="feDistantLight4414" />
+  </feDiffuseLighting>
+  <feComposite
+	 in2="fbSourceGraphicAlpha"
+	 in="result5"
+	 result="result2"
+	 operator="in"
+	 id="feComposite4416" />
+  <feComposite
+	 in="fbSourceGraphic"
+	 result="result4"
+	 operator="arithmetic"
+	 k2="1"
+	 k3="0.7"
+	 in2="result2"
+	 id="feComposite4418" />
+</filter>

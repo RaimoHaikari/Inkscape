@@ -1,0 +1,10 @@
+<filter
+   name="Motion blur, horizontal"
+   tooltip="Blur as if the object flies horizontally; adjust Standard Deviation to vary force"
+   color-interpolation-filters="sRGB"
+   id="filter4346">
+  <feGaussianBlur
+	 in="SourceGraphic"
+	 stdDeviation="5 0.01"
+	 id="feGaussianBlur4348" />
+</filter>

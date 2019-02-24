@@ -1,0 +1,57 @@
+<filter
+   name="Smart jelly"
+   tooltip="Same as Matte jelly but with more controls"
+   height="1"
+   width="1"
+   y="0"
+   x="0"
+   color-interpolation-filters="sRGB"
+   id="filter3167">
+  <feBlend
+	 result="result3"
+	 mode="normal"
+	 in2="SourceGraphic"
+	 id="feBlend3169" />
+  <feComposite
+	 result="result4"
+	 operator="arithmetic"
+	 k2="1"
+	 in2="result3"
+	 id="feComposite3171" />
+  <feColorMatrix
+	 in="result4"
+	 result="result0"
+	 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.85 0 "
+	 id="feColorMatrix3173" />
+  <feGaussianBlur
+	 stdDeviation="7"
+	 in="SourceAlpha"
+	 id="feGaussianBlur3175" />
+  <feSpecularLighting
+	 result="result1"
+	 specularExponent="25"
+	 specularConstant="1"
+	 surfaceScale="5"
+	 id="feSpecularLighting3177">
+	<feDistantLight
+	   azimuth="225"
+	   elevation="60"
+	   id="feDistantLight3179" />
+  </feSpecularLighting>
+  <feComposite
+	 in2="result0"
+	 k1="0.5"
+	 k2="1"
+	 operator="arithmetic"
+	 k3="0.5"
+	 id="feComposite3181" />
+  <feComposite
+	 result="result2"
+	 in2="result0"
+	 operator="atop"
+	 id="feComposite3183" />
+  <feComposite
+	 operator="in"
+	 in2="SourceGraphic"
+	 id="feComposite3185" />
+</filter>

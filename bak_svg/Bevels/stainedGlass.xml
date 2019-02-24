@@ -1,0 +1,72 @@
+<filter
+   name="Stained glass"
+   tooltip="Illuminated stained glass effect"
+   height="1.5"
+   width="1.5"
+   y="-0.25"
+   x="-0.25"
+   color-interpolation-filters="sRGB"
+   id="filter3187">
+  <feBlend
+	 result="result1"
+	 mode="screen"
+	 in2="SourceGraphic"
+	 id="feBlend3189" />
+  <feGaussianBlur
+	 stdDeviation="7"
+	 result="result6"
+	 id="feGaussianBlur3191" />
+  <feComposite
+	 operator="xor"
+	 in="result6"
+	 in2="result6"
+	 result="result7"
+	 id="feComposite3193" />
+  <feComposite
+	 in2="result1"
+	 operator="atop"
+	 in="result6"
+	 result="result92"
+	 id="feComposite3195" />
+  <feComposite
+	 result="result4"
+	 in="result7"
+	 operator="xor"
+	 in2="result92"
+	 id="feComposite3197" />
+  <feGaussianBlur
+	 result="result3"
+	 stdDeviation="0.7"
+	 in="result4"
+	 id="feGaussianBlur3199" />
+  <feSpecularLighting
+	 result="result5"
+	 specularExponent="50"
+	 specularConstant="1.5"
+	 surfaceScale="4"
+	 id="feSpecularLighting3201">
+	<fePointLight
+	   z="20000"
+	   y="-8000"
+	   x="-5000"
+	   id="fePointLight3203" />
+  </feSpecularLighting>
+  <feComposite
+	 in="result3"
+	 k3="1"
+	 k2="1"
+	 operator="arithmetic"
+	 in2="SourceGraphic"
+	 result="result93"
+	 id="feComposite3205" />
+  <feComposite
+	 in="result5"
+	 operator="atop"
+	 in2="result93"
+	 result="result94"
+	 id="feComposite3207" />
+  <feBlend
+	 mode="multiply"
+	 in2="result94"
+	 id="feBlend3209" />
+</filter>

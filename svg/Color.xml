@@ -1,0 +1,560 @@
+<defs
+ id="defs4128" menu="Color">
+	<filter
+	   label="Black Light"
+	   tooltip="Light areas turn to black"
+	   x="0"
+	   width="1"
+	   y="0"
+	   height="1"
+	   color-interpolation-filters="sRGB"
+	   id="filter4144">
+	  <feColorMatrix
+		 type="luminanceToAlpha"
+		 result="result2"
+		 id="feColorMatrix4146" />
+	  <feComposite
+		 in2="SourceGraphic"
+		 operator="arithmetic"
+		 in="result2"
+		 k3="2"
+		 result="result4"
+		 id="feComposite4148" />
+	  <feBlend
+		 in="result4"
+		 mode="multiply"
+		 result="result3"
+		 in2="result2"
+		 id="feBlend4150" />
+	  <feComposite
+		 in2="SourceGraphic"
+		 operator="in"
+		 in="result3"
+		 id="feComposite4152" />
+	</filter>
+	<filter
+	   label="Colorize"
+	   menu="Color"
+	   tooltip="Blend image or object with a flood color and set lightness and contrast"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   color-interpolation-filters="sRGB"
+	   id="filter4154">
+	  <feColorMatrix
+		 values="1"
+		 in="SourceGraphic"
+		 type="saturate"
+		 result="result2"
+		 id="feColorMatrix4156" />
+	  <feFlood
+		 flood-color="rgb(254,102,0)"
+		 flood-opacity="1"
+		 result="result1"
+		 id="feFlood4158" />
+	  <feBlend
+		 in2="result2"
+		 mode="multiply"
+		 in="result1"
+		 result="result3"
+		 id="feBlend4160" />
+	  <feComposite
+		 operator="in"
+		 k2="1"
+		 result="result4"
+		 in2="SourceGraphic"
+		 id="feComposite4162" />
+	</filter>
+	<filter
+	   label="Desaturate"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   menu="Color"
+	   tooltip="Render in shades of gray by reducing saturation to zero"
+	   color-interpolation-filters="sRGB"
+	   id="filter4164">
+	  <feColorMatrix
+		 type="saturate"
+		 values="0"
+		 id="feColorMatrix4166" />
+	</filter>
+	<filter
+	   label="Duotone"
+	   menu="Color"
+	   tooltip="Change colors to a duotone palette"
+	   height="1"
+	   width="1"
+	   y="0"
+	   x="0"
+	   color-interpolation-filters="sRGB"
+	   id="filter4168">
+	  <feColorMatrix
+		 type="saturate"
+		 values="0"
+		 result="result1"
+		 id="feColorMatrix4170" />
+	  <feFlood
+		 flood-color="rgb(9,111,152)"
+		 id="feFlood4172" />
+	  <feBlend
+		 in2="result1"
+		 mode="screen"
+		 result="result2"
+		 id="feBlend4174" />
+	  <feComposite
+		 operator="in"
+		 in2="SourceGraphic"
+		 in="result2"
+		 id="feComposite4176" />
+	</filter>
+	<filter
+	   label="Fluorescence"
+	   menu="Color"
+	   tooltip="Oversaturate colors which can be fluorescent in real world"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   color-interpolation-filters="sRGB"
+	   id="filter4178">
+	  <feColorMatrix
+		 type="hueRotate"
+		 values="0"
+		 id="feColorMatrix4180" />
+	  <feColorMatrix
+		 type="saturate"
+		 values="1"
+		 id="feColorMatrix4182" />
+	  <feColorMatrix
+		 type="matrix"
+		 values="2 -1 0 0 0 0 2 -1 0 0 -1 0 2 0 0 0 0 0 1 0 "
+		 id="feColorMatrix4184" />
+	</filter>
+	<filter
+	   label="Invert"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   menu="Color"
+	   tooltip="Invert colors"
+	   color-interpolation-filters="sRGB"
+	   id="filter4186">
+	  <feColorMatrix
+		 type="saturate"
+		 values="1"
+		 result="fbSourceGraphic"
+		 id="feColorMatrix4188" />
+	  <feColorMatrix
+		 in="fbSourceGraphic"
+		 values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+		 id="feColorMatrix4190" />
+	</filter>
+	<filter
+	   label="Invert hue"
+	   menu="Color"
+	   tooltip="Invert hue, or rotate it"
+	   y="0"
+	   x="0"
+	   height="1"
+	   width="1"
+	   color-interpolation-filters="sRGB"
+	   id="filter4192">
+	  <feColorMatrix
+		 type="hueRotate"
+		 values="180"
+		 result="result1"
+		 id="feColorMatrix4194" />
+	</filter>
+	<filter
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   label="Lightness-Contrast"
+	   menu="Color"
+	   tooltip="Increase or decrease lightness and contrast"
+	   color-interpolation-filters="sRGB"
+	   id="filter4196">
+	  <feFlood
+		 result="result1"
+		 flood-opacity="0"
+		 flood-color="rgb(128,128,128)"
+		 id="feFlood4198" />
+	  <feBlend
+		 mode="normal"
+		 in2="SourceGraphic"
+		 result="result2"
+		 id="feBlend4200" />
+	  <feComposite
+		 k2="1"
+		 operator="arithmetic"
+		 in2="SourceGraphic"
+		 id="feComposite4202" />
+	  <feComposite
+		 operator="in"
+		 in2="SourceGraphic"
+		 id="feComposite4204" />
+	</filter>
+	<filter
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   label="Lightness-Contrast"
+	   menu="Color"
+	   tooltip="Increase or decrease lightness and contrast"
+	   color-interpolation-filters="sRGB"
+	   id="filter4206">
+	  <feFlood
+		 result="result1"
+		 flood-opacity="0"
+		 flood-color="rgb(128,128,128)"
+		 id="feFlood4208" />
+	  <feBlend
+		 mode="normal"
+		 in2="SourceGraphic"
+		 result="result2"
+		 id="feBlend4210" />
+	  <feComposite
+		 k2="1"
+		 operator="arithmetic"
+		 in2="SourceGraphic"
+		 id="feComposite4212" />
+	  <feComposite
+		 operator="in"
+		 in2="SourceGraphic"
+		 id="feComposite4214" />
+	</filter>
+	<filter
+	   label="Moonarize"
+	   menu="Color"
+	   tooltip="An effect between solarize and invert which often preserves sky and water lights"
+	   y="0"
+	   x="0"
+	   height="1"
+	   width="1"
+	   color-interpolation-filters="sRGB"
+	   id="filter4216">
+	  <feColorMatrix
+		 type="hueRotate"
+		 values="180"
+		 result="fbSourceGraphic"
+		 id="feColorMatrix4218" />
+	  <feColorMatrix
+		 in="fbSourceGraphic"
+		 values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+		 result="result3"
+		 id="feColorMatrix4220" />
+	  <feBlend
+		 mode="lighten"
+		 in="fbSourceGraphic"
+		 result="result2"
+		 in2="result3"
+		 id="feBlend4222" />
+	  <feBlend
+		 mode="multiply"
+		 result="result1"
+		 in2="result2"
+		 in="result2"
+		 id="feBlend4224" />
+	  <feComposite
+		 operator="in"
+		 in2="SourceGraphic"
+		 id="feComposite4226" />
+	</filter>
+	<filter
+	   label="Quadritone fantasy"
+	   menu="Color"
+	   tooltip="Replace hue by two colors"
+	   height="1"
+	   width="1"
+	   y="0"
+	   x="0"
+	   color-interpolation-filters="sRGB"
+	   id="filter4228">
+	  <feColorMatrix
+		 type="saturate"
+		 values="1"
+		 result="result2"
+		 id="feColorMatrix4230" />
+	  <feColorMatrix
+		 result="result1"
+		 values="50"
+		 type="hueRotate"
+		 in="result2"
+		 id="feColorMatrix4232" />
+	  <feColorMatrix
+		 values="1 -1 1 0 0 0 1 0 0 0 1 -1 1 0 0 0 0 0 1 0 "
+		 type="matrix"
+		 id="feColorMatrix4234" />
+	  <feColorMatrix
+		 values="300"
+		 type="hueRotate"
+		 id="feColorMatrix4236" />
+	</filter>
+	<filter
+	   label="Sepia"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   menu="Color"
+	   tooltip="Render in warm sepia tones"
+	   color-interpolation-filters="sRGB"
+	   id="filter4238">
+	  <feColorMatrix
+		 values="0"
+		 in="SourceGraphic"
+		 type="saturate"
+		 result="result2"
+		 id="feColorMatrix4240" />
+	  <feFlood
+		 flood-color="rgb(160,67,0)"
+		 flood-opacity="1"
+		 result="result1"
+		 id="feFlood4242" />
+	  <feBlend
+		 in2="result1"
+		 mode="multiply"
+		 in="result2"
+		 result="result5"
+		 id="feBlend4244" />
+	  <feBlend
+		 in2="result2"
+		 mode="screen"
+		 result="result3"
+		 id="feBlend4246" />
+	  <feComposite
+		 result="result4"
+		 operator="arithmetic"
+		 k2="1"
+		 in2="result2"
+		 id="feComposite4248" />
+	  <feComposite
+		 in2="SourceAlpha"
+		 operator="in"
+		 in="result4"
+		 id="feComposite4250" />
+	</filter>
+	<filter
+	   label="Soft colors"
+	   menu="Color"
+	   tooltip="Adds a colorizable edges glow inside objects and pictures"
+	   height="1"
+	   width="1"
+	   x="0"
+	   y="0"
+	   color-interpolation-filters="sRGB"
+	   id="filter4252">
+	  <feColorMatrix
+		 type="saturate"
+		 values="1"
+		 result="result91"
+		 id="feColorMatrix4254" />
+	  <feComposite
+		 result="result15"
+		 operator="arithmetic"
+		 k2="0.4"
+		 k1="0.3"
+		 k3="0.3"
+		 in2="result91"
+		 id="feComposite4256" />
+	  <feGaussianBlur
+		 in="result15"
+		 result="result8"
+		 stdDeviation="5"
+		 id="feGaussianBlur4258" />
+	  <feComposite
+		 operator="in"
+		 result="result13"
+		 in2="result8"
+		 id="feComposite4260" />
+	  <feComposite
+		 k3="0.3"
+		 k1="0.3"
+		 k2="0.4"
+		 in2="result13"
+		 operator="arithmetic"
+		 in="result15"
+		 result="result6"
+		 id="feComposite4262" />
+	  <feFlood
+		 flood-color="rgb(128,172,0)"
+		 flood-opacity="1"
+		 in="result6"
+		 result="result10"
+		 id="feFlood4264" />
+	  <feBlend
+		 result="result12"
+		 in2="result10"
+		 in="result6"
+		 mode="darken"
+		 id="feBlend4266" />
+	  <feBlend
+		 in2="result6"
+		 result="result14"
+		 mode="screen"
+		 id="feBlend4268" />
+	  <feComposite
+		 in="result14"
+		 in2="SourceGraphic"
+		 operator="in"
+		 result="result2"
+		 id="feComposite4270" />
+	</filter>
+	<filter
+	   label="Solarize"
+	   menu="Color"
+	   tooltip="Classical photographic solarization effect"
+	   y="0"
+	   x="0"
+	   height="1"
+	   width="1"
+	   color-interpolation-filters="sRGB"
+	   id="filter4272">
+	  <feColorMatrix
+		 type="hueRotate"
+		 values="0"
+		 result="fbSourceGraphic"
+		 id="feColorMatrix4274" />
+	  <feColorMatrix
+		 in="fbSourceGraphic"
+		 values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+		 result="result91"
+		 id="feColorMatrix4276" />
+	  <feBlend
+		 mode="darken"
+		 in="fbSourceGraphic"
+		 in2="result91"
+		 result="result92"
+		 id="feBlend4278" />
+	  <feBlend
+		 mode="screen"
+		 in2="result92"
+		 id="feBlend4280" />
+	  <feComposite
+		 operator="in"
+		 in2="SourceGraphic"
+		 id="feComposite4282" />
+	</filter>
+	<filter
+	   label="Tritone"
+	   menu="Color"
+	   tooltip="Create a tritone palette with hue selectable by flood"
+	   x="0"
+	   y="0"
+	   height="1"
+	   width="1"
+	   color-interpolation-filters="sRGB"
+	   id="filter4284">
+	  <feColorMatrix
+		 in="SourceGraphic"
+		 result="r"
+		 type="matrix"
+		 values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+		 id="feColorMatrix4286" />
+	  <feColorMatrix
+		 in="SourceGraphic"
+		 result="g"
+		 type="matrix"
+		 values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+		 id="feColorMatrix4288" />
+	  <feColorMatrix
+		 in="SourceGraphic"
+		 result="b"
+		 type="matrix"
+		 values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+		 id="feColorMatrix4290" />
+	  <feBlend
+		 mode="darken"
+		 in="r"
+		 in2="g"
+		 result="minrg"
+		 id="feBlend4292" />
+	  <feBlend
+		 mode="darken"
+		 in="minrg"
+		 in2="b"
+		 result="p"
+		 id="feBlend4294" />
+	  <feBlend
+		 mode="lighten"
+		 in="r"
+		 in2="g"
+		 result="maxrg"
+		 id="feBlend4296" />
+	  <feBlend
+		 mode="lighten"
+		 in="maxrg"
+		 in2="b"
+		 result="q"
+		 id="feBlend4298" />
+	  <feComponentTransfer
+		 in="q"
+		 result="q2"
+		 id="feComponentTransfer4300">
+		<feFuncR
+		   type="linear"
+		   slope="0"
+		   id="feFuncR4302" />
+	  </feComponentTransfer>
+	  <feBlend
+		 mode="lighten"
+		 in="p"
+		 in2="q2"
+		 result="pq"
+		 id="feBlend4304" />
+	  <feColorMatrix
+		 in="pq"
+		 result="qminp"
+		 type="matrix"
+		 values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+		 id="feColorMatrix4306" />
+	  <feComponentTransfer
+		 in="qminp"
+		 result="coefsq"
+		 id="feComponentTransfer4308">
+		<feFuncR
+		   type="table"
+		   tableValues="1 1 0 0 0 1 1"
+		   id="feFuncR4310" />
+		<feFuncG
+		   type="table"
+		   tableValues="0 1 1 1 0 0 0"
+		   id="feFuncG4312" />
+		<feFuncB
+		   type="table"
+		   tableValues="0 0 0 1 1 1 0"
+		   id="feFuncB4314" />
+	  </feComponentTransfer>
+	  <feFlood
+		 flood-color="rgb(203,0,254)"
+		 result="result1"
+		 id="feFlood4316" />
+	  <feComposite
+		 in="qminp"
+		 in2="result1"
+		 result="qminpc"
+		 operator="arithmetic"
+		 k1="1"
+		 id="feComposite4318" />
+	  <feComposite
+		 in="p"
+		 in2="qminpc"
+		 result="color"
+		 operator="arithmetic"
+		 k2="1"
+		 k3="1"
+		 id="feComposite4320" />
+	  <feComposite
+		 in="color"
+		 in2="SourceGraphic"
+		 operator="in"
+		 k1="1"
+		 id="feComposite4322" />
+	</filter>
+</defs>

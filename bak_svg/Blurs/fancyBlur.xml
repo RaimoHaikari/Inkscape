@@ -1,0 +1,17 @@
+<filter
+   name="Fancy blur"
+   inkscape:menu="Blurs"
+   tooltip="Smooth colorized contour which allows desaturation and hue rotation"
+   color-interpolation-filters="sRGB"
+   id="filter4340">
+  <feGaussianBlur
+	 stdDeviation="5"
+	 result="result1"
+	 id="feGaussianBlur4342" />
+  <feComposite
+	 operator="arithmetic"
+	 k2="2"
+	 in="result1"
+	 in2="result1"
+	 id="feComposite4344" />
+</filter>

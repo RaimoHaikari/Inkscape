@@ -1,0 +1,50 @@
+<filter
+   name="Melted jelly, matte"
+   tooltip="Matte bevel with blurred edges"
+   height="1.3"
+   y="-0.15"
+   width="1.3"
+   x="-0.15"
+   color-interpolation-filters="sRGB"
+   id="filter3029">
+  <feComposite
+	 operator="arithmetic"
+	 in2="SourceGraphic"
+	 result="fbSourceGraphic"
+	 in="SourceGraphic"
+	 k2="0.9"
+	 id="feComposite3031" />
+  <feGaussianBlur
+	 result="result0"
+	 in="fbSourceGraphic"
+	 stdDeviation="6"
+	 id="feGaussianBlur3033" />
+  <feSpecularLighting
+	 specularExponent="15"
+	 specularConstant="0.9"
+	 surfaceScale="6"
+	 lighting-color="rgb(255,255,255)"
+	 result="result1"
+	 in="result0"
+	 id="feSpecularLighting3035">
+	<feDistantLight
+	   azimuth="235"
+	   elevation="65"
+	   id="feDistantLight3037" />
+  </feSpecularLighting>
+  <feComposite
+	 k3="0.1"
+	 k2="0.7"
+	 operator="arithmetic"
+	 result="result4"
+	 in="result1"
+	 in2="result0"
+	 k1="0.1"
+	 id="feComposite3039" />
+  <feComposite
+	 operator="atop"
+	 result="result2"
+	 in="result4"
+	 in2="result0"
+	 id="feComposite3041" />
+</filter>

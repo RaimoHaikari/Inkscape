@@ -1,0 +1,69 @@
+<filter
+   name="Molten metal"
+   tooltip="Melting parts of object together, with a glossy bevel and a glow"
+   color-interpolation-filters="sRGB"
+   id="filter3055">
+  <feGaussianBlur
+	 stdDeviation="5"
+	 result="result1"
+	 id="feGaussianBlur3057" />
+  <feColorMatrix
+	 result="result10"
+	 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 5 -4 "
+	 id="feColorMatrix3059" />
+  <feComposite
+	 operator="atop"
+	 in="result10"
+	 in2="result10"
+	 result="result8"
+	 id="feComposite3061" />
+  <feComposite
+	 operator="in"
+	 result="fbSourceGraphic"
+	 in="result1"
+	 in2="result8"
+	 id="feComposite3063" />
+  <feGaussianBlur
+	 result="result0"
+	 in="fbSourceGraphic"
+	 stdDeviation="5"
+	 id="feGaussianBlur3065" />
+  <feSpecularLighting
+	 specularExponent="55"
+	 specularConstant="2.5"
+	 surfaceScale="2"
+	 lighting-color="rgb(255,255,255)"
+	 result="result1"
+	 in="result0"
+	 id="feSpecularLighting3067">
+	<feDistantLight
+	   azimuth="225"
+	   elevation="60"
+	   id="feDistantLight3069" />
+  </feSpecularLighting>
+  <feComposite
+	 operator="in"
+	 result="result2"
+	 in="result1"
+	 in2="fbSourceGraphic"
+	 id="feComposite3071" />
+  <feComposite
+	 k3="1"
+	 k2="1"
+	 operator="arithmetic"
+	 result="result4"
+	 in="fbSourceGraphic"
+	 in2="result2"
+	 id="feComposite3073" />
+  <feComposite
+	 operator="in"
+	 in="result9"
+	 in2="result4"
+	 result="result9"
+	 id="feComposite3075" />
+  <feBlend
+	 mode="multiply"
+	 in="result9"
+	 in2="result9"
+	 id="feBlend3077" />
+</filter>

@@ -1,0 +1,57 @@
+<filter
+   name="Canvas Bumps"
+   tooltip="Canvas texture with an HSL sensitive height map"
+   color-interpolation-filters="sRGB"
+   id="filter4420">
+  <feTurbulence
+	 type="turbulence"
+	 result="result1"
+	 numOctaves="7"
+	 seed="300"
+	 baseFrequency="0.2"
+	 id="feTurbulence4422" />
+  <feDisplacementMap
+	 xChannelSelector="R"
+	 in2="result1"
+	 result="result7"
+	 id="feDisplacementMap4424" />
+  <feBlend
+	 in="result7"
+	 in2="SourceGraphic"
+	 mode="screen"
+	 result="fbSourceGraphic"
+	 id="feBlend4426" />
+  <feColorMatrix
+	 result="fbSourceGraphicAlpha"
+	 values="1 0 0 -1 0 1 0 1 -1 0 1 0 0 -1 0 -0.8 -1 0 4 -2.5 "
+	 id="feColorMatrix4428" />
+  <feGaussianBlur
+	 result="result0"
+	 in="fbSourceGraphicAlpha"
+	 stdDeviation="0.5"
+	 id="feGaussianBlur4430" />
+  <feSpecularLighting
+	 result="result6"
+	 surfaceScale="5"
+	 specularConstant="1"
+	 specularExponent="5"
+	 id="feSpecularLighting4432">
+	<feDistantLight
+	   azimuth="225"
+	   elevation="35"
+	   id="feDistantLight4434" />
+  </feSpecularLighting>
+  <feComposite
+	 in2="SourceGraphic"
+	 k3="1"
+	 k2="0.5"
+	 operator="arithmetic"
+	 result="result4"
+	 id="feComposite4436" />
+  <feComposite
+	 operator="in"
+	 result="result2"
+	 in="result4"
+	 in2="SourceGraphic"
+	 id="feComposite4438" />
+</filter>

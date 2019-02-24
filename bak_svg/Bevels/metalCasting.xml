@@ -1,0 +1,34 @@
+<filter
+   name="Metal casting"
+   x="0"
+   y="0"
+   width="1"
+   height="1"
+   tooltip="Smooth drop-like bevel with metallic finish"
+   color-interpolation-filters="sRGB"
+   id="filter3043">
+  <feColorMatrix
+	 values="0.37"
+	 type="saturate"
+	 in="SourceGraphic"
+	 result="result1"
+	 id="feColorMatrix3045" />
+  <feGaussianBlur
+	 stdDeviation="7"
+	 in="SourceAlpha"
+	 id="feGaussianBlur3047" />
+  <feSpecularLighting
+	 specularExponent="8"
+	 specularConstant="3.88"
+	 surfaceScale="10"
+	 id="feSpecularLighting3049">
+	<feDistantLight
+	   azimuth="225"
+	   elevation="17"
+	   id="feDistantLight3051" />
+  </feSpecularLighting>
+  <feComposite
+	 in2="result1"
+	 operator="atop"
+	 id="feComposite3053" />
+</filter>

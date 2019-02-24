@@ -1,0 +1,33 @@
+<filter
+   name="Jigsaw piece"
+   inkscape:menu="Bevels"
+   tooltip="Low, sharp bevel"
+   color-interpolation-filters="sRGB"
+   id="filter3211">
+  <feSpecularLighting
+	 in="SourceAlpha"
+	 surfaceScale="1"
+	 specularConstant="2"
+	 specularExponent="18.5"
+	 id="feSpecularLighting3213">
+	<feDistantLight
+	   elevation="30"
+	   azimuth="225"
+	   id="feDistantLight3215" />
+  </feSpecularLighting>
+  <feComposite
+	 result="result0"
+	 operator="atop"
+	 in2="SourceGraphic"
+	 id="feComposite3217" />
+  <feMorphology
+	 radius="2"
+	 result="result1"
+	 in="SourceAlpha"
+	 operator="dilate"
+	 id="feMorphology3219" />
+  <feComposite
+	 in="result0"
+	 in2="result1"
+	 id="feComposite3221" />
+</filter>

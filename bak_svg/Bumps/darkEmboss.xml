@@ -1,0 +1,50 @@
+<filter
+   name="Dark Emboss"
+   tooltip="Emboss effect : 3D relief where white is replaced by black"
+   height="1"
+   width="1"
+   y="0"
+   x="0"
+   color-interpolation-filters="sRGB"
+   id="filter3072">
+  <feColorMatrix
+	 result="result2"
+	 type="luminanceToAlpha"
+	 id="feColorMatrix3074" />
+  <feDiffuseLighting
+	 diffuseConstant="0.5"
+	 result="result1"
+	 surfaceScale="-10"
+	 id="feDiffuseLighting3076">
+	<feDistantLight
+	   elevation="20"
+	   azimuth="225"
+	   id="feDistantLight3078" />
+  </feDiffuseLighting>
+  <feComposite
+	 result="result3"
+	 k3="1"
+	 k2="1"
+	 k1="1"
+	 in="result1"
+	 operator="arithmetic"
+	 in2="SourceGraphic"
+	 id="feComposite3080" />
+  <feBlend
+	 result="result4"
+	 mode="multiply"
+	 in="result2"
+	 in2="result3"
+	 id="feBlend3082" />
+  <feComposite
+	 result="result5"
+	 operator="arithmetic"
+	 k2="1.2"
+	 in2="result4"
+	 id="feComposite3084" />
+  <feComposite
+	 operator="in"
+	 in="result5"
+	 in2="SourceGraphic"
+	 id="feComposite3086" />
+</filter>

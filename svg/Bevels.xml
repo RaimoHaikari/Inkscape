@@ -1,0 +1,1395 @@
+<defs id="defs3093" menu="Bevels">
+	<filter
+	   label="Bloom"
+	   tooltip="Soft, cushion-like bevel with matte highlights"
+	   color-interpolation-filters="sRGB"
+	   id="filter3111">
+	  <feGaussianBlur
+		 result="result1"
+		 in="SourceAlpha"
+		 stdDeviation="2.2"
+		 id="feGaussianBlur3113" />
+	  <feSpecularLighting
+		 result="result0"
+		 specularExponent="18.1"
+		 specularConstant="2"
+		 surfaceScale="5"
+		 id="feSpecularLighting3115">
+		<feDistantLight
+		   azimuth="225"
+		   elevation="24"
+		   id="feDistantLight3117" />
+	  </feSpecularLighting>
+	  <feComposite
+		 result="result6"
+		 operator="in"
+		 in2="SourceAlpha"
+		 id="feComposite3119" />
+	  <feMorphology
+		 radius="5.7"
+		 operator="dilate"
+		 id="feMorphology3121" />
+	  <feGaussianBlur
+		 result="result11"
+		 stdDeviation="5.7"
+		 id="feGaussianBlur3123" />
+	  <feDiffuseLighting
+		 surfaceScale="5"
+		 result="result3"
+		 diffuseConstant="2"
+		 in="result1"
+		 id="feDiffuseLighting3125">
+		<feDistantLight
+		   elevation="25"
+		   azimuth="225"
+		   id="feDistantLight3127" />
+	  </feDiffuseLighting>
+	  <feBlend
+		 result="result7"
+		 mode="multiply"
+		 in="result3"
+		 in2="SourceGraphic"
+		 id="feBlend3129" />
+	  <feComposite
+		 in="result7"
+		 operator="in"
+		 in2="SourceAlpha"
+		 result="result91"
+		 id="feComposite3131" />
+	  <feBlend
+		 result="result9"
+		 mode="lighten"
+		 in="result6"
+		 in2="result91"
+		 id="feBlend3133" />
+	  <feComposite
+		 in="result11"
+		 in2="result9"
+		 id="feComposite3135" />
+	</filter>
+	<filter
+	   tooltip="Bright metallic effect for any color"
+	   menu="Bevels"
+	   label="Bright metal"
+	   color-interpolation-filters="sRGB"
+	   id="filter3137">
+	  <feGaussianBlur
+		 result="result6"
+		 stdDeviation="8"
+		 in="SourceGraphic"
+		 id="feGaussianBlur3139" />
+	  <feComposite
+		 in2="SourceGraphic"
+		 in="result6"
+		 operator="xor"
+		 result="result10"
+		 id="feComposite3141" />
+	  <feGaussianBlur
+		 result="result2"
+		 stdDeviation="8"
+		 id="feGaussianBlur3143" />
+	  <feComposite
+		 in2="SourceGraphic"
+		 operator="atop"
+		 in="result10"
+		 result="result91"
+		 id="feComposite3145" />
+	  <feComposite
+		 result="result4"
+		 in="result2"
+		 operator="xor"
+		 in2="result91"
+		 id="feComposite3147" />
+	  <feGaussianBlur
+		 in="result4"
+		 result="result3"
+		 stdDeviation="4"
+		 id="feGaussianBlur3149" />
+	  <feSpecularLighting
+		 result="result5"
+		 specularExponent="5"
+		 specularConstant="1.1"
+		 surfaceScale="18"
+		 id="feSpecularLighting3151">
+		<feDistantLight
+		   azimuth="235"
+		   elevation="55"
+		   id="feDistantLight3153" />
+	  </feSpecularLighting>
+	  <feComposite
+		 in="result3"
+		 k3="1.1"
+		 k2="0.5"
+		 operator="arithmetic"
+		 result="result7"
+		 in2="result5"
+		 k1="0.5"
+		 id="feComposite3155" />
+	  <feComposite
+		 in="result7"
+		 operator="atop"
+		 in2="SourceGraphic"
+		 result="result8"
+		 id="feComposite3157" />
+	</filter>
+	<filter
+	   label="Button"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   menu="Bevels"
+	   tooltip="Soft bevel, slightly depressed middle"
+	   color-interpolation-filters="sRGB"
+	   id="filter3159">
+	  <feGaussianBlur
+		 stdDeviation="2.3"
+		 in="SourceAlpha"
+		 result="result0"
+		 id="feGaussianBlur3161" />
+	  <feMorphology
+		 in="SourceAlpha"
+		 radius="6.6"
+		 result="result1"
+		 id="feMorphology3163" />
+	  <feGaussianBlur
+		 stdDeviation="8.9"
+		 in="result1"
+		 id="feGaussianBlur3165" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.3 0"
+		 result="result91"
+		 id="feColorMatrix3167" />
+	  <feComposite
+		 in="result0"
+		 operator="out"
+		 result="result2"
+		 in2="result91"
+		 id="feComposite3169" />
+	  <feGaussianBlur
+		 stdDeviation="1.7"
+		 result="result4"
+		 id="feGaussianBlur3171" />
+	  <feDiffuseLighting
+		 surfaceScale="10"
+		 id="feDiffuseLighting3173">
+		<feDistantLight
+		   azimuth="225"
+		   elevation="45"
+		   id="feDistantLight3175" />
+	  </feDiffuseLighting>
+	  <feBlend
+		 in2="SourceGraphic"
+		 mode="multiply"
+		 id="feBlend3177" />
+	  <feComposite
+		 in2="SourceAlpha"
+		 operator="in"
+		 result="result3"
+		 id="feComposite3179" />
+	  <feSpecularLighting
+		 in="result4"
+		 surfaceScale="5"
+		 specularExponent="17.9"
+		 id="feSpecularLighting3181">
+		<feDistantLight
+		   azimuth="225"
+		   elevation="45"
+		   id="feDistantLight3183" />
+	  </feSpecularLighting>
+	  <feComposite
+		 in2="result3"
+		 operator="atop"
+		 id="feComposite3185" />
+	</filter>
+	<filter
+	   label="Combined lighting"
+	   menu="Bevels"
+	   tooltip="Basic specular bevel to use for building textures"
+	   color-interpolation-filters="sRGB"
+	   id="filter3187">
+	  <feGaussianBlur
+		 stdDeviation="6"
+		 in="SourceGraphic"
+		 result="result0"
+		 id="feGaussianBlur3189" />
+	  <feDiffuseLighting
+		 lighting-color="rgb(255,255,255)"
+		 diffuseConstant="1"
+		 surfaceScale="4"
+		 result="result5"
+		 id="feDiffuseLighting3191">
+		<feDistantLight
+		   elevation="45"
+		   azimuth="235"
+		   id="feDistantLight3193" />
+	  </feDiffuseLighting>
+	  <feComposite
+		 k1="1.4"
+		 in2="SourceGraphic"
+		 in="result5"
+		 result="fbSourceGraphic"
+		 operator="arithmetic"
+		 id="feComposite3195" />
+	  <feGaussianBlur
+		 result="result0"
+		 in="fbSourceGraphic"
+		 stdDeviation="6"
+		 id="feGaussianBlur3197" />
+	  <feSpecularLighting
+		 specularExponent="25"
+		 specularConstant="1"
+		 surfaceScale="4"
+		 lighting-color="rgb(255,255,255)"
+		 result="result1"
+		 in="result0"
+		 id="feSpecularLighting3199">
+		<feDistantLight
+		   azimuth="235"
+		   elevation="45"
+		   id="feDistantLight3201" />
+	  </feSpecularLighting>
+	  <feComposite
+		 k3="1"
+		 k2="1"
+		 operator="arithmetic"
+		 result="result4"
+		 in="fbSourceGraphic"
+		 in2="result1"
+		 id="feComposite3203" />
+	  <feComposite
+		 operator="in"
+		 result="result2"
+		 in2="SourceGraphic"
+		 in="result4"
+		 id="feComposite3205" />
+	</filter>
+	<filter
+	   label="Dark glass"
+	   menu="Bevels"
+	   tooltip="Illuminated glass effect with light coming from beneath"
+	   height="1.5"
+	   width="1.5"
+	   y="-0.25"
+	   x="-0.25"
+	   color-interpolation-filters="sRGB"
+	   id="filter3207">
+	  <feBlend
+		 result="result1"
+		 mode="screen"
+		 in2="SourceGraphic"
+		 id="feBlend3209" />
+	  <feGaussianBlur
+		 stdDeviation="2"
+		 result="result6"
+		 id="feGaussianBlur3211" />
+	  <feComposite
+		 operator="xor"
+		 in="result6"
+		 in2="result1"
+		 result="result7"
+		 id="feComposite3213" />
+	  <feComposite
+		 result="result4"
+		 in="result7"
+		 operator="xor"
+		 in2="result7"
+		 id="feComposite3215" />
+	  <feGaussianBlur
+		 result="result3"
+		 stdDeviation="3"
+		 in="result4"
+		 id="feGaussianBlur3217" />
+	  <feSpecularLighting
+		 result="result5"
+		 specularExponent="55"
+		 specularConstant="1.5"
+		 surfaceScale="6"
+		 in="result3"
+		 id="feSpecularLighting3219">
+		<fePointLight
+		   z="20000"
+		   y="-8000"
+		   x="-5000"
+		   id="fePointLight3221" />
+	  </feSpecularLighting>
+	  <feComposite
+		 in="result3"
+		 k3="1"
+		 k2="1.5"
+		 operator="arithmetic"
+		 in2="SourceGraphic"
+		 result="result92"
+		 id="feComposite3223" />
+	  <feComposite
+		 in="result5"
+		 operator="atop"
+		 in2="result92"
+		 result="result93"
+		 id="feComposite3225" />
+	  <feBlend
+		 mode="multiply"
+		 in2="result93"
+		 id="feBlend3227" />
+	</filter>
+	<filter
+	   tooltip="Transparent plastic with deep colors"
+	   menu="Bevels"
+	   label="Deep colors plastic"
+	   color-interpolation-filters="sRGB"
+	   id="filter3229">
+	  <feGaussianBlur
+		 in="SourceGraphic"
+		 result="result6"
+		 stdDeviation="10"
+		 id="feGaussianBlur3231" />
+	  <feComposite
+		 in2="SourceGraphic"
+		 in="result6"
+		 operator="xor"
+		 id="feComposite3233" />
+	  <feGaussianBlur
+		 result="result2"
+		 stdDeviation="10"
+		 id="feGaussianBlur3235" />
+	  <feComposite
+		 in2="SourceGraphic"
+		 operator="atop"
+		 result="result91"
+		 id="feComposite3237" />
+	  <feComposite
+		 result="result4"
+		 in="result2"
+		 operator="xor"
+		 in2="result91"
+		 id="feComposite3239" />
+	  <feGaussianBlur
+		 in="result4"
+		 result="result3"
+		 stdDeviation="5"
+		 id="feGaussianBlur3241" />
+	  <feSpecularLighting
+		 lighting-color="rgb(255,255,255)"
+		 in="result3"
+		 result="result5"
+		 specularExponent="35"
+		 specularConstant="3"
+		 surfaceScale="12"
+		 id="feSpecularLighting3243">
+		<feDistantLight
+		   elevation="45"
+		   azimuth="235"
+		   id="feDistantLight3245" />
+	  </feSpecularLighting>
+	  <feComposite
+		 in2="result5"
+		 in="SourceGraphic"
+		 k3="0.7"
+		 k2="0.8"
+		 operator="arithmetic"
+		 result="result7"
+		 id="feComposite3247" />
+	  <feComposite
+		 in="result7"
+		 operator="in"
+		 in2="SourceGraphic"
+		 id="feComposite3249" />
+	</filter>
+	<filter
+	   label="Electronic microscopy"
+	   menu="Bevels"
+	   tooltip="Bevel, crude light, discoloration and glow like in electronic microscopy"
+	   x="-0.15"
+	   y="-0.15"
+	   width="1.3"
+	   height="1.3"
+	   color-interpolation-filters="sRGB"
+	   id="filter3251">
+	  <feGaussianBlur
+		 stdDeviation="0.5"
+		 result="result6"
+		 id="feGaussianBlur3253" />
+	  <feComposite
+		 operator="in"
+		 in="result6"
+		 in2="result6"
+		 result="result91"
+		 id="feComposite3255" />
+	  <feBlend
+		 mode="multiply"
+		 in="result6"
+		 result="result2"
+		 in2="result91"
+		 id="feBlend3257" />
+	  <feGaussianBlur
+		 stdDeviation="7"
+		 result="result3"
+		 in="result2"
+		 id="feGaussianBlur3259" />
+	  <feComposite
+		 in2="result2"
+		 result="result92"
+		 id="feComposite3261" />
+	  <feComposite
+		 operator="in"
+		 in="result3"
+		 result="result5"
+		 in2="result92"
+		 id="feComposite3263" />
+	  <feGaussianBlur
+		 stdDeviation="1"
+		 in="result5"
+		 id="feGaussianBlur3265" />
+	  <feSpecularLighting
+		 surfaceScale="2"
+		 specularConstant="1.5"
+		 specularExponent="100"
+		 id="feSpecularLighting3267">
+		<fePointLight
+		   x="-5000"
+		   y="-5000"
+		   z="20000"
+		   id="fePointLight3269" />
+	  </feSpecularLighting>
+	  <feComposite
+		 operator="arithmetic"
+		 k1="1"
+		 in2="result5"
+		 result="result93"
+		 id="feComposite3271" />
+	  <feComposite
+		 operator="arithmetic"
+		 k2="0.1"
+		 k3="1"
+		 in="result5"
+		 in2="result93"
+		 result="result94"
+		 id="feComposite3273" />
+	  <feBlend
+		 mode="multiply"
+		 in2="result94"
+		 id="feBlend3275" />
+	</filter>
+	<filter
+	   label="Fat oil"
+	   menu="Bevels"
+	   tooltip="Fat oil with some adjustable turbulence"
+	   height="1.4"
+	   width="1.4"
+	   y="-0.2"
+	   x="-0.2"
+	   color-interpolation-filters="sRGB"
+	   id="filter3277">
+	  <feTurbulence
+		 numOctaves="3"
+		 seed="55"
+		 type="fractalNoise"
+		 baseFrequency="0.02"
+		 id="feTurbulence3279" />
+	  <feGaussianBlur
+		 stdDeviation="1"
+		 result="result91"
+		 id="feGaussianBlur3281" />
+	  <feDisplacementMap
+		 scale="15"
+		 yChannelSelector="G"
+		 xChannelSelector="R"
+		 in="SourceGraphic"
+		 in2="result91"
+		 id="feDisplacementMap3283" />
+	  <feGaussianBlur
+		 stdDeviation="1.5"
+		 result="result92"
+		 id="feGaussianBlur3285" />
+	  <feComposite
+		 result="fbSourceGraphic"
+		 k4="-0.3"
+		 k3="1"
+		 k2="1"
+		 operator="arithmetic"
+		 in2="result92"
+		 id="feComposite3287" />
+	  <feGaussianBlur
+		 stdDeviation="3.5"
+		 in="fbSourceGraphic"
+		 result="result0"
+		 id="feGaussianBlur3289" />
+	  <feSpecularLighting
+		 in="result0"
+		 result="result1"
+		 lighting-color="rgb(255,255,255)"
+		 surfaceScale="3"
+		 specularConstant="1"
+		 specularExponent="55"
+		 id="feSpecularLighting3291">
+		<feDistantLight
+		   azimuth="235"
+		   elevation="65"
+		   id="feDistantLight3293" />
+	  </feSpecularLighting>
+	  <feComposite
+		 in2="fbSourceGraphic"
+		 in="result1"
+		 result="result2"
+		 operator="in"
+		 id="feComposite3295" />
+	  <feComposite
+		 in="fbSourceGraphic"
+		 result="result4"
+		 operator="arithmetic"
+		 k2="0.4"
+		 k3="1.7"
+		 in2="result2"
+		 id="feComposite3297" />
+	  <feBlend
+		 result="fbSourceGraphic"
+		 mode="normal"
+		 in2="result2"
+		 id="feBlend3299" />
+	</filter>
+	<filter
+	   tooltip="Glowing metal texture"
+	   menu="Bevels"
+	   label="Glowing metal"
+	   color-interpolation-filters="sRGB"
+	   id="filter3301">
+	  <feGaussianBlur
+		 stdDeviation="3"
+		 result="result10"
+		 id="feGaussianBlur3303" />
+	  <feBlend
+		 in2="SourceGraphic"
+		 result="result5"
+		 mode="multiply"
+		 in="result10"
+		 id="feBlend3305" />
+	  <feComposite
+		 in2="SourceGraphic"
+		 in="result5"
+		 result="fbSourceGraphic"
+		 operator="over"
+		 id="feComposite3307" />
+	  <feGaussianBlur
+		 result="result9"
+		 stdDeviation="5"
+		 id="feGaussianBlur3309" />
+	  <feSpecularLighting
+		 in="result9"
+		 result="result1"
+		 lighting-color="rgb(255,255,255)"
+		 surfaceScale="1"
+		 specularConstant="2.2"
+		 specularExponent="45"
+		 id="feSpecularLighting3311">
+		<fePointLight
+		   x="-5000"
+		   y="-10000"
+		   z="20000"
+		   id="fePointLight3313" />
+	  </feSpecularLighting>
+	  <feComposite
+		 in2="fbSourceGraphic"
+		 in="result1"
+		 result="result2"
+		 operator="in"
+		 id="feComposite3315" />
+	  <feComposite
+		 in="result2"
+		 result="result4"
+		 operator="arithmetic"
+		 k2="2"
+		 k3="0.8"
+		 in2="fbSourceGraphic"
+		 id="feComposite3317" />
+	  <feBlend
+		 in="result4"
+		 in2="result4"
+		 mode="multiply"
+		 id="feBlend3319" />
+	</filter>
+	<filter
+	   label="Jigsaw piece"
+	   menu="Bevels"
+	   tooltip="Low, sharp bevel"
+	   color-interpolation-filters="sRGB"
+	   id="filter3321">
+	  <feSpecularLighting
+		 in="SourceAlpha"
+		 surfaceScale="1"
+		 specularConstant="2"
+		 specularExponent="18.5"
+		 id="feSpecularLighting3323">
+		<feDistantLight
+		   elevation="30"
+		   azimuth="225"
+		   id="feDistantLight3325" />
+	  </feSpecularLighting>
+	  <feComposite
+		 result="result0"
+		 operator="atop"
+		 in2="SourceGraphic"
+		 id="feComposite3327" />
+	  <feMorphology
+		 radius="2"
+		 result="result1"
+		 in="SourceAlpha"
+		 operator="dilate"
+		 id="feMorphology3329" />
+	  <feComposite
+		 in="result0"
+		 in2="result1"
+		 id="feComposite3331" />
+	</filter>
+	<filter
+	   label="Matte bevel"
+	   menu="Bevels"
+	   tooltip="Soft, pastel-colored, blurry bevel"
+	   x="-0.25"
+	   y="-0.25"
+	   width="1.5"
+	   height="1.5"
+	   color-interpolation-filters="sRGB"
+	   id="filter3333">
+	  <feGaussianBlur
+		 stdDeviation="1"
+		 result="result6"
+		 id="feGaussianBlur3335" />
+	  <feComposite
+		 operator="in"
+		 in="result6"
+		 in2="result6"
+		 result="result7"
+		 id="feComposite3337" />
+	  <feGaussianBlur
+		 stdDeviation="8"
+		 result="result3"
+		 in="result7"
+		 id="feGaussianBlur3339" />
+	  <feComposite
+		 in2="result7"
+		 operator="over"
+		 result="result91"
+		 id="feComposite3341" />
+	  <feComposite
+		 operator="in"
+		 in="result3"
+		 result="result5"
+		 in2="result91"
+		 id="feComposite3343" />
+	  <feColorMatrix
+		 values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0 "
+		 result="result4"
+		 id="feColorMatrix3345" />
+	  <feSpecularLighting
+		 surfaceScale="3"
+		 specularConstant="2"
+		 specularExponent="45"
+		 in="result4"
+		 result="result11"
+		 id="feSpecularLighting3347">
+		<fePointLight
+		   x="-5000"
+		   y="-10000"
+		   z="20000"
+		   id="fePointLight3349" />
+	  </feSpecularLighting>
+	  <feComposite
+		 operator="arithmetic"
+		 k1="1"
+		 in2="result4"
+		 result="result10"
+		 id="feComposite3351" />
+	  <feComposite
+		 operator="arithmetic"
+		 k2="0.5"
+		 k3="1"
+		 in="result5"
+		 result="result8"
+		 in2="result10"
+		 id="feComposite3353" />
+	  <feComposite
+		 result="result9"
+		 in2="result8"
+		 id="feComposite3355" />
+	  <feBlend
+		 mode="normal"
+		 in2="result9"
+		 id="feBlend3357" />
+	</filter>
+	<filter
+	   label="Melted jelly"
+	   menu="Bevels"
+	   tooltip="Glossy bevel with blurred edges"
+	   height="1.3"
+	   y="-0.15"
+	   width="1.3"
+	   x="-0.15"
+	   color-interpolation-filters="sRGB"
+	   id="filter3359">
+	  <feComposite
+		 operator="arithmetic"
+		 in2="SourceGraphic"
+		 result="fbSourceGraphic"
+		 in="SourceGraphic"
+		 k2="0.9"
+		 id="feComposite3361" />
+	  <feGaussianBlur
+		 result="result0"
+		 in="fbSourceGraphic"
+		 stdDeviation="6"
+		 id="feGaussianBlur3363" />
+	  <feSpecularLighting
+		 specularExponent="25"
+		 specularConstant="1"
+		 surfaceScale="6"
+		 lighting-color="rgb(255,255,255)"
+		 result="result1"
+		 in="result0"
+		 id="feSpecularLighting3365">
+		<feDistantLight
+		   azimuth="235"
+		   elevation="55"
+		   id="feDistantLight3367" />
+	  </feSpecularLighting>
+	  <feComposite
+		 k3="1.5"
+		 k2="1"
+		 operator="arithmetic"
+		 result="result4"
+		 in="result0"
+		 in2="result1"
+		 id="feComposite3369" />
+	  <feComposite
+		 operator="atop"
+		 result="result2"
+		 in="result4"
+		 in2="result0"
+		 id="feComposite3371" />
+	</filter>
+	<filter
+	   label="Melted jelly, matte"
+	   menu="Bevels"
+	   tooltip="Matte bevel with blurred edges"
+	   height="1.3"
+	   y="-0.15"
+	   width="1.3"
+	   x="-0.15"
+	   color-interpolation-filters="sRGB"
+	   id="filter3373">
+	  <feComposite
+		 operator="arithmetic"
+		 in2="SourceGraphic"
+		 result="fbSourceGraphic"
+		 in="SourceGraphic"
+		 k2="0.9"
+		 id="feComposite3375" />
+	  <feGaussianBlur
+		 result="result0"
+		 in="fbSourceGraphic"
+		 stdDeviation="6"
+		 id="feGaussianBlur3377" />
+	  <feSpecularLighting
+		 specularExponent="15"
+		 specularConstant="0.9"
+		 surfaceScale="6"
+		 lighting-color="rgb(255,255,255)"
+		 result="result1"
+		 in="result0"
+		 id="feSpecularLighting3379">
+		<feDistantLight
+		   azimuth="235"
+		   elevation="65"
+		   id="feDistantLight3381" />
+	  </feSpecularLighting>
+	  <feComposite
+		 k3="0.1"
+		 k2="0.7"
+		 operator="arithmetic"
+		 result="result4"
+		 in="result1"
+		 in2="result0"
+		 k1="0.1"
+		 id="feComposite3383" />
+	  <feComposite
+		 operator="atop"
+		 result="result2"
+		 in="result4"
+		 in2="result0"
+		 id="feComposite3385" />
+	</filter>
+	<filter
+	   label="Metal casting"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   menu="Bevels"
+	   tooltip="Smooth drop-like bevel with metallic finish"
+	   color-interpolation-filters="sRGB"
+	   id="filter3387">
+	  <feColorMatrix
+		 values="0.37"
+		 type="saturate"
+		 in="SourceGraphic"
+		 result="result1"
+		 id="feColorMatrix3389" />
+	  <feGaussianBlur
+		 stdDeviation="7"
+		 in="SourceAlpha"
+		 id="feGaussianBlur3391" />
+	  <feSpecularLighting
+		 specularExponent="8"
+		 specularConstant="3.88"
+		 surfaceScale="10"
+		 id="feSpecularLighting3393">
+		<feDistantLight
+		   azimuth="225"
+		   elevation="17"
+		   id="feDistantLight3395" />
+	  </feSpecularLighting>
+	  <feComposite
+		 in2="result1"
+		 operator="atop"
+		 id="feComposite3397" />
+	</filter>
+	<filter
+	   label="Molten metal"
+	   menu="Bevels"
+	   tooltip="Melting parts of object together, with a glossy bevel and a glow"
+	   color-interpolation-filters="sRGB"
+	   id="filter3399">
+	  <feGaussianBlur
+		 stdDeviation="5"
+		 result="result1"
+		 id="feGaussianBlur3401" />
+	  <feColorMatrix
+		 result="result10"
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 5 -4 "
+		 id="feColorMatrix3403" />
+	  <feComposite
+		 operator="atop"
+		 in="result10"
+		 in2="result10"
+		 result="result8"
+		 id="feComposite3405" />
+	  <feComposite
+		 operator="in"
+		 result="fbSourceGraphic"
+		 in="result1"
+		 in2="result8"
+		 id="feComposite3407" />
+	  <feGaussianBlur
+		 result="result0"
+		 in="fbSourceGraphic"
+		 stdDeviation="5"
+		 id="feGaussianBlur3409" />
+	  <feSpecularLighting
+		 specularExponent="55"
+		 specularConstant="2.5"
+		 surfaceScale="2"
+		 lighting-color="rgb(255,255,255)"
+		 result="result1"
+		 in="result0"
+		 id="feSpecularLighting3411">
+		<feDistantLight
+		   azimuth="225"
+		   elevation="60"
+		   id="feDistantLight3413" />
+	  </feSpecularLighting>
+	  <feComposite
+		 operator="in"
+		 result="result2"
+		 in="result1"
+		 in2="fbSourceGraphic"
+		 id="feComposite3415" />
+	  <feComposite
+		 k3="1"
+		 k2="1"
+		 operator="arithmetic"
+		 result="result4"
+		 in="fbSourceGraphic"
+		 in2="result2"
+		 id="feComposite3417" />
+	  <feComposite
+		 operator="in"
+		 in="result9"
+		 in2="result4"
+		 result="result9"
+		 id="feComposite3419" />
+	  <feBlend
+		 mode="multiply"
+		 in="result9"
+		 in2="result9"
+		 id="feBlend3421" />
+	</filter>
+	<filter
+	   label="Neon"
+	   menu="Bevels"
+	   tooltip="Neon light effect"
+	   x="-0.25"
+	   y="-0.25"
+	   width="1.5"
+	   height="1.5"
+	   color-interpolation-filters="sRGB"
+	   id="filter3423">
+	  <feGaussianBlur
+		 stdDeviation="1"
+		 result="result1"
+		 id="feGaussianBlur3425" />
+	  <feComposite
+		 in="result1"
+		 in2="result1"
+		 result="result4"
+		 operator="in"
+		 id="feComposite3427" />
+	  <feGaussianBlur
+		 stdDeviation="7"
+		 result="result6"
+		 in="result4"
+		 id="feGaussianBlur3429" />
+	  <feComposite
+		 operator="over"
+		 in="result6"
+		 in2="result4"
+		 result="result8"
+		 id="feComposite3431" />
+	  <feComposite
+		 operator="in"
+		 result="fbSourceGraphic"
+		 in="result6"
+		 in2="result8"
+		 id="feComposite3433" />
+	  <feSpecularLighting
+		 specularExponent="45"
+		 specularConstant="2"
+		 surfaceScale="2.5"
+		 lighting-color="rgb(255,255,255)"
+		 result="result1"
+		 in="fbSourceGraphic"
+		 id="feSpecularLighting3435">
+		<fePointLight
+		   z="20000"
+		   y="-10000"
+		   x="-5000"
+		   id="fePointLight3437" />
+	  </feSpecularLighting>
+	  <feComposite
+		 operator="in"
+		 result="result2"
+		 in="result1"
+		 in2="fbSourceGraphic"
+		 id="feComposite3439" />
+	  <feComposite
+		 k3="1.5"
+		 k2="1.2"
+		 operator="arithmetic"
+		 result="result4"
+		 in="fbSourceGraphic"
+		 in2="result2"
+		 id="feComposite3441" />
+	  <feComposite
+		 operator="over"
+		 in="result9"
+		 in2="result4"
+		 result="result9"
+		 id="feComposite3443" />
+	  <feBlend
+		 mode="screen"
+		 in2="result9"
+		 id="feBlend3445" />
+	</filter>
+	<filter
+	   tooltip="Pressed metal with a rolled edge"
+	   menu="Bevels"
+	   label="Pressed steel"
+	   color-interpolation-filters="sRGB"
+	   id="filter3447">
+	  <feGaussianBlur
+		 result="result1"
+		 stdDeviation="3"
+		 id="feGaussianBlur3449" />
+	  <feBlend
+		 in2="result1"
+		 result="result5"
+		 mode="multiply"
+		 in="result1"
+		 id="feBlend3451" />
+	  <feGaussianBlur
+		 in="result5"
+		 result="result6"
+		 stdDeviation="1"
+		 id="feGaussianBlur3453" />
+	  <feComposite
+		 result="result8"
+		 in2="result5"
+		 in="result6"
+		 operator="xor"
+		 id="feComposite3455" />
+	  <feComposite
+		 in="result6"
+		 result="fbSourceGraphic"
+		 operator="xor"
+		 in2="result8"
+		 id="feComposite3457" />
+	  <feSpecularLighting
+		 in="fbSourceGraphic"
+		 result="result1"
+		 lighting-color="rgb(255,255,255)"
+		 surfaceScale="2"
+		 specularConstant="2.2"
+		 specularExponent="55"
+		 id="feSpecularLighting3459">
+		<fePointLight
+		   x="-5000"
+		   y="-10000"
+		   z="20000"
+		   id="fePointLight3461" />
+	  </feSpecularLighting>
+	  <feComposite
+		 in2="fbSourceGraphic"
+		 in="result1"
+		 result="result2"
+		 operator="in"
+		 id="feComposite3463" />
+	  <feComposite
+		 in="fbSourceGraphic"
+		 result="result4"
+		 operator="arithmetic"
+		 k2="2"
+		 k3="1"
+		 in2="result2"
+		 id="feComposite3465" />
+	  <feComposite
+		 in2="result4"
+		 in="result9"
+		 operator="in"
+		 result="result91"
+		 id="feComposite3467" />
+	  <feBlend
+		 mode="darken"
+		 in2="result91"
+		 id="feBlend3469" />
+	</filter>
+	<filter
+	   label="Raised border"
+	   menu="Bevels"
+	   tooltip="Strongly raised border around a flat surface"
+	   height="1.5"
+	   width="1.5"
+	   y="-0.25"
+	   x="-0.25"
+	   color-interpolation-filters="sRGB"
+	   id="filter3471">
+	  <feGaussianBlur
+		 stdDeviation="4"
+		 result="result1"
+		 id="feGaussianBlur3473" />
+	  <feComposite
+		 in="result1"
+		 in2="result1"
+		 result="result4"
+		 operator="in"
+		 id="feComposite3475" />
+	  <feGaussianBlur
+		 stdDeviation="2"
+		 result="result6"
+		 in="result4"
+		 id="feGaussianBlur3477" />
+	  <feComposite
+		 operator="xor"
+		 in="result6"
+		 in2="result4"
+		 result="result8"
+		 id="feComposite3479" />
+	  <feComposite
+		 operator="atop"
+		 result="fbSourceGraphic"
+		 in="result4"
+		 in2="result8"
+		 id="feComposite3481" />
+	  <feSpecularLighting
+		 specularExponent="10"
+		 specularConstant="1.3"
+		 surfaceScale="3"
+		 lighting-color="rgb(255,255,255)"
+		 result="result1"
+		 in="fbSourceGraphic"
+		 id="feSpecularLighting3483">
+		<feDistantLight
+		   azimuth="235"
+		   elevation="55"
+		   id="feDistantLight3485" />
+	  </feSpecularLighting>
+	  <feComposite
+		 operator="atop"
+		 result="result2"
+		 in="result1"
+		 in2="fbSourceGraphic"
+		 id="feComposite3487" />
+	  <feComposite
+		 k3="1"
+		 k2="1"
+		 operator="arithmetic"
+		 result="result4"
+		 in="fbSourceGraphic"
+		 in2="result2"
+		 id="feComposite3489" />
+	  <feComposite
+		 operator="over"
+		 in="result4"
+		 in2="SourceGraphic"
+		 id="feComposite3491" />
+	  <feBlend
+		 mode="multiply"
+		 in2="result2"
+		 id="feBlend3493" />
+	</filter>
+	<filter
+	   label="Ridged border"
+	   menu="Bevels"
+	   tooltip="Ridged border with inner bevel"
+	   color-interpolation-filters="sRGB"
+	   id="filter3495">
+	  <feMorphology
+		 radius="4.3"
+		 in="SourceAlpha"
+		 result="result91"
+		 id="feMorphology3497" />
+	  <feComposite
+		 operator="out"
+		 in="SourceGraphic"
+		 in2="result91"
+		 id="feComposite3499" />
+	  <feGaussianBlur
+		 result="result0"
+		 stdDeviation="1.2"
+		 id="feGaussianBlur3501" />
+	  <feDiffuseLighting
+		 diffuseConstant="1"
+		 id="feDiffuseLighting3503">
+		<feDistantLight
+		   elevation="66"
+		   azimuth="225"
+		   id="feDistantLight3505" />
+	  </feDiffuseLighting>
+	  <feBlend
+		 mode="multiply"
+		 in2="SourceGraphic"
+		 id="feBlend3507" />
+	  <feComposite
+		 operator="in"
+		 in2="SourceAlpha"
+		 id="feComposite3509" />
+	</filter>
+	<filter
+	   label="Smart jelly"
+	   menu="Bevels"
+	   tooltip="Same as Matte jelly but with more controls"
+	   height="1"
+	   width="1"
+	   y="0"
+	   x="0"
+	   color-interpolation-filters="sRGB"
+	   id="filter3511">
+	  <feBlend
+		 result="result3"
+		 mode="normal"
+		 in2="SourceGraphic"
+		 id="feBlend3513" />
+	  <feComposite
+		 result="result4"
+		 operator="arithmetic"
+		 k2="1"
+		 in2="result3"
+		 id="feComposite3515" />
+	  <feColorMatrix
+		 in="result4"
+		 result="result0"
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.85 0 "
+		 id="feColorMatrix3517" />
+	  <feGaussianBlur
+		 stdDeviation="7"
+		 in="SourceAlpha"
+		 id="feGaussianBlur3519" />
+	  <feSpecularLighting
+		 result="result1"
+		 specularExponent="25"
+		 specularConstant="1"
+		 surfaceScale="5"
+		 id="feSpecularLighting3521">
+		<feDistantLight
+		   azimuth="225"
+		   elevation="60"
+		   id="feDistantLight3523" />
+	  </feSpecularLighting>
+	  <feComposite
+		 in2="result0"
+		 k1="0.5"
+		 k2="1"
+		 operator="arithmetic"
+		 k3="0.5"
+		 id="feComposite3525" />
+	  <feComposite
+		 result="result2"
+		 in2="result0"
+		 operator="atop"
+		 id="feComposite3527" />
+	  <feComposite
+		 operator="in"
+		 in2="SourceGraphic"
+		 id="feComposite3529" />
+	</filter>
+	<filter
+	   label="Stained glass"
+	   menu="Bevels"
+	   tooltip="Illuminated stained glass effect"
+	   height="1.5"
+	   width="1.5"
+	   y="-0.25"
+	   x="-0.25"
+	   color-interpolation-filters="sRGB"
+	   id="filter3531">
+	  <feBlend
+		 result="result1"
+		 mode="screen"
+		 in2="SourceGraphic"
+		 id="feBlend3533" />
+	  <feGaussianBlur
+		 stdDeviation="7"
+		 result="result6"
+		 id="feGaussianBlur3535" />
+	  <feComposite
+		 operator="xor"
+		 in="result6"
+		 in2="result6"
+		 result="result7"
+		 id="feComposite3537" />
+	  <feComposite
+		 in2="result1"
+		 operator="atop"
+		 in="result6"
+		 result="result92"
+		 id="feComposite3539" />
+	  <feComposite
+		 result="result4"
+		 in="result7"
+		 operator="xor"
+		 in2="result92"
+		 id="feComposite3541" />
+	  <feGaussianBlur
+		 result="result3"
+		 stdDeviation="0.7"
+		 in="result4"
+		 id="feGaussianBlur3543" />
+	  <feSpecularLighting
+		 result="result5"
+		 specularExponent="50"
+		 specularConstant="1.5"
+		 surfaceScale="4"
+		 id="feSpecularLighting3545">
+		<fePointLight
+		   z="20000"
+		   y="-8000"
+		   x="-5000"
+		   id="fePointLight3547" />
+	  </feSpecularLighting>
+	  <feComposite
+		 in="result3"
+		 k3="1"
+		 k2="1"
+		 operator="arithmetic"
+		 in2="SourceGraphic"
+		 result="result93"
+		 id="feComposite3549" />
+	  <feComposite
+		 in="result5"
+		 operator="atop"
+		 in2="result93"
+		 result="result94"
+		 id="feComposite3551" />
+	  <feBlend
+		 mode="multiply"
+		 in2="result94"
+		 id="feBlend3553" />
+	</filter>
+	<filter
+	   label="Translucent"
+	   menu="Bevels"
+	   tooltip="Illuminated translucent plastic or glass effect"
+	   x="-0.25"
+	   y="-0.25"
+	   width="1.5"
+	   height="1.5"
+	   color-interpolation-filters="sRGB"
+	   id="filter3555">
+	  <feBlend
+		 mode="screen"
+		 result="result1"
+		 id="feBlend3557"
+		 in2="SourceGraphic" />
+	  <feGaussianBlur
+		 stdDeviation="8"
+		 result="result6"
+		 id="feGaussianBlur3559" />
+	  <feComposite
+		 operator="xor"
+		 in="result6"
+		 in2="SourceGraphic"
+		 id="feComposite3561" />
+	  <feGaussianBlur
+		 stdDeviation="5"
+		 result="result2"
+		 id="feGaussianBlur3563" />
+	  <feComposite
+		 operator="atop"
+		 in2="result1"
+		 result="result92"
+		 id="feComposite3565" />
+	  <feComposite
+		 operator="xor"
+		 in="result2"
+		 result="result4"
+		 in2="result92"
+		 id="feComposite3567" />
+	  <feGaussianBlur
+		 stdDeviation="1"
+		 result="result3"
+		 in="result4"
+		 id="feGaussianBlur3569" />
+	  <feSpecularLighting
+		 surfaceScale="3"
+		 specularConstant="1.5"
+		 specularExponent="45"
+		 result="result5"
+		 id="feSpecularLighting3571">
+		<fePointLight
+		   x="-5000"
+		   y="-8000"
+		   z="20000"
+		   id="fePointLight3573" />
+	  </feSpecularLighting>
+	  <feComposite
+		 operator="in"
+		 in2="SourceGraphic"
+		 result="result93"
+		 id="feComposite3575" />
+	  <feComposite
+		 operator="arithmetic"
+		 k2="1"
+		 k3="2"
+		 in="result3"
+		 in2="result93"
+		 result="result94"
+		 id="feComposite3577" />
+	  <feComposite
+		 operator="atop"
+		 in="result5"
+		 in2="result94"
+		 result="result95"
+		 id="feComposite3579" />
+	  <feBlend
+		 mode="screen"
+		 in2="result95"
+		 id="feBlend3581" />
+	</filter>
+</defs>

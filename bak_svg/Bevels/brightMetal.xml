@@ -1,0 +1,64 @@
+<filter
+   tooltip="Bright metallic effect for any color"
+   name="Bright metal"
+   color-interpolation-filters="sRGB"
+   id="filter3015">
+  <feGaussianBlur
+	 result="result6"
+	 stdDeviation="8"
+	 in="SourceGraphic"
+	 id="feGaussianBlur3017" />
+  <feComposite
+	 in2="SourceGraphic"
+	 in="result6"
+	 operator="xor"
+	 result="result10"
+	 id="feComposite3019" />
+  <feGaussianBlur
+	 result="result2"
+	 stdDeviation="8"
+	 id="feGaussianBlur3021" />
+  <feComposite
+	 in2="SourceGraphic"
+	 operator="atop"
+	 in="result10"
+	 result="result91"
+	 id="feComposite3023" />
+  <feComposite
+	 result="result4"
+	 in="result2"
+	 operator="xor"
+	 in2="result91"
+	 id="feComposite3025" />
+  <feGaussianBlur
+	 in="result4"
+	 result="result3"
+	 stdDeviation="4"
+	 id="feGaussianBlur3027" />
+  <feSpecularLighting
+	 result="result5"
+	 specularExponent="5"
+	 specularConstant="1.1"
+	 surfaceScale="18"
+	 id="feSpecularLighting3029">
+	<feDistantLight
+	   azimuth="235"
+	   elevation="55"
+	   id="feDistantLight3031" />
+  </feSpecularLighting>
+  <feComposite
+	 in="result3"
+	 k3="1.1"
+	 k2="0.5"
+	 operator="arithmetic"
+	 result="result7"
+	 in2="result5"
+	 k1="0.5"
+	 id="feComposite3033" />
+  <feComposite
+	 in="result7"
+	 operator="atop"
+	 in2="SourceGraphic"
+	 result="result8"
+	 id="feComposite3035" />
+</filter>

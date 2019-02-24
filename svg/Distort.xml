@@ -1,0 +1,249 @@
+<defs
+ id="defs4326" menu="Distort">
+	<filter
+	   label="Chalk and sponge"
+	   tooltip="Low turbulence gives sponge look and high turbulence chalk"
+	   width="1.6"
+	   height="2"
+	   y="-0.5"
+	   x="-0.3"
+	   color-interpolation-filters="sRGB"
+	   id="filter4345">
+	  <feTurbulence
+		 baseFrequency="0.4"
+		 type="fractalNoise"
+		 seed="0"
+		 numOctaves="5"
+		 result="result1"
+		 id="feTurbulence4347" />
+	  <feOffset
+		 dx="-5"
+		 dy="-5"
+		 result="result2"
+		 id="feOffset4349" />
+	  <feDisplacementMap
+		 xChannelSelector="R"
+		 yChannelSelector="G"
+		 scale="30"
+		 in="SourceGraphic"
+		 in2="result1"
+		 id="feDisplacementMap4351" />
+	</filter>
+	<filter
+	   label="Lapping"
+	   menu="Distort"
+	   tooltip="Something like a water noise"
+	   height="1.3"
+	   y="-0.15"
+	   width="1.3"
+	   x="-0.15"
+	   color-interpolation-filters="sRGB"
+	   id="filter4353">
+	  <feTurbulence
+		 numOctaves="5"
+		 seed="0"
+		 type="fractalNoise"
+		 baseFrequency="0.1"
+		 result="result1"
+		 id="feTurbulence4355" />
+	  <feGaussianBlur
+		 stdDeviation="2"
+		 result="result2"
+		 id="feGaussianBlur4357" />
+	  <feDisplacementMap
+		 scale="50"
+		 yChannelSelector="B"
+		 xChannelSelector="R"
+		 in="SourceGraphic"
+		 in2="result2"
+		 id="feDisplacementMap4359" />
+	</filter>
+	<filter
+	   height="1.3"
+	   width="1.3"
+	   y="-0.15"
+	   x="-0.15"
+	   tooltip="Van Gogh painting effect for bitmaps"
+	   menu="Distort"
+	   label="Pixel smear"
+	   color-interpolation-filters="sRGB"
+	   id="filter4361">
+	  <feTurbulence
+		 type="fractalNoise"
+		 numOctaves="3"
+		 baseFrequency="0.25 0.4"
+		 seed="5"
+		 id="feTurbulence4363" />
+	  <feColorMatrix
+		 result="result5"
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 "
+		 id="feColorMatrix4365" />
+	  <feComposite
+		 in="SourceGraphic"
+		 operator="in"
+		 in2="result5"
+		 id="feComposite4367" />
+	  <feMorphology
+		 operator="dilate"
+		 radius="1.5"
+		 result="result3"
+		 id="feMorphology4369" />
+	  <feTurbulence
+		 numOctaves="5"
+		 baseFrequency="0.03"
+		 type="fractalNoise"
+		 seed="7"
+		 id="feTurbulence4371" />
+	  <feGaussianBlur
+		 stdDeviation="0.5"
+		 result="result91"
+		 id="feGaussianBlur4373" />
+	  <feDisplacementMap
+		 in="result3"
+		 xChannelSelector="R"
+		 yChannelSelector="G"
+		 scale="27"
+		 result="result4"
+		 in2="result91"
+		 id="feDisplacementMap4375" />
+	  <feComposite
+		 in="result4"
+		 k3="0.8"
+		 k1="1.3"
+		 result="result2"
+		 operator="arithmetic"
+		 in2="result4"
+		 id="feComposite4377" />
+	  <feBlend
+		 in2="result2"
+		 mode="screen"
+		 in="result2"
+		 id="feBlend4379" />
+	</filter>
+	<filter
+	   label="Ripple"
+	   menu="Distort"
+	   tooltip="Horizontal rippling of edges"
+	   color-interpolation-filters="sRGB"
+	   id="filter4381">
+	  <feTurbulence
+		 numOctaves="1"
+		 baseFrequency="0.002 0.107"
+		 id="feTurbulence4383" />
+	  <feColorMatrix
+		 values="2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0.5"
+		 result="result91"
+		 id="feColorMatrix4385" />
+	  <feDisplacementMap
+		 yChannelSelector="A"
+		 xChannelSelector="R"
+		 scale="14.3"
+		 in="SourceGraphic"
+		 in2="result91"
+		 id="feDisplacementMap4387" />
+	</filter>
+	<filter
+	   y="-0.2"
+	   height="1.4"
+	   label="Rough and dilate"
+	   menu="Distort"
+	   tooltip="Create a turbulent contour around"
+	   color-interpolation-filters="sRGB"
+	   id="filter4389">
+	  <feMorphology
+		 radius="7"
+		 operator="dilate"
+		 result="result8"
+		 in="SourceGraphic"
+		 id="feMorphology4391" />
+	  <feComposite
+		 in2="result8"
+		 result="result10"
+		 in="SourceGraphic"
+		 operator="arithmetic"
+		 k1="0.5"
+		 k3="0.5"
+		 id="feComposite4393" />
+	  <feTurbulence
+		 result="result11"
+		 type="fractalNoise"
+		 numOctaves="3"
+		 baseFrequency="0.07"
+		 id="feTurbulence4395" />
+	  <feDisplacementMap
+		 result="result12"
+		 in2="result11"
+		 in="result10"
+		 xChannelSelector="R"
+		 scale="10"
+		 id="feDisplacementMap4397" />
+	  <feComposite
+		 operator="arithmetic"
+		 result="result13"
+		 in="SourceGraphic"
+		 in2="result12"
+		 k1="0.25"
+		 k2="0.25"
+		 k3="0.75"
+		 id="feComposite4399" />
+	</filter>
+	<filter
+	   label="Roughen inside"
+	   menu="Distort"
+	   tooltip="Roughen all inside shapes"
+	   color-interpolation-filters="sRGB"
+	   id="filter4401">
+	  <feTurbulence
+		 numOctaves="5"
+		 seed="0"
+		 type="fractalNoise"
+		 baseFrequency="0.08"
+		 id="feTurbulence4403" />
+	  <feGaussianBlur
+		 stdDeviation="0.5"
+		 result="result91"
+		 id="feGaussianBlur4405" />
+	  <feDisplacementMap
+		 scale="20"
+		 yChannelSelector="G"
+		 xChannelSelector="R"
+		 in="SourceGraphic"
+		 result="result1"
+		 in2="result91"
+		 id="feDisplacementMap4407" />
+	  <feComposite
+		 in="result1"
+		 in2="SourceGraphic"
+		 operator="atop"
+		 id="feComposite4409" />
+	</filter>
+	<filter
+	   label="Torn edges"
+	   menu="Distort"
+	   tooltip="Displace the outside of shapes and pictures without altering their content"
+	   height="1.4"
+	   y="-0.2"
+	   width="1.4"
+	   x="-0.2"
+	   color-interpolation-filters="sRGB"
+	   id="filter4411">
+	  <feTurbulence
+		 baseFrequency="0.05"
+		 numOctaves="5"
+		 type="fractalNoise"
+		 result="result91"
+		 id="feTurbulence4413" />
+	  <feDisplacementMap
+		 scale="25"
+		 result="result5"
+		 xChannelSelector="R"
+		 in="SourceGraphic"
+		 in2="result91"
+		 id="feDisplacementMap4415" />
+	  <feComposite
+		 in="SourceGraphic"
+		 operator="atop"
+		 in2="result5"
+		 id="feComposite4417" />
+	</filter>
+</defs>

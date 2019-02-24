@@ -1,0 +1,210 @@
+<defs
+ id="defs4496" menu="Transparency utilities">
+	<filter
+	   label="Alpha repaint"
+	   tooltip="Repaint anything monochrome"
+	   id="filter4512">
+	  <feFlood
+		 flood-color="rgb(255,0,105)"
+		 result="result1"
+		 id="feFlood4514" />
+	  <feComposite
+		 operator="in"
+		 in2="SourceGraphic"
+		 result="result2"
+		 id="feComposite4516" />
+	</filter>
+	<filter
+	   tooltip="Make the lightest parts of the object progressively transparent"
+	   menu="Transparency utilities"
+	   label="Light eraser"
+	   height="1"
+	   width="1"
+	   y="0"
+	   x="0"
+	   color-interpolation-filters="sRGB"
+	   id="filter4518">
+	  <feColorMatrix
+		 result="result14"
+		 type="luminanceToAlpha"
+		 in="SourceGraphic"
+		 id="feColorMatrix4520" />
+	  <feComposite
+		 in="SourceGraphic"
+		 in2="result14"
+		 result="fbSourceGraphic"
+		 operator="out"
+		 id="feComposite4522" />
+	  <feBlend
+		 mode="normal"
+		 in2="fbSourceGraphic"
+		 result="result15"
+		 id="feBlend4524" />
+	</filter>
+	<filter
+	   label="Light eraser, negative"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   menu="Transparency utilities"
+	   tooltip="Like Light eraser but converts to negative"
+	   color-interpolation-filters="sRGB"
+	   id="filter4526">
+	  <feColorMatrix
+		 in="SourceGraphic"
+		 values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+		 result="fbSourceGraphic"
+		 id="feColorMatrix4528" />
+	  <feColorMatrix
+		 result="result14"
+		 type="luminanceToAlpha"
+		 in="fbSourceGraphic"
+		 id="feColorMatrix4530" />
+	  <feComposite
+		 in="fbSourceGraphic"
+		 in2="result14"
+		 result="fbSourceGraphic"
+		 operator="out"
+		 id="feComposite4532" />
+	  <feBlend
+		 mode="normal"
+		 in2="fbSourceGraphic"
+		 result="result15"
+		 id="feBlend4534" />
+	</filter>
+	<filter
+	   label="Monochrome transparency"
+	   menu="Transparency utilities"
+	   tooltip="Convert to a colorizable transparent positive or negative"
+	   height="1"
+	   width="1"
+	   y="0"
+	   x="0"
+	   color-interpolation-filters="sRGB"
+	   id="filter4536">
+	  <feColorMatrix
+		 type="luminanceToAlpha"
+		 result="fbSourceGraphic"
+		 id="feColorMatrix4538" />
+	  <feFlood
+		 flood-color="rgb(134,39,24)"
+		 result="result1"
+		 in="fbSourceGraphic"
+		 flood-opacity="1"
+		 id="feFlood4540" />
+	  <feComposite
+		 operator="out"
+		 in2="fbSourceGraphic"
+		 result="result2"
+		 id="feComposite4542" />
+	  <feComposite
+		 operator="in"
+		 in2="SourceGraphic"
+		 id="feComposite4544" />
+	</filter>
+	<filter
+	   label="Saturation map"
+	   menu="Transparency utilities"
+	   tooltip="Creates an approximative semi-transparent and colorizable image of the saturation levels"
+	   width="1"
+	   height="1"
+	   y="0"
+	   x="0"
+	   color-interpolation-filters="sRGB"
+	   id="filter4546">
+	  <feColorMatrix
+		 values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+		 type="matrix"
+		 result="r"
+		 in="SourceGraphic"
+		 id="feColorMatrix4548" />
+	  <feColorMatrix
+		 values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+		 type="matrix"
+		 result="g"
+		 in="SourceGraphic"
+		 id="feColorMatrix4550" />
+	  <feColorMatrix
+		 values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+		 type="matrix"
+		 result="b"
+		 in="SourceGraphic"
+		 id="feColorMatrix4552" />
+	  <feBlend
+		 result="minrg"
+		 in2="g"
+		 in="r"
+		 mode="darken"
+		 id="feBlend4554" />
+	  <feBlend
+		 result="p"
+		 in2="b"
+		 in="minrg"
+		 mode="darken"
+		 id="feBlend4556" />
+	  <feBlend
+		 result="maxrg"
+		 in2="g"
+		 in="r"
+		 mode="lighten"
+		 id="feBlend4558" />
+	  <feBlend
+		 result="q"
+		 in2="b"
+		 in="maxrg"
+		 mode="lighten"
+		 id="feBlend4560" />
+	  <feComponentTransfer
+		 result="q2"
+		 in="q"
+		 id="feComponentTransfer4562">
+		<feFuncR
+		   slope="0"
+		   type="linear"
+		   id="feFuncR4564" />
+	  </feComponentTransfer>
+	  <feBlend
+		 result="pq"
+		 in2="q2"
+		 in="p"
+		 mode="lighten"
+		 id="feBlend4566" />
+	  <feColorMatrix
+		 values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+		 type="matrix"
+		 result="qminp"
+		 in="pq"
+		 id="feColorMatrix4568" />
+	  <feColorMatrix
+		 type="luminanceToAlpha"
+		 result="result1"
+		 in="qminp"
+		 id="feColorMatrix4570" />
+	  <feComposite
+		 k2="0"
+		 k3="0"
+		 k1="1"
+		 operator="arithmetic"
+		 in2="qminp"
+		 in="result1"
+		 result="result3"
+		 id="feComposite4572" />
+	  <feComposite
+		 in="result3"
+		 operator="in"
+		 in2="SourceGraphic"
+		 result="fbSourceGraphic"
+		 id="feComposite4574" />
+	  <feFlood
+		 flood-color="rgb(255,204,0)"
+		 result="result1"
+		 in="result3"
+		 id="feFlood4576" />
+	  <feComposite
+		 operator="in"
+		 in2="fbSourceGraphic"
+		 result="result2"
+		 id="feComposite4578" />
+	</filter>
+</defs>

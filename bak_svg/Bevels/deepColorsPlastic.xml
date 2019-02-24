@@ -1,0 +1,62 @@
+<filter
+   tooltip="Transparent plastic with deep colors"
+   name="Deep colors plastic"
+   color-interpolation-filters="sRGB"
+   id="filter3107">
+  <feGaussianBlur
+	 in="SourceGraphic"
+	 result="result6"
+	 stdDeviation="10"
+	 id="feGaussianBlur3109" />
+  <feComposite
+	 in2="SourceGraphic"
+	 in="result6"
+	 operator="xor"
+	 id="feComposite3111" />
+  <feGaussianBlur
+	 result="result2"
+	 stdDeviation="10"
+	 id="feGaussianBlur3113" />
+  <feComposite
+	 in2="SourceGraphic"
+	 operator="atop"
+	 result="result91"
+	 id="feComposite3115" />
+  <feComposite
+	 result="result4"
+	 in="result2"
+	 operator="xor"
+	 in2="result91"
+	 id="feComposite3117" />
+  <feGaussianBlur
+	 in="result4"
+	 result="result3"
+	 stdDeviation="5"
+	 id="feGaussianBlur3119" />
+  <feSpecularLighting
+	 lighting-color="rgb(255,255,255)"
+	 in="result3"
+	 result="result5"
+	 specularExponent="35"
+	 specularConstant="3"
+	 surfaceScale="12"
+	 id="feSpecularLighting3121">
+	<feDistantLight
+	   elevation="45"
+	   azimuth="235"
+	   id="feDistantLight3123" />
+  </feSpecularLighting>
+  <feComposite
+	 in2="result5"
+	 in="SourceGraphic"
+	 k3="0.7"
+	 k2="0.8"
+	 operator="arithmetic"
+	 result="result7"
+	 id="feComposite3125" />
+  <feComposite
+	 in="result7"
+	 operator="in"
+	 in2="SourceGraphic"
+	 id="feComposite3127" />
+</filter>

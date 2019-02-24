@@ -1,0 +1,912 @@
+<defs id="defs3166" menu="Overlays">
+	<filter
+	   label="Barbed wire"
+	   tooltip="Gray bevelled wires with drop shadows"
+	   color-interpolation-filters="sRGB"
+	   id="filter3182">
+	  <feTurbulence
+		 baseFrequency="0.033 0.128"
+		 numOctaves="1"
+		 id="feTurbulence3184" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 -15 1"
+		 id="feColorMatrix3186" />
+	  <feMorphology
+		 radius="1"
+		 operator="dilate"
+		 result="result0"
+		 id="feMorphology3188" />
+	  <feMorphology
+		 in="SourceAlpha"
+		 operator="dilate"
+		 radius="3.1"
+		 result="result1"
+		 id="feMorphology3190" />
+	  <feGaussianBlur
+		 stdDeviation="8.1"
+		 id="feGaussianBlur3192" />
+	  <feDiffuseLighting
+		 surfaceScale="12.6"
+		 diffuseConstant="1"
+		 id="feDiffuseLighting3194">
+		<feDistantLight
+		   azimuth="225"
+		   elevation="45"
+		   id="feDistantLight3196" />
+	  </feDiffuseLighting>
+	  <feComposite
+		 in2="result0"
+		 operator="in"
+		 id="feComposite3198" />
+	  <feComposite
+		 in2="result1"
+		 operator="in"
+		 result="result3"
+		 id="feComposite3200" />
+	  <feSpecularLighting
+		 in="result0"
+		 specularConstant="1"
+		 specularExponent="3.5"
+		 id="feSpecularLighting3202">
+		<feDistantLight
+		   elevation="50"
+		   azimuth="225"
+		   id="feDistantLight3204" />
+	  </feSpecularLighting>
+	  <feComposite
+		 in2="result3"
+		 operator="atop"
+		 result="result6"
+		 id="feComposite3206" />
+	  <feColorMatrix
+		 in="result0"
+		 result="result4"
+		 values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0"
+		 id="feColorMatrix3208" />
+	  <feGaussianBlur
+		 stdDeviation="1.4"
+		 in="result4"
+		 id="feGaussianBlur3210" />
+	  <feOffset
+		 dx="2"
+		 dy="2"
+		 result="result5"
+		 id="feOffset3212" />
+	  <feComposite
+		 in="result5"
+		 in2="SourceGraphic"
+		 operator="atop"
+		 result="result7"
+		 id="feComposite3214" />
+	  <feComposite
+		 in2="result7"
+		 in="result6"
+		 id="feComposite3216" />
+	</filter>
+	<filter
+	   label="Blue cheese"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   menu="Overlays"
+	   tooltip="Marble-like bluish speckles"
+	   color-interpolation-filters="sRGB"
+	   id="filter3218">
+	  <feTurbulence
+		 numOctaves="2"
+		 baseFrequency="0.063"
+		 id="feTurbulence3220" />
+	  <feColorMatrix
+		 values="0 0 0 0 0 0 0 0 0 0.5 0 0 0 0 0.5 0 0 0 -10 1"
+		 id="feColorMatrix3222" />
+	  <feGaussianBlur
+		 stdDeviation="1"
+		 result="result1"
+		 id="feGaussianBlur3224" />
+	  <feTurbulence
+		 numOctaves="3"
+		 baseFrequency="0.031"
+		 type="fractalNoise"
+		 result="result0"
+		 id="feTurbulence3226" />
+	  <feColorMatrix
+		 result="result2"
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 2 -0.5"
+		 id="feColorMatrix3228" />
+	  <feComposite
+		 operator="in"
+		 in2="result2"
+		 in="result1"
+		 id="feComposite3230" />
+	  <feComposite
+		 in2="SourceGraphic"
+		 operator="atop"
+		 id="feComposite3232" />
+	</filter>
+	<filter
+	   label="Carnaval"
+	   menu="Overlays"
+	   tooltip="White splotches evocating carnaval masks"
+	   color-interpolation-filters="sRGB"
+	   id="filter3234">
+	  <feGaussianBlur
+		 stdDeviation="0.01"
+		 result="result8"
+		 id="feGaussianBlur3236" />
+	  <feTurbulence
+		 baseFrequency="0.025 0.028"
+		 numOctaves="5"
+		 type="turbulence"
+		 result="result7"
+		 seed="3"
+		 id="feTurbulence3238" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 6 -2.4 "
+		 result="result5"
+		 id="feColorMatrix3240" />
+	  <feComposite
+		 in2="result7"
+		 operator="in"
+		 in="result8"
+		 result="result6"
+		 id="feComposite3242" />
+	  <feDisplacementMap
+		 in2="result6"
+		 result="result4"
+		 scale="40"
+		 yChannelSelector="A"
+		 xChannelSelector="R"
+		 in="result5"
+		 id="feDisplacementMap3244" />
+	  <feFlood
+		 flood-color="rgb(255,255,255)"
+		 flood-opacity="1"
+		 result="result10"
+		 id="feFlood3246" />
+	  <feComposite
+		 in2="result4"
+		 operator="in"
+		 result="result2"
+		 id="feComposite3248" />
+	  <feComposite
+		 in2="result8"
+		 operator="in"
+		 in="result2"
+		 result="result9"
+		 id="feComposite3250" />
+	  <feBlend
+		 mode="normal"
+		 in2="result8"
+		 result="result11"
+		 id="feBlend3252" />
+	  <feBlend
+		 mode="multiply"
+		 in2="result11"
+		 id="feBlend3254" />
+	</filter>
+	<filter
+	   label="Clouds"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   menu="Overlays"
+	   tooltip="Airy, fluffy, sparse white clouds"
+	   color-interpolation-filters="sRGB"
+	   id="filter3256">
+	  <feTurbulence
+		 numOctaves="3"
+		 baseFrequency="0.040 0.107"
+		 type="fractalNoise"
+		 id="feTurbulence3258" />
+	  <feColorMatrix
+		 result="result0"
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 5 -2.7"
+		 id="feColorMatrix3260" />
+	  <feFlood
+		 flood-opacity="1"
+		 flood-color="rgb(255,255,255)"
+		 id="feFlood3262" />
+	  <feComposite
+		 operator="in"
+		 in2="result0"
+		 id="feComposite3264" />
+	  <feComposite
+		 operator="atop"
+		 in2="SourceGraphic"
+		 id="feComposite3266" />
+	</filter>
+	<filter
+	   label="Frost"
+	   menu="Overlays"
+	   tooltip="Flake-like white splotches"
+	   color-interpolation-filters="sRGB"
+	   id="filter3268">
+	  <feTurbulence
+		 type="fractalNoise"
+		 numOctaves="5"
+		 baseFrequency="0.143"
+		 id="feTurbulence3270" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 5 -3"
+		 id="feColorMatrix3272" />
+	  <feComposite
+		 operator="in"
+		 in2="SourceAlpha"
+		 id="feComposite3274" />
+	  <feMorphology
+		 operator="dilate"
+		 radius="2.7"
+		 result="result3"
+		 id="feMorphology3276" />
+	  <feTurbulence
+		 numOctaves="2"
+		 baseFrequency="0.121"
+		 result="result91"
+		 id="feTurbulence3278" />
+	  <feDisplacementMap
+		 in="result3"
+		 xChannelSelector="R"
+		 yChannelSelector="A"
+		 scale="10"
+		 result="result4"
+		 in2="result91"
+		 id="feDisplacementMap3280" />
+	  <feFlood
+		 flood-opacity="1"
+		 flood-color="rgb(255,255,255)"
+		 id="feFlood3282" />
+	  <feComposite
+		 result="result2"
+		 operator="in"
+		 in2="result4"
+		 id="feComposite3284" />
+	  <feComposite
+		 in="result2"
+		 operator="over"
+		 in2="SourceGraphic"
+		 id="feComposite3286" />
+	</filter>
+	<filter
+	   label="Garden of Delights"
+	   menu="Overlays"
+	   tooltip="Phantasmagorical turbulent wisps, like Hieronymus Bosch's Garden of Delights"
+	   x="-0.15"
+	   width="1.3"
+	   y="-0.15"
+	   height="1.3"
+	   color-interpolation-filters="sRGB"
+	   id="filter3288">
+	  <feTurbulence
+		 result="result1"
+		 baseFrequency="0.005 0.01"
+		 numOctaves="8"
+		 type="fractalNoise"
+		 seed="20"
+		 id="feTurbulence3290" />
+	  <feColorMatrix
+		 result="result3"
+		 values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1.2 -0.4 "
+		 id="feColorMatrix3292" />
+	  <feConvolveMatrix
+		 order="3 3"
+		 kernelMatrix="3 0 0 0 2 0 0 0 -1 "
+		 targetX="1"
+		 targetY="1"
+		 divisor="2"
+		 result="result8"
+		 id="feConvolveMatrix3294" />
+	  <feComposite
+		 result="fbSourceGraphic"
+		 in2="SourceGraphic"
+		 operator="atop"
+		 in="result8"
+		 id="feComposite3296" />
+	  <feTurbulence
+		 baseFrequency="0.027 0.025"
+		 numOctaves="7"
+		 type="turbulence"
+		 seed="20"
+		 id="feTurbulence3298" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 4.7 -2 "
+		 result="result5"
+		 id="feColorMatrix3300" />
+	  <feComposite
+		 in2="result5"
+		 operator="in"
+		 in="fbSourceGraphic"
+		 result="result6"
+		 id="feComposite3302" />
+	  <feDisplacementMap
+		 in2="result5"
+		 result="result4"
+		 scale="48"
+		 yChannelSelector="A"
+		 xChannelSelector="R"
+		 in="result6"
+		 id="feDisplacementMap3304" />
+	  <feFlood
+		 flood-color="rgb(222,217,217)"
+		 flood-opacity="1"
+		 id="feFlood3306" />
+	  <feComposite
+		 in2="result4"
+		 operator="in"
+		 result="result2"
+		 id="feComposite3308" />
+	  <feComposite
+		 in2="fbSourceGraphic"
+		 operator="atop"
+		 in="result2"
+		 result="result91"
+		 id="feComposite3310" />
+	  <feBlend
+		 mode="darken"
+		 in2="result91"
+		 id="feBlend3312" />
+	</filter>
+	<filter
+	   label="Growing cells"
+	   menu="Overlays"
+	   tooltip="Random rounded living cells like fill"
+	   color-interpolation-filters="sRGB"
+	   id="filter3314">
+	  <feTurbulence
+		 type="fractalNoise"
+		 baseFrequency="0.1"
+		 numOctaves="3"
+		 result="result7"
+		 id="feTurbulence3316" />
+	  <feColorMatrix
+		 values="0"
+		 result="result8"
+		 type="saturate"
+		 id="feColorMatrix3318" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 20 -12 "
+		 result="result6"
+		 type="matrix"
+		 id="feColorMatrix3320" />
+	  <feGaussianBlur
+		 stdDeviation="2"
+		 result="result5"
+		 in="result6"
+		 id="feGaussianBlur3322" />
+	  <feColorMatrix
+		 in="result5"
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 10 -0.1 "
+		 result="result0"
+		 type="matrix"
+		 id="feColorMatrix3324" />
+	  <feComposite
+		 k1="0.8"
+		 k2="1"
+		 in2="SourceGraphic"
+		 operator="arithmetic"
+		 result="result3"
+		 in="result0"
+		 id="feComposite3326" />
+	  <feComposite
+		 operator="atop"
+		 in2="result8"
+		 id="feComposite3328" />
+	  <feBlend
+		 mode="normal"
+		 in2="SourceGraphic"
+		 result="result9"
+		 id="feBlend3330" />
+	  <feComposite
+		 in="result9"
+		 in2="SourceGraphic"
+		 operator="atop"
+		 result="result2"
+		 id="feComposite3332" />
+	</filter>
+	<filter
+	   label="Oil slick"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   menu="Overlays"
+	   tooltip="Rainbow-colored semitransparent oily splotches"
+	   color-interpolation-filters="sRGB"
+	   id="filter3334">
+	  <feTurbulence
+		 baseFrequency="0.143"
+		 numOctaves="5"
+		 type="fractalNoise"
+		 id="feTurbulence3336" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 5 -3"
+		 id="feColorMatrix3338" />
+	  <feMorphology
+		 result="result3"
+		 radius="2.7"
+		 operator="dilate"
+		 id="feMorphology3340" />
+	  <feTurbulence
+		 baseFrequency="0.121"
+		 numOctaves="2"
+		 result="result91"
+		 id="feTurbulence3342" />
+	  <feDisplacementMap
+		 result="result4"
+		 scale="18.5"
+		 yChannelSelector="A"
+		 xChannelSelector="R"
+		 in="result3"
+		 in2="result91"
+		 id="feDisplacementMap3344" />
+	  <feComposite
+		 in2="SourceGraphic"
+		 operator="atop"
+		 in="result4"
+		 id="feComposite3346" />
+	</filter>
+	<filter
+	   label="People"
+	   menu="Overlays"
+	   tooltip="Colorized blotches, like a crowd of people"
+	   color-interpolation-filters="sRGB"
+	   id="filter3348">
+	  <feTurbulence
+		 result="result7"
+		 type="fractalNoise"
+		 numOctaves="3"
+		 baseFrequency="0.2 0.09"
+		 id="feTurbulence3350" />
+	  <feColorMatrix
+		 result="result5"
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 5.5 -2 "
+		 id="feColorMatrix3352" />
+	  <feComposite
+		 result="result6"
+		 in="SourceGraphic"
+		 operator="in"
+		 in2="result7"
+		 id="feComposite3354" />
+	  <feDisplacementMap
+		 in="result5"
+		 xChannelSelector="R"
+		 yChannelSelector="A"
+		 scale="9"
+		 result="result4"
+		 in2="result6"
+		 id="feDisplacementMap3356" />
+	  <feComposite
+		 result="result2"
+		 operator="in"
+		 in2="result4"
+		 in="SourceGraphic"
+		 id="feComposite3358" />
+	  <feComposite
+		 in="result2"
+		 operator="in"
+		 in2="SourceGraphic"
+		 result="result91"
+		 id="feComposite3360" />
+	  <feBlend
+		 mode="multiply"
+		 in2="result91"
+		 id="feBlend3362" />
+	</filter>
+	<filter
+	   label="Rubber stamp"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   menu="Overlays"
+	   tooltip="Random whiteouts inside"
+	   color-interpolation-filters="sRGB"
+	   id="filter3364">
+	  <feTurbulence
+		 result="result1"
+		 baseFrequency="0.064"
+		 numOctaves="4"
+		 type="fractalNoise"
+		 id="feTurbulence3366" />
+	  <feGaussianBlur
+		 in="SourceAlpha"
+		 stdDeviation="4.9"
+		 result="result91"
+		 id="feGaussianBlur3368" />
+	  <feComposite
+		 operator="out"
+		 in="SourceAlpha"
+		 in2="result91"
+		 id="feComposite3370" />
+	  <feComposite
+		 in2="result1"
+		 id="feComposite3372" />
+	  <feColorMatrix
+		 result="result1"
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 20 -9"
+		 id="feColorMatrix3374" />
+	  <feComposite
+		 result="result1"
+		 operator="in"
+		 in="SourceGraphic"
+		 in2="result1"
+		 id="feComposite3376" />
+	  <feTurbulence
+		 baseFrequency="0.032"
+		 numOctaves="1"
+		 result="result92"
+		 id="feTurbulence3378" />
+	  <feDisplacementMap
+		 scale="4.1"
+		 yChannelSelector="G"
+		 xChannelSelector="R"
+		 in="result1"
+		 in2="result92"
+		 id="feDisplacementMap3380" />
+	</filter>
+	<filter
+	   tooltip="Colorized mountain tops out of the fog"
+	   menu="Overlays"
+	   label="Scotland"
+	   color-interpolation-filters="sRGB"
+	   id="filter3382">
+	  <feTurbulence
+		 baseFrequency="0.03 0.1"
+		 numOctaves="5"
+		 type="fractalNoise"
+		 result="result91"
+		 id="feTurbulence3384" />
+	  <feDisplacementMap
+		 scale="5"
+		 in2="result91"
+		 id="feDisplacementMap3386" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 3 -1 "
+		 result="result5"
+		 id="feColorMatrix3388" />
+	  <feComposite
+		 in2="result5"
+		 operator="in"
+		 in="SourceGraphic"
+		 result="result6"
+		 id="feComposite3390" />
+	  <feTurbulence
+		 baseFrequency="0.03 0.1"
+		 numOctaves="5"
+		 type="fractalNoise"
+		 result="result92"
+		 id="feTurbulence3392" />
+	  <feDisplacementMap
+		 result="result4"
+		 scale="4"
+		 yChannelSelector="A"
+		 xChannelSelector="R"
+		 in="result6"
+		 in2="result92"
+		 id="feDisplacementMap3394" />
+	  <feComposite
+		 in2="result4"
+		 operator="in"
+		 result="result2"
+		 in="result4"
+		 id="feComposite3396" />
+	  <feComposite
+		 in2="result2"
+		 operator="over"
+		 in="result2"
+		 result="result93"
+		 id="feComposite3398" />
+	  <feBlend
+		 mode="multiply"
+		 in2="result93"
+		 id="feBlend3400" />
+	</filter>
+	<filter
+	   label="Speckle"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   menu="Overlays"
+	   tooltip="Fill object with sparse translucent specks"
+	   color-interpolation-filters="sRGB"
+	   id="filter3402">
+	  <feTurbulence
+		 result="result1"
+		 numOctaves="1"
+		 baseFrequency="0.21"
+		 type="fractalNoise"
+		 id="feTurbulence3404" />
+	  <feColorMatrix
+		 result="result0"
+		 in="SourceGraphic"
+		 type="luminanceToAlpha"
+		 id="feColorMatrix3406" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.8 0"
+		 result="result2"
+		 id="feColorMatrix3408" />
+	  <feComposite
+		 in="result1"
+		 operator="over"
+		 in2="result2"
+		 id="feComposite3410" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 20 -14"
+		 result="result91"
+		 id="feColorMatrix3412" />
+	  <feComposite
+		 operator="out"
+		 in="SourceGraphic"
+		 in2="result91"
+		 id="feComposite3414" />
+	</filter>
+	<filter
+	   label="Swiss cheese"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   menu="Overlays"
+	   tooltip="Random inner-bevel holes"
+	   color-interpolation-filters="sRGB"
+	   id="filter3416">
+	  <feTurbulence
+		 type="fractalNoise"
+		 baseFrequency="0.097"
+		 numOctaves="1"
+		 id="feTurbulence3418" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 20 -14"
+		 id="feColorMatrix3420" />
+	  <feGaussianBlur
+		 stdDeviation="3.7"
+		 id="feGaussianBlur3422" />
+	  <feColorMatrix
+		 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 70 0"
+		 result="result0"
+		 id="feColorMatrix3424" />
+	  <feGaussianBlur
+		 stdDeviation="3.9"
+		 result="result1"
+		 id="feGaussianBlur3426" />
+	  <feDiffuseLighting
+		 surfaceScale="-5"
+		 diffuseConstant="1.29"
+		 id="feDiffuseLighting3428">
+		<feDistantLight
+		   azimuth="225"
+		   elevation="45"
+		   id="feDistantLight3430" />
+	  </feDiffuseLighting>
+	  <feComposite
+		 in2="result0"
+		 operator="in"
+		 id="feComposite3432" />
+	  <feBlend
+		 in2="SourceGraphic"
+		 mode="multiply"
+		 id="feBlend3434" />
+	  <feComposite
+		 in2="SourceGraphic"
+		 operator="in"
+		 result="result2"
+		 id="feComposite3436" />
+	  <feSpecularLighting
+		 in="result1"
+		 surfaceScale="-5"
+		 specularExponent="4.5"
+		 specularConstant="0.7"
+		 id="feSpecularLighting3438">
+		<feDistantLight
+		   elevation="33"
+		   azimuth="225"
+		   id="feDistantLight3440" />
+	  </feSpecularLighting>
+	  <feComposite
+		 in2="result0"
+		 operator="in"
+		 id="feComposite3442" />
+	  <feComposite
+		 in2="result2"
+		 operator="atop"
+		 id="feComposite3444" />
+	</filter>
+	<filter
+	   label="Tartan"
+	   menu="Overlays"
+	   tooltip="Checkered tartan pattern"
+	   color-interpolation-filters="sRGB"
+	   id="filter3446">
+	  <feTurbulence
+		 type="turbulence"
+		 result="result0"
+		 seed="5"
+		 numOctaves="1"
+		 baseFrequency="0 0.184"
+		 id="feTurbulence3448" />
+	  <feTurbulence
+		 result="result3"
+		 type="turbulence"
+		 seed="57"
+		 numOctaves="1"
+		 baseFrequency="0.285 0"
+		 id="feTurbulence3450" />
+	  <feComposite
+		 result="result1"
+		 operator="over"
+		 in2="result0"
+		 id="feComposite3452" />
+	  <feMerge
+		 result="result2"
+		 id="feMerge3454">
+		<feMergeNode
+		   in="result1"
+		   id="feMergeNode3456" />
+		<feMergeNode
+		   in="result0"
+		   id="feMergeNode3458" />
+	  </feMerge>
+	  <feComposite
+		 result="result4"
+		 in="SourceGraphic"
+		 operator="in"
+		 in2="result2"
+		 id="feComposite3460" />
+	</filter>
+	<filter
+	   label="Tiger fur"
+	   menu="Overlays"
+	   tooltip="Tiger fur pattern with folds and bevel around the edges"
+	   height="1.5"
+	   y="-0.25"
+	   width="1.5"
+	   x="-0.25"
+	   color-interpolation-filters="sRGB"
+	   id="filter3462">
+	  <feTurbulence
+		 type="turbulence"
+		 result="result0"
+		 seed="57"
+		 numOctaves="2"
+		 baseFrequency="0.1 0.015"
+		 id="feTurbulence3464" />
+	  <feComposite
+		 result="result1"
+		 operator="over"
+		 in2="result0"
+		 in="result0"
+		 id="feComposite3466" />
+	  <feComposite
+		 result="fbSourceGraphic"
+		 in="SourceGraphic"
+		 operator="arithmetic"
+		 in2="result1"
+		 k1="1"
+		 id="feComposite3468" />
+	  <feGaussianBlur
+		 stdDeviation="10"
+		 result="result8"
+		 in="fbSourceGraphic"
+		 id="feGaussianBlur3470" />
+	  <feComposite
+		 in2="result8"
+		 result="result6"
+		 operator="xor"
+		 in="result8"
+		 id="feComposite3472" />
+	  <feDisplacementMap
+		 xChannelSelector="A"
+		 yChannelSelector="A"
+		 scale="100"
+		 result="result4"
+		 in="result1"
+		 in2="result6"
+		 id="feDisplacementMap3474" />
+	  <feComposite
+		 in2="result4"
+		 result="result2"
+		 operator="arithmetic"
+		 k1="1"
+		 in="SourceGraphic"
+		 id="feComposite3476" />
+	  <feComposite
+		 operator="out"
+		 in="SourceGraphic"
+		 in2="result2"
+		 id="feComposite3478" />
+	</filter>
+	<filter
+	   label="Wavy tartan"
+	   menu="Overlays"
+	   tooltip="Tartan pattern with a wavy displacement and bevel around the edges"
+	   x="-0.25"
+	   width="1.5"
+	   y="-0.25"
+	   height="1.5"
+	   color-interpolation-filters="sRGB"
+	   id="filter3480">
+	  <feTurbulence
+		 type="turbulence"
+		 result="result0"
+		 seed="20"
+		 numOctaves="1"
+		 baseFrequency="0 0.19"
+		 id="feTurbulence3482" />
+	  <feTurbulence
+		 result="result3"
+		 type="turbulence"
+		 seed="20"
+		 numOctaves="1"
+		 baseFrequency="0.19 0"
+		 id="feTurbulence3484" />
+	  <feComposite
+		 result="result1"
+		 operator="arithmetic"
+		 in2="result3"
+		 in="result0"
+		 k2="1"
+		 k3="1"
+		 k1="3"
+		 id="feComposite3486" />
+	  <feComposite
+		 result="fbSourceGraphic"
+		 in="SourceGraphic"
+		 operator="in"
+		 in2="result1"
+		 id="feComposite3488" />
+	  <feGaussianBlur
+		 result="result8"
+		 stdDeviation="10"
+		 in="fbSourceGraphic"
+		 id="feGaussianBlur3490" />
+	  <feComposite
+		 in="result8"
+		 operator="xor"
+		 result="result6"
+		 in2="result8"
+		 id="feComposite3492" />
+	  <feDisplacementMap
+		 result="result4"
+		 scale="75"
+		 yChannelSelector="A"
+		 xChannelSelector="A"
+		 in2="result6"
+		 in="result1"
+		 id="feDisplacementMap3494" />
+	  <feComposite
+		 k1="1"
+		 in="SourceGraphic"
+		 operator="in"
+		 result="result2"
+		 in2="result4"
+		 id="feComposite3496" />
+	</filter>
+	<filter
+	   label="Zebra"
+	   x="0"
+	   y="0"
+	   width="1"
+	   height="1"
+	   menu="Overlays"
+	   tooltip="Irregular vertical dark stripes (loses object's own color)"
+	   color-interpolation-filters="sRGB"
+	   id="filter3498">
+	  <feColorMatrix
+		 result="result0"
+		 values="0.15 0.3 0.05 0 0.5 0.15 0.3 0.05 0 0.5 0.15 0.3 0.05 0 0.5 0 0 0 1 0"
+		 id="feColorMatrix3500" />
+	  <feTurbulence
+		 baseFrequency="0.078 0.012"
+		 numOctaves="1"
+		 id="feTurbulence3502" />
+	  <feColorMatrix
+		 values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5 -0.8"
+		 id="feColorMatrix3504" />
+	  <feComposite
+		 operator="atop"
+		 in2="result0"
+		 id="feComposite3506" />
+	</filter>
+</defs>

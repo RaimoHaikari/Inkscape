@@ -1,0 +1,26 @@
+    <filter
+       name="Clean edges"
+       tooltip="Removes or decreases glows and jaggeries around objects edges after applying some filters"
+       height="1"
+       width="1"
+       y="0"
+       x="0"
+       color-interpolation-filters="sRGB"
+       id="filter3798">
+      <feGaussianBlur
+         result="result6"
+         stdDeviation="0.4"
+         id="feGaussianBlur3800" />
+      <feComposite
+         in2="result6"
+         operator="in"
+         in="SourceGraphic"
+         result="result7"
+         id="feComposite3802" />
+      <feComposite
+         operator="in"
+         in2="result7"
+         result="result8"
+         in="result7"
+         id="feComposite3804" />
+    </filter>

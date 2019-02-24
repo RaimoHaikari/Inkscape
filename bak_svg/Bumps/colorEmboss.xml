@@ -1,0 +1,55 @@
+<filter
+   name="Color emboss"
+   x="0"
+   y="0"
+   width="1"
+   height="1"
+   tooltip="Classic or colorized emboss effect: grayscale, color and 3D relief"
+   color-interpolation-filters="sRGB"
+   id="filter3030">
+  <feColorMatrix
+	 type="luminanceToAlpha"
+	 result="result2"
+	 id="feColorMatrix3032" />
+  <feDiffuseLighting
+	 surfaceScale="-10"
+	 result="result1"
+	 diffuseConstant="1"
+	 lighting-color="rgb(255,255,255)"
+	 id="feDiffuseLighting3034">
+	<feDistantLight
+	   azimuth="225"
+	   elevation="35"
+	   id="feDistantLight3036" />
+  </feDiffuseLighting>
+  <feFlood
+	 flood-opacity="0.5"
+	 result="result3"
+	 flood-color="rgb(86,172,140)"
+	 in="SourceGraphic"
+	 id="feFlood3038" />
+  <feComposite
+	 result="result4"
+	 in2="result3"
+	 operator="arithmetic"
+	 in="result1"
+	 k1="0.5"
+	 k2="0.5"
+	 k3="1"
+	 id="feComposite3040" />
+  <feBlend
+	 mode="normal"
+	 in2="SourceGraphic"
+	 in="result4"
+	 result="result91"
+	 id="feBlend3042" />
+  <feComposite
+	 operator="arithmetic"
+	 k2="1"
+	 in2="result91"
+	 id="feComposite3044" />
+  <feComposite
+	 in2="SourceGraphic"
+	 operator="in"
+	 id="feComposite3046" />
+</filter>

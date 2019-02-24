@@ -1,0 +1,14 @@
+<filter
+   name="Cross-smooth"
+   inkscape:menu="Blurs"
+   tooltip="Blur inner borders and intersections"
+   color-interpolation-filters="sRGB"
+   id="filter4326">
+  <feGaussianBlur
+	 stdDeviation="3"
+	 id="feGaussianBlur4328" />
+  <feColorMatrix
+	 result="fbSourceGraphic"
+	 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 6 -2.5 "
+	 id="feColorMatrix4330" />
+</filter>

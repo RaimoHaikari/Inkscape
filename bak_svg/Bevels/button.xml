@@ -1,0 +1,69 @@
+<filter
+   name="Button"
+   x="0"
+   y="0"
+   width="1"
+   height="1"
+   tooltip="Soft bevel, slightly depressed middle"
+   color-interpolation-filters="sRGB"
+   id="filter3037">
+  <feGaussianBlur
+	 stdDeviation="2.3"
+	 in="SourceAlpha"
+	 result="result0"
+	 id="feGaussianBlur3039" />
+  <feMorphology
+	 in="SourceAlpha"
+	 radius="6.6"
+	 result="result1"
+	 id="feMorphology3041" />
+  <feGaussianBlur
+	 stdDeviation="8.9"
+	 in="result1"
+	 id="feGaussianBlur3043" />
+  <feColorMatrix
+	 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.3 0"
+	 result="result91"
+	 id="feColorMatrix3045" />
+  <feComposite
+	 in="result0"
+	 operator="out"
+	 result="result2"
+	 in2="result91"
+	 id="feComposite3047" />
+  <feGaussianBlur
+	 stdDeviation="1.7"
+	 result="result4"
+	 id="feGaussianBlur3049" />
+  <feDiffuseLighting
+	 surfaceScale="10"
+	 id="feDiffuseLighting3051">
+	<feDistantLight
+	   azimuth="225"
+	   elevation="45"
+	   id="feDistantLight3053" />
+  </feDiffuseLighting>
+  <feBlend
+	 in2="SourceGraphic"
+	 mode="multiply"
+	 id="feBlend3055" />
+  <feComposite
+	 in2="SourceAlpha"
+	 operator="in"
+	 result="result3"
+	 id="feComposite3057" />
+  <feSpecularLighting
+	 in="result4"
+	 surfaceScale="5"
+	 specularExponent="17.9"
+	 id="feSpecularLighting3059">
+	<feDistantLight
+	   azimuth="225"
+	   elevation="45"
+	   id="feDistantLight3061" />
+  </feSpecularLighting>
+  <feComposite
+	 in2="result3"
+	 operator="atop"
+	 id="feComposite3063" />
+</filter>

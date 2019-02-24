@@ -1,0 +1,20 @@
+<filter
+   name="Roughen"
+   tooltip="Small-scale roughening to edges and content"
+   color-interpolation-filters="sRGB"
+   id="filter3055">
+  <feTurbulence
+	 numOctaves="3"
+	 seed="0"
+	 type="turbulence"
+	 baseFrequency="0.04"
+	 result="result91"
+	 id="feTurbulence3057" />
+  <feDisplacementMap
+	 scale="6.6"
+	 yChannelSelector="G"
+	 xChannelSelector="R"
+	 in="SourceGraphic"
+	 in2="result91"
+	 id="feDisplacementMap3059" />
+</filter>

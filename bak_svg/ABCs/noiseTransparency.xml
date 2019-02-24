@@ -1,0 +1,23 @@
+<filter
+   name="Noise transparency"
+   tooltip="Basic noise transparency texture"
+   color-interpolation-filters="sRGB"
+   id="filter3047">
+  <feTurbulence
+	 type="fractalNoise"
+	 numOctaves="5"
+	 baseFrequency="0.02"
+	 result="result1"
+	 id="feTurbulence3049" />
+  <feComposite
+	 operator="in"
+	 in2="result1"
+	 result="result2"
+	 in="SourceGraphic"
+	 id="feComposite3051" />
+  <feColorMatrix
+	 result="result3"
+	 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 3 -1 "
+	 in="result2"
+	 id="feColorMatrix3053" />
+</filter>

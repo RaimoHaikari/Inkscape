@@ -1,0 +1,112 @@
+<defs id="defs3807" menu="ABCs">
+	<filter
+	   tooltip="Draws a black outline around"
+	   name="Black outline"
+	   color-interpolation-filters="sRGB"
+	   id="filter3825">
+	  <feGaussianBlur
+		 stdDeviation="2"
+		 in="SourceAlpha"
+		 result="result0"
+		 id="feGaussianBlur3827" />
+	  <feComposite
+		 result="result3"
+		 operator="arithmetic"
+		 in2="result0"
+		 in="SourceGraphic"
+		 k2="1"
+		 k3="10"
+		 id="feComposite3829" />
+	  <feComposite
+		 k2="1"
+		 operator="in"
+		 in="result3"
+		 result="result4"
+		 in2="result3"
+		 id="feComposite3831" />
+	</filter>
+	<filter
+	   name="Clean edges"
+	   menu="ABCs"
+	   menu-tooltip="Removes or decreases glows and jaggeries around objects edges after applying some filters"
+	   height="1"
+	   width="1"
+	   y="0"
+	   x="0"
+	   color-interpolation-filters="sRGB"
+	   id="filter3833">
+	  <feGaussianBlur
+		 result="result6"
+		 stdDeviation="0.4"
+		 id="feGaussianBlur3835" />
+	  <feComposite
+		 in2="result6"
+		 operator="in"
+		 in="SourceGraphic"
+		 result="result7"
+		 id="feComposite3837" />
+	  <feComposite
+		 operator="in"
+		 in2="result7"
+		 result="result8"
+		 in="result7"
+		 id="feComposite3839" />
+	</filter>
+	<filter
+	   name="Diffuse light"
+	   menu="ABCs"
+	   menu-tooltip="Basic diffuse bevel to use for building textures"
+	   color-interpolation-filters="sRGB"
+	   id="filter3841">
+	  <feGaussianBlur
+		 stdDeviation="6"
+		 in="SourceGraphic"
+		 result="result0"
+		 id="feGaussianBlur3843" />
+	  <feDiffuseLighting
+		 diffuseConstant="1"
+		 surfaceScale="10"
+		 result="result5"
+		 id="feDiffuseLighting3845">
+		<feDistantLight
+		   elevation="25"
+		   azimuth="235"
+		   id="feDistantLight3847" />
+	  </feDiffuseLighting>
+	  <feComposite
+		 k1="1"
+		 in2="SourceGraphic"
+		 in="result5"
+		 result="result4"
+		 operator="arithmetic"
+		 k2="0"
+		 k3="0.6"
+		 id="feComposite3849" />
+	</filter>
+	<filter
+	   name="Feather"
+	   menu="ABCs"
+	   menu-tooltip="Blurred mask on the edge without altering the contents"
+	   color-interpolation-filters="sRGB"
+	   id="filter3861">
+	  <feGaussianBlur
+		 result="result6"
+		 stdDeviation="5"
+		 id="feGaussianBlur3863" />
+	  <feComposite
+		 in2="result6"
+		 operator="atop"
+		 in="SourceGraphic"
+		 result="result91"
+		 id="feComposite3865" />
+	  <feComposite
+		 operator="in"
+		 in2="result91"
+		 result="result92"
+		 id="feComposite3867" />
+	  <feComposite
+		 operator="in"
+		 in2="result92"
+		 id="feComposite3869" />
+	</filter>
+</defs>

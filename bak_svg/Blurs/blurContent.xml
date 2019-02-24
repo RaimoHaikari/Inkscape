@@ -1,0 +1,24 @@
+<filter
+   name="Blur content"
+   tooltip="Blur the contents of objects, preserving the outline"
+   color-interpolation-filters="sRGB"
+   id="filter4316">
+  <feColorMatrix
+	 values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 "
+	 result="result7"
+	 id="feColorMatrix4318" />
+  <feGaussianBlur
+	 result="result6"
+	 stdDeviation="5"
+	 id="feGaussianBlur4320" />
+  <feComposite
+	 in2="result7"
+	 operator="atop"
+	 in="result6"
+	 result="result91"
+	 id="feComposite4322" />
+  <feComposite
+	 operator="in"
+	 in2="result91"
+	 id="feComposite4324" />
+</filter>
